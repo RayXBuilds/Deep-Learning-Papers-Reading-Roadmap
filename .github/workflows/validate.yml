@@ -1,0 +1,33 @@
+name: Validate learning content
+on:
+  push:
+    branches: [master, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docs
+            notes
+            experiments
+            scripts
+            templates
+            .github
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Validate local links, notes and baseline provenance
+        run: python scripts/check_content.py
+      - name: Check mechanisms against independent expectations
+        run: python -m unittest discover -s experiments -p 'test_*.py' -v
+      - name: Run mechanism experiments
+        run: python experiments/run.py --experiment all --seed 7 --output /tmp/roadmap-ci.json
