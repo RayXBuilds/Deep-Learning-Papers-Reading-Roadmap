@@ -1,78 +1,66 @@
-# 深度学习经典论文精读与技术演进路线
+# Deep Learning Papers Reading Roadmap
 
-Deep Learning Papers Reading Roadmap · 中文解读 · 论文关联 · 可验证实验
+**深度学习经典论文精读与技术演进路线**
 
-读懂一个方法解决了什么问题，再通过小实验检验自己的理解。本项目从经典深度学习出发，连接注意力、Transformer 与扩散模型；重点是学习路径和证据，而不是 PDF 数量。
+从经典论文出发，理解深度学习中的关键问题、方法选择与技术演进。每篇中文精读围绕“为什么提出、怎样实现、证据是什么、局限在哪里”展开，并配套可在 CPU 上运行的小实验。
 
-## 从这里开始
+**[开始阅读](docs/roadmaps/README.md) · [论文索引](docs/papers.md) · [技术关联](docs/connections.md) · [实验指南](experiments/README.md) · [历史资料](docs/archive/README.md)**
 
-| 你的目标 | 阅读入口 | 学习产出 |
+适合已经接触过 Python 和神经网络、希望系统阅读原论文的学习者。建议具备矩阵运算、链式法则和基础概率知识；具体先修要求见各条路线。
+
+## 从哪里开始
+
+1. **刚开始读论文**：先看 [阅读方法与核心顺序](docs/roadmaps/README.md)，再从 [ResNet：为什么加深网络之后反而更难训练？](notes/resnet.md) 开始。
+2. **已有研究方向**：从下面选择路线，结合原论文与中文精读阅读；需要补前置概念时，再返回相关笔记。
+3. **想验证自己的理解**：运行配套实验，比较预测与结果，再回到论文检查解释是否成立。
+
+## 选择阅读路线
+
+| 方向 | 围绕什么问题阅读 | 路线入口 |
 |---|---|---|
-| 第一次系统读论文 | [起步与核心路线](docs/roadmaps/README.md) | 区分原论文证据、自己的解释和实验结论 |
-| 理解网络为什么能训练 | [训练与视觉](docs/roadmaps/training-and-vision.md) | 解释残差、归一化和优化器各自解决的问题 |
-| 从序列模型走向 Transformer | [序列与注意力](docs/roadmaps/sequence-and-attention.md) | 手算注意力并检查因果掩码 |
-| 从潜变量走向扩散模型 | [生成模型](docs/roadmaps/generative-models.md) | 验证加噪分布和预测噪声 |
-| 查找原来收录的资料 | [历史资料入口](docs/archive/README.md) | 找到原 PDF 或旧清单中的外部链接 |
+| 训练与视觉 | 网络为什么能加深？归一化与优化器各自改变什么？ | [卷积网络 → 残差连接 → 训练方法 → ViT](docs/roadmaps/training-and-vision.md) |
+| 序列与注意力 | 模型如何读取上下文？注意力怎样组织序列计算？ | [Encoder–Decoder → Attention → Transformer](docs/roadmaps/sequence-and-attention.md) |
+| 生成模型 | 模型如何学习数据分布？不同生成目标怎样比较？ | [VAE / GAN → DDPM](docs/roadmaps/generative-models.md) |
 
-先修：Python、向量与矩阵、导数与链式法则、均值与方差。生成路线还需要条件概率、期望和 KL 散度。
+路线包含已完成精读和后续阅读入口，具体状态见 [论文索引](docs/papers.md)。箭头表示建议阅读顺序；方法之间的继承、组件联系与对照关系见 [技术关联](docs/connections.md)。
 
-## 第一批精读与实验
+## 已有中文精读
 
-| 论文 | 中文精读 | 机制实验 | 验证边界 |
-|---|---|---|---|
-| ResNet（2015 预印本 / CVPR 2016） | [残差改变了什么](notes/resnet.md) | `residual` | 标量网络的输入导数 |
-| BatchNorm（2015） | [统计量从哪里来](notes/batch-normalization.md) | `normalization` | 二维输入的训练态归一化 |
-| LayerNorm（2016） | [不依赖同批样本](notes/layer-normalization.md) | `normalization` | 统计轴和批次依赖对照 |
-| Adam（2014 预印本 / ICLR 2015） | [从梯度到参数更新](notes/adam.md) | `adam` | 二维二次函数上的优化轨迹 |
-| Transformer（2017） | [Q、K、V 与信息可见性](notes/transformer.md) | `attention` | 单头前向与未来信息隔离 |
-| DDPM（2020） | [加噪与预测噪声](notes/ddpm.md) | `diffusion` | 一维高斯加噪与线性去噪 |
+| 论文 | 这篇精读回答什么 | 配套实验 |
+|---|---|---|
+| [ResNet](notes/resnet.md) | 为什么增加恒等捷径会改变深层网络的梯度传播？ | 普通路径与残差路径的导数对照 |
+| [Batch Normalization](notes/batch-normalization.md) | 归一化统计量来自哪里，为什么会受同批样本影响？ | 改变同批样本，观察输出变化 |
+| [Layer Normalization](notes/layer-normalization.md) | 改变统计轴后，哪些批次依赖消失了？ | 与 BatchNorm 使用相同输入对照 |
+| [Adam](notes/adam.md) | 梯度历史如何影响参数更新，为什么需要偏差校正？ | 二次函数优化与手算第一步更新 |
+| [Transformer](notes/transformer.md) | Q、K、V 怎样协作，因果掩码如何限制信息可见性？ | 修改未来位置，检查前缀输出 |
+| [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
 
-这些是教学用机制验证，**尚未完成原论文数据集、模型规模和指标复现**。扩展论文的精读状态见 [论文索引](docs/papers.md)。
+目前有 **6 篇精读初版、5 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
 
-## 五分钟跑通实验
+## 动手验证
 
-Python 3.10+，仅使用标准库，无须 GPU、下载数据或安装第三方包。在仓库根目录运行：
+已有 Python 3.10+ 即可运行，无需 GPU、第三方依赖或外部数据。在仓库根目录执行：
 
 ```bash
-python3 experiments/run.py --experiment all --seed 7 --output /tmp/roadmap-results.json
-python3 -m unittest discover -s experiments -p 'test_*.py' -v
-python3 scripts/check_content.py
+python3 experiments/run.py --experiment all --seed 7
 ```
 
-每项实验输出参数、指标和通过条件，失败返回非零状态。详见 [实验说明](experiments/README.md) 与 [实测报告](experiments/results/README.md)。
+也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 
-## 论文之间怎么连接
+[查看输入、对照与验收条件](experiments/README.md) · [查看实测结果](experiments/results/README.md)
 
-```mermaid
-flowchart LR
-  CNN[卷积网络] -->|加深后的训练困难| ResNet[残差连接]
-  BN[BatchNorm] -.统计轴对照.-> LN[LayerNorm]
-  Seq[Encoder–Decoder] -->|动态读取源序列| Attn[Attention]
-  Attn -->|以注意力组织序列计算| TF[Transformer]
-  ResNet -.组件联系.-> TF
-  LN -.组件联系.-> TF
-  TF -->|预训练目标| BERT[BERT]
-  TF -->|图像块序列| ViT[ViT]
-  VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
-  GAN[GAN] -.生成目标对照.-> DDPM
-```
+## 经典资料与其他方向
 
-箭头表示问题延续、组件联系或教学对照，不表示所有论文之间都有直接继承关系，也不表示后者全面优于前者。详见 [技术演进与关联](docs/connections.md)。
+原有资料涵盖深度学习基础、语音识别、强化学习、迁移学习、单样本学习、目标检测、跟踪、分割、图像描述、机器翻译、机器人及风格迁移。
 
-## 目录与维护
+- [按专题查找资料](docs/archive/README.md)：保留 22 个原分类目录和 112 个 PDF 的路径。
+- [查看历史论文清单](docs/archive/reading-list-2018.md)：主体整理于 2018 年，阅读时注意版本与时代背景。
+- [查看已核实的勘误](docs/errata.md)：包括归一化、跟踪方法和书目信息的修正。
 
-```text
-docs/roadmaps/      学习路线、先修关系与验收标准
-docs/papers.md      论文索引、状态与一手来源
-docs/connections.md 技术关系及边界
-notes/             中文精读：问题、方法、证据、局限、实验
-experiments/       可运行脚本、语义测试与实测记录
-scripts/           本地链接与内容完整性检查
-templates/         精读和实验报告模板
-docs/archive/      历史清单与旧目录索引
-1.0-Book/ … 4.0-Other/  原有资料目录，保留旧路径
-```
+## 参与维护
 
-原资料区保留 112 个 PDF；新内容优先引用作者、会议或 arXiv 页面。历史文献的版权属于各自权利人。旧条目的“暂无”指旧收录状态，不表示论文无法取得。
+欢迎补充中文精读、技术关联、实验与纠错。优先完成一个学习问题的解释和验证；新增论文采用作者、会议或 arXiv 的一手来源链接。
 
-贡献前阅读 [维护规范](CONTRIBUTING.md)。后续选题见 [维护计划](docs/maintenance.md)，旧表述修正见 [勘误](docs/errata.md)。
+[贡献规范](CONTRIBUTING.md) · [后续选题](docs/maintenance.md) · [文档与目录导航](docs/README.md)
+
+历史论文与书籍的版权归各自权利人。

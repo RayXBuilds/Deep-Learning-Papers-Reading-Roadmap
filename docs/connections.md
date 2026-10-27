@@ -21,6 +21,24 @@
 
 关系依据分别来自对应原论文的方法段落；精读页给出具体章节。表中的阅读顺序和“不应推断”是本项目的教学解释。
 
+## 关系概览
+
+```mermaid
+flowchart LR
+  CNN[卷积网络] -->|加深后的训练困难| ResNet[残差连接]
+  BN[BatchNorm] -.统计轴对照.-> LN[LayerNorm]
+  Seq[Encoder–Decoder] -->|动态读取源序列| Attn[Attention]
+  Attn -->|以注意力组织序列计算| TF[Transformer]
+  ResNet -.组件联系.-> TF
+  LN -.组件联系.-> TF
+  TF -->|预训练目标| BERT[BERT]
+  TF -->|图像块序列| ViT[ViT]
+  VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
+  GAN[GAN] -.生成目标对照.-> DDPM
+```
+
+实线表示问题延续或应用方向，虚线表示组件联系或教学对照。具体含义与边界以上表为准。
+
 ## 用同一组问题比较论文
 
 1. 输入、输出和训练监督分别是什么？
