@@ -1,181 +1,78 @@
-# Deep-Learning-Papers-Reading-Roadmap（深度学习论文阅读路线图）
+# 深度学习经典论文精读与技术演进路线
 
-## 深度学习基础及历史
-### 1.0 书
-- 深度学习圣经：Bengio, Yoshua, Ian J. Goodfellow, and Aaron Courville. “Deep learning.” An MIT Press book. (2015)
+Deep Learning Papers Reading Roadmap · 中文解读 · 论文关联 · 可验证实验
 
-### 1.1 报告
-- 三巨头报告：LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. “Deep learning.” Nature 521.7553 (2015)
+读懂一个方法解决了什么问题，再通过小实验检验自己的理解。本项目从经典深度学习出发，连接注意力、Transformer 与扩散模型；重点是学习路径和证据，而不是 PDF 数量。
 
-### 1.2 深度信念网络 (DBN)
-- 深度学习前夜的里程碑：Hinton, Geoffrey E., Simon Osindero, and Yee-Whye Teh. “A fast learning algorithm for deep belief nets.” Neural computation 18.7 (2006)
-- 展示深度学习前景的里程碑：Hinton, Geoffrey E., and Ruslan R. Salakhutdinov. “Reducing the dimensionality of data with neural networks.” Science 313.5786 (2006)
+## 从这里开始
 
-### 1.3 ImageNet革命（深度学习大爆炸）
-- AlexNet的深度学习突破：Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. “Imagenet classification with deep convolutional neural networks.” Advances in neural information processing systems. 2012. 
-- VGGNet深度神经网络出现：Simonyan, Karen, and Andrew Zisserman. “Very deep convolutional networks for large-scale image recognition.” arXiv preprint arXiv:1409.1556 (2014). 
-- GoogLeNet：Szegedy, Christian, et al. “Going deeper with convolutions.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2015. 
-- ResNet极深度神经网络，CVPR最佳论文：He, Kaiming, et al. “Deep residual learning for image recognition.” arXiv preprint arXiv:1512.03385 (2015). 
+| 你的目标 | 阅读入口 | 学习产出 |
+|---|---|---|
+| 第一次系统读论文 | [起步与核心路线](docs/roadmaps/README.md) | 区分原论文证据、自己的解释和实验结论 |
+| 理解网络为什么能训练 | [训练与视觉](docs/roadmaps/training-and-vision.md) | 解释残差、归一化和优化器各自解决的问题 |
+| 从序列模型走向 Transformer | [序列与注意力](docs/roadmaps/sequence-and-attention.md) | 手算注意力并检查因果掩码 |
+| 从潜变量走向扩散模型 | [生成模型](docs/roadmaps/generative-models.md) | 验证加噪分布和预测噪声 |
+| 查找原来收录的资料 | [历史资料入口](docs/archive/README.md) | 找到原 PDF 或旧清单中的外部链接 |
 
-### 1.4 语音识别革命
-- 语音识别突破：Hinton, Geoffrey, et al. “Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups.” IEEE Signal Processing Magazine 29.6 (2012): 82-97. 
-- RNN论文：Graves, Alex, Abdel-rahman Mohamed, and Geoffrey Hinton. “Speech recognition with deep recurrent neural networks.” 2013 IEEE international conference on acoustics, speech and signal processing. IEEE, 2013. 
-- 端对端RNN语音识别：Graves, Alex, and Navdeep Jaitly. “Towards End-To-End Speech Recognition with Recurrent Neural Networks.” ICML. Vol. 14. 2014. 
-- Google语音识别系统论文：Sak, Haşim, et al. “Fast and accurate recurrent neural network acoustic models for speech recognition.” arXiv preprint arXiv:1507.06947 (2015). 
-- 百度语音识别系统论文：Amodei, Dario, et al. “Deep speech 2: End-to-end speech recognition in english and mandarin.” arXiv preprint arXiv:1512.02595 (2015). 
-- 来自微软的当下最先进的语音识别论文：W. Xiong, J. Droppo, X. Huang, F. Seide, M. Seltzer, A. Stolcke, D. Yu, G. Zweig “Achieving Human Parity in Conversational Speech Recognition.” arXiv preprint arXiv:1610.05256 (2016). 
+先修：Python、向量与矩阵、导数与链式法则、均值与方差。生成路线还需要条件概率、期望和 KL 散度。
 
-## 深度学习方法
-### 2.1 模型
-- Dropout：Hinton, Geoffrey E., et al. “Improving neural networks by preventing co-adaptation of feature detectors.” arXiv preprint arXiv:1207.0580 (2012). 
-- 过拟合：Srivastava, Nitish, et al. “Dropout: a simple way to prevent neural networks from overfitting.” Journal of Machine Learning Research 15.1 (2014): 1929-1958. 
-- Batch归一化——2015年杰出成果：Ioffe, Sergey, and Christian Szegedy. “Batch normalization: Accelerating deep network training by reducing internal covariate shift.” arXiv preprint arXiv:1502.03167 (2015). 
-- Batch归一化的升级：Ba, Jimmy Lei, Jamie Ryan Kiros, and Geoffrey E. Hinton. “Layer normalization.” arXiv preprint arXiv:1607.06450 (2016). 
-- 快速训练新模型：Courbariaux, Matthieu, et al. “Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to+ 1 or−1.” 
-- 训练方法创新：Jaderberg, Max, et al. “Decoupled neural interfaces using synthetic gradients.” arXiv preprint arXiv:1608.05343 (2016). 
-- 修改预训练网络以降低训练耗时：Chen, Tianqi, Ian Goodfellow, and Jonathon Shlens. “Net2net: Accelerating learning via knowledge transfer.” arXiv preprint arXiv:1511.05641 (2015). 
-- 修改预训练网络以降低训练耗时：Wei, Tao, et al. “Network Morphism.” arXiv preprint arXiv:1603.01670 (2016). 
+## 第一批精读与实验
 
-### 2.2 优化
-- 动量优化器：Sutskever, Ilya, et al. “On the importance of initialization and momentum in deep learning.” ICML (3) 28 (2013): 1139-1147. 
-- 可能是当前使用最多的随机优化：Kingma, Diederik, and Jimmy Ba. “Adam: A method for stochastic optimization.” arXiv preprint arXiv:1412.6980 (2014). 
-- 神经优化器：Andrychowicz, Marcin, et al. “Learning to learn by gradient descent by gradient descent.” arXiv preprint arXiv:1606.04474 (2016). 
-- ICLR最佳论文，让神经网络运行更快的新方向：Han, Song, Huizi Mao, and William J. Dally. “Deep compression: Compressing deep neural network with pruning, trained quantization and huffman coding.” CoRR, abs/1510.00149 2 (2015). 
-- 优化神经网络的另一个新方向：Iandola, Forrest N., et al. “SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and< 1MB model size.” arXiv preprint arXiv:1602.07360 (2016). 
+| 论文 | 中文精读 | 机制实验 | 验证边界 |
+|---|---|---|---|
+| ResNet（2015 预印本 / CVPR 2016） | [残差改变了什么](notes/resnet.md) | `residual` | 标量网络的输入导数 |
+| BatchNorm（2015） | [统计量从哪里来](notes/batch-normalization.md) | `normalization` | 二维输入的训练态归一化 |
+| LayerNorm（2016） | [不依赖同批样本](notes/layer-normalization.md) | `normalization` | 统计轴和批次依赖对照 |
+| Adam（2014 预印本 / ICLR 2015） | [从梯度到参数更新](notes/adam.md) | `adam` | 二维二次函数上的优化轨迹 |
+| Transformer（2017） | [Q、K、V 与信息可见性](notes/transformer.md) | `attention` | 单头前向与未来信息隔离 |
+| DDPM（2020） | [加噪与预测噪声](notes/ddpm.md) | `diffusion` | 一维高斯加噪与线性去噪 |
 
-### 2.3 无监督学习 / 深度生成式模型
-- Google Brain找猫的里程碑论文，吴恩达：Le, Quoc V. “Building high-level features using large scale unsupervised learning.” 2013 IEEE international conference on acoustics, speech and signal processing. IEEE, 2013. 
-- 变分自编码机 (VAE)：Kingma, Diederik P., and Max Welling. “Auto-encoding variational bayes.” arXiv preprint arXiv:1312.6114 (2013). 
-- 生成式对抗网络 (GAN)：Goodfellow, Ian, et al. “Generative adversarial nets.” Advances in Neural Information Processing Systems. 2014. 
-- 解卷积生成式对抗网络 (DCGAN)：Radford, Alec, Luke Metz, and Soumith Chintala. “Unsupervised representation learning with deep convolutional generative adversarial networks.” arXiv preprint arXiv:1511.06434 (2015). 
-- Attention机制的变分自编码机：Gregor, Karol, et al. “DRAW: A recurrent neural network for image generation.” arXiv preprint arXiv:1502.04623 (2015). 
-- PixelRNN：Oord, Aaron van den, Nal Kalchbrenner, and Koray Kavukcuoglu. “Pixel recurrent neural networks.” arXiv preprint arXiv:1601.06759 (2016). 
-- PixelCNN：Oord, Aaron van den, et al. “Conditional image generation with PixelCNN decoders.” arXiv preprint arXiv:1606.05328 (2016). 
+这些是教学用机制验证，**尚未完成原论文数据集、模型规模和指标复现**。扩展论文的精读状态见 [论文索引](docs/papers.md)。
 
-### 2.4 RNN / 序列到序列模型
-- RNN的生成式序列，LSTM：Graves, Alex. “Generating sequences with recurrent neural networks.” arXiv preprint arXiv:1308.0850 (2013). 
-- 第一份序列到序列论文：Cho, Kyunghyun, et al. “Learning phrase representations using RNN encoder-decoder for statistical machine translation.” arXiv preprint arXiv:1406.1078 (2014). 
-- 神经机器翻译：Bahdanau, Dzmitry, KyungHyun Cho, and Yoshua Bengio. “Neural Machine Translation by Jointly Learning to Align and Translate.” arXiv preprint arXiv:1409.0473 (2014). 
-- 序列到序列Chatbot：Vinyals, Oriol, and Quoc Le. “A neural conversational model.” arXiv preprint arXiv:1506.05869 (2015). 
+## 五分钟跑通实验
 
-### 2.5 神经网络图灵机
-- 未来计算机的基本原型：Graves, Alex, Greg Wayne, and Ivo Danihelka. “Neural turing machines.” arXiv preprint arXiv:1410.5401 (2014). 
-- 强化学习神经图灵机：Zaremba, Wojciech, and Ilya Sutskever. “Reinforcement learning neural Turing machines.” arXiv preprint arXiv:1505.00521 362 (2015). 
-- 记忆网络：Weston, Jason, Sumit Chopra, and Antoine Bordes. “Memory networks.” arXiv preprint arXiv:1410.3916 (2014). 
-- 端对端记忆网络：Sukhbaatar, Sainbayar, Jason Weston, and Rob Fergus. “End-to-end memory networks.” Advances in neural information processing systems. 2015. 
-- 指针网络：Vinyals, Oriol, Meire Fortunato, and Navdeep Jaitly. “Pointer networks.” Advances in Neural Information Processing Systems. 2015. 
+Python 3.10+，仅使用标准库，无须 GPU、下载数据或安装第三方包。在仓库根目录运行：
 
-### 2.6 深度强化学习
-- 第一篇以深度强化学习为名的论文：Mnih, Volodymyr, et al. “Playing atari with deep reinforcement learning.” arXiv preprint arXiv:1312.5602 (2013). 
-- 里程碑：Mnih, Volodymyr, et al. “DeepMind:Human-level control through deep reinforcement learning.” Nature 518.7540 (2015): 529-533. 
-- ICLR最佳论文：Wang, Ziyu, Nando de Freitas, and Marc Lanctot. “Dueling network architectures for deep reinforcement learning.” arXiv preprint arXiv:1511.06581 (2015). 
-- 当前最先进的深度强化学习方法：Mnih, Volodymyr, et al. “Asynchronous methods for deep reinforcement learning.” arXiv preprint arXiv:1602.01783 (2016). 
-- DDPG：Lillicrap, Timothy P., et al. “Continuous control with deep reinforcement learning.” arXiv preprint arXiv:1509.02971 (2015). 
-- NAF：Gu, Shixiang, et al. “Continuous Deep Q-Learning with Model-based Acceleration.” arXiv preprint arXiv:1603.00748 (2016). 
-- TRPO：Schulman, John, et al. “Trust region policy optimization.” CoRR, abs/1502.05477 (2015). 
-- AlphaGo：Silver, David, et al. “Mastering the game of Go with deep neural networks and tree search.” Nature 529.7587 (2016): 484-489. 
+```bash
+python3 experiments/run.py --experiment all --seed 7 --output /tmp/roadmap-results.json
+python3 -m unittest discover -s experiments -p 'test_*.py' -v
+python3 scripts/check_content.py
+```
 
-### 2.7 深度迁移学习 / 终生学习 / 强化学习
-- Bengio教程：Bengio, Yoshua. “Deep Learning of Representations for Unsupervised and Transfer Learning.” ICML Unsupervised and Transfer Learning 27 (2012): 17-36. 
-- 终生学习的简单讨论：Silver, Daniel L., Qiang Yang, and Lianghao Li. “Lifelong Machine Learning Systems: Beyond Learning Algorithms.” AAAI Spring Symposium: Lifelong Machine Learning. 2013. 
-- Hinton、Jeff Dean大神研究：Hinton, Geoffrey, Oriol Vinyals, and Jeff Dean. “Distilling the knowledge in a neural network.” arXiv preprint arXiv:1503.02531 (2015). 
-- 强化学习策略：Rusu, Andrei A., et al. “Policy distillation.” arXiv preprint arXiv:1511.06295 (2015). 
-- 多任务深度迁移强化学习：Parisotto, Emilio, Jimmy Lei Ba, and Ruslan Salakhutdinov. “Actor-mimic: Deep multitask and transfer reinforcement learning.” arXiv preprint arXiv:1511.06342 (2015). 
-- 累进式神经网络：Rusu, Andrei A., et al. “Progressive neural networks.” arXiv preprint arXiv:1606.04671 (2016). 
+每项实验输出参数、指标和通过条件，失败返回非零状态。详见 [实验说明](experiments/README.md) 与 [实测报告](experiments/results/README.md)。
 
-### 2.8 一次性深度学习
-- 不涉及深度学习，但值得一读：Lake, Brenden M., Ruslan Salakhutdinov, and Joshua B. Tenenbaum. “Human-level concept learning through probabilistic program induction.” Science 350.6266 (2015): 1332-1338. 
-- 一次性图像识别（暂无）：Koch, Gregory, Richard Zemel, and Ruslan Salakhutdinov. “Siamese Neural Networks for One-shot Image Recognition.”(2015). [pdf](http://www.cs.utoronto.ca/%7Egkoch/files/msc-thesis.pdf)
-- 一次性学习基础（暂无）：Santoro, Adam, et al. “One-shot Learning with Memory-Augmented Neural Networks.” arXiv preprint arXiv:1605.06065 (2016). [pdf](http://arxiv.org/pdf/1605.06065)
-- 一次性学习网络：Vinyals, Oriol, et al. “Matching Networks for One Shot Learning.” arXiv preprint arXiv:1606.04080 (2016). 
-- 大型数据（暂无）：Hariharan, Bharath, and Ross Girshick. “Low-shot visual object recognition.” arXiv preprint arXiv:1606.02819 (2016). [pdf](http://arxiv.org/pdf/1606.02819)
+## 论文之间怎么连接
 
-## 应用
-### 3.1 自然语言处理 (NLP)
-- Antoine Bordes, et al. “Joint Learning of Words and Meaning Representations for Open-Text Semantic Parsing.” AISTATS(2012) 
-- word2vec Mikolov, et al. “Distributed representations of words and phrases and their compositionality.” ANIPS(2013): 3111-3119 
-- Sutskever, et al. “Sequence to sequence learning with neural networks.” ANIPS(2014) 
-http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf
-- Ankit Kumar, et al. “Ask Me Anything: Dynamic Memory Networks for Natural Language Processing.” arXiv preprint arXiv:1506.07285(2015) 
-- Yoon Kim, et al. “Character-Aware Neural Language Models.” NIPS(2015) arXiv preprint arXiv:1508.06615(2015) 
-https://arxiv.org/abs/1508.06615
-- bAbI任务：Jason Weston, et al. “Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks.” arXiv preprint arXiv:1502.05698(2015) 
-- CNN / DailyMail 风格对比：Karl Moritz Hermann, et al. “Teaching Machines to Read and Comprehend.” arXiv preprint arXiv:1506.03340(2015) 
-- 当前最先进的文本分类：Alexis Conneau, et al. “Very Deep Convolutional Networks for Natural Language Processing.” arXiv preprint arXiv:1606.01781(2016) 
-- 稍次于最先进方案，但速度快很多：Armand Joulin, et al. “Bag of Tricks for Efficient Text Classification.” arXiv preprint arXiv:1607.01759(2016) 
+```mermaid
+flowchart LR
+  CNN[卷积网络] -->|加深后的训练困难| ResNet[残差连接]
+  BN[BatchNorm] -.统计轴对照.-> LN[LayerNorm]
+  Seq[Encoder–Decoder] -->|动态读取源序列| Attn[Attention]
+  Attn -->|以注意力组织序列计算| TF[Transformer]
+  ResNet -.组件联系.-> TF
+  LN -.组件联系.-> TF
+  TF -->|预训练目标| BERT[BERT]
+  TF -->|图像块序列| ViT[ViT]
+  VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
+  GAN[GAN] -.生成目标对照.-> DDPM
+```
 
-### 3.2 目标检测
-- Szegedy, Christian, Alexander Toshev, and Dumitru Erhan. “Deep neural networks for object detection.” Advances in Neural Information Processing Systems. 2013. 
-- RCNN：Girshick, Ross, et al. “Rich feature hierarchies for accurate object detection and semantic segmentation.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2014. 
-- SPPNet（暂无）：He, Kaiming, et al. “Spatial pyramid pooling in deep convolutional networks for visual recognition.” European Conference on Computer Vision. Springer International Publishing, 2014. [pdf](http://arxiv.org/pdf/1406.4729) 
-- Girshick, Ross. “Fast r-cnn.” Proceedings of the IEEE International Conference on Computer Vision. 2015. 
-- 相当实用的YOLO项目：Redmon, Joseph, et al. “You only look once: Unified, real-time object detection.” arXiv preprint arXiv:1506.02640 (2015). 
-- （暂无）Liu, Wei, et al. “SSD: Single Shot MultiBox Detector.” arXiv preprint arXiv:1512.02325 (2015). [pdf](http://arxiv.org/pdf/1512.02325)
-- （暂无）Dai, Jifeng, et al. “R-FCN: Object Detection via Region-based Fully Convolutional Networks.” arXiv preprint arXiv:1605.06409 (2016). [pdf](https://arxiv.org/abs/1605.06409)
-- （暂无）He, Gkioxari, et al. “Mask R-CNN” arXiv preprint arXiv:1703.06870 (2017). [pdf](https://arxiv.org/abs/1703.06870)
+箭头表示问题延续、组件联系或教学对照，不表示所有论文之间都有直接继承关系，也不表示后者全面优于前者。详见 [技术演进与关联](docs/connections.md)。
 
-### 3.3 视觉追踪
-- 第一份采用深度学习的视觉追踪论文，DLT追踪器：Wang, Naiyan, and Dit-Yan Yeung. “Learning a deep compact image representation for visual tracking.” Advances in neural information processing systems. 2013. 
-- SO-DLT（暂无）：Wang, Naiyan, et al. “Transferring rich feature hierarchies for robust visual tracking.” arXiv preprint arXiv:1501.04587 (2015). [pdf](http://arxiv.org/pdf/1501.04587)
-- FCNT：Wang, Lijun, et al. “Visual tracking with fully convolutional networks.” Proceedings of the IEEE International Conference on Computer Vision. 2015. 
-- 跟深度学习一样快的非深度学习方法，GOTURN（暂无）：Held, David, Sebastian Thrun, and Silvio Savarese. “Learning to Track at 100 FPS with Deep Regression Networks.” arXiv preprint arXiv:1604.01802 (2016). [pdf](http://arxiv.org/pdf/1604.01802)
-- 新的最先进的实时目标追踪方案 SiameseFC（暂无）：Bertinetto, Luca, et al. “Fully-Convolutional Siamese Networks for Object Tracking.” arXiv preprint arXiv:1606.09549 (2016). [pdf](https://arxiv.org/pdf/1606.09549)
-- C-COT：Martin Danelljan, Andreas Robinson, Fahad Khan, Michael Felsberg. “Beyond Correlation Filters: Learning Continuous Convolution Operators for Visual Tracking.” ECCV (2016) 
-- VOT2016大赛冠军 TCNN（暂无）：Nam, Hyeonseob, Mooyeol Baek, and Bohyung Han. “Modeling and Propagating CNNs in a Tree Structure for Visual Tracking.” arXiv preprint arXiv:1608.07242 (2016). [pdf](https://arxiv.org/pdf/1608.07242)
+## 目录与维护
 
-### 3.4 图像标注
-- Farhadi,Ali,etal. “Every picture tells a story: Generating sentences from images”. In Computer VisionECCV 201match0. Spmatchringer Berlin Heidelberg:15-29, 2010. 
-- Kulkarni, Girish, et al. “Baby talk: Understanding and generating image descriptions”. In Proceedings of the 24th CVPR, 2011. 
-- （暂无）Vinyals, Oriol, et al. “Show and tell: A neural image caption generator”. In arXiv preprint arXiv:1411.4555, 2014. [pdf](https://arxiv.org/pdf/1411.4555.pdf)
-- RNN视觉识别与标注（暂无）：Donahue, Jeff, et al. “Long-term recurrent convolutional networks for visual recognition and description”. In arXiv preprint arXiv:1411.4389 ,2014. [pdf](https://arxiv.org/pdf/1411.4389.pdf) 
-- 李飞飞及高徒Andrej Karpathy：Karpathy, Andrej, and Li Fei-Fei. “Deep visual-semantic alignments for generating image descriptions”. In arXiv preprint arXiv:1412.2306, 2014. 
-- 李飞飞及高徒Andrej Karpathy（暂无）：Karpathy, Andrej, Armand Joulin, and Fei Fei F. Li. “Deep fragment embeddings for bidirectional image sentence mapping”. In Advances in neural information processing systems, 2014. [pdf](https://arxiv.org/pdf/1406.5679v1.pdf)
-- （暂无）Fang, Hao, et al. “From captions to visual concepts and back”. In arXiv preprint arXiv:1411.4952, 2014. [pdf](https://arxiv.org/pdf/1411.4952v3.pdf) 
-- （暂无）Chen, Xinlei, and C. Lawrence Zitnick. “Learning a recurrent visual representation for image caption generation”. In arXiv preprint arXiv:1411.5654, 2014. [pdf](https://arxiv.org/pdf/1411.5654v1.pdf)
-- （暂无）Mao, Junhua, et al. “Deep captioning with multimodal recurrent neural networks (m-rnn)”. In arXiv preprint arXiv:1412.6632, 2014. [pdf](https://arxiv.org/pdf/1412.6632v5.pdf)
-- （暂无）Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention”. In arXiv preprint arXiv:1502.03044, 2015. [pdf](https://arxiv.org/pdf/1502.03044v3.pdf)
+```text
+docs/roadmaps/      学习路线、先修关系与验收标准
+docs/papers.md      论文索引、状态与一手来源
+docs/connections.md 技术关系及边界
+notes/             中文精读：问题、方法、证据、局限、实验
+experiments/       可运行脚本、语义测试与实测记录
+scripts/           本地链接与内容完整性检查
+templates/         精读和实验报告模板
+docs/archive/      历史清单与旧目录索引
+1.0-Book/ … 4.0-Other/  原有资料目录，保留旧路径
+```
 
-### 3.5 机器翻译
-- Luong, Minh-Thang, et al. “Addressing the rare word problem in neural machine translation.” arXiv preprint arXiv:1410.8206 (2014). 
-- Sennrich, et al. “Neural Machine Translation of Rare Words with Subword Units”. In arXiv preprint arXiv:1508.07909, 2015. 
-- Luong, Minh-Thang, Hieu Pham, and Christopher D. Manning. “Effective approaches to attention-based neural machine translation.” arXiv preprint arXiv:1508.04025 (2015). 
-- Chung, et al. “A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation”. In arXiv preprint arXiv:1603.06147, 2016. 
-- Lee, et al. “Fully Character-Level Neural Machine Translation without Explicit Segmentation”. In arXiv preprint arXiv:1610.03017, 2016. 
-- Wu, Schuster, Chen, Le, et al. “Google’s Neural Machine Translation System: Bridging the Gap between Human and Machine Translation”. In arXiv preprint arXiv:1609.08144v2, 2016. 
+原资料区保留 112 个 PDF；新内容优先引用作者、会议或 arXiv 页面。历史文献的版权属于各自权利人。旧条目的“暂无”指旧收录状态，不表示论文无法取得。
 
-### 3.6 机器人
-- Koutník, Jan, et al. “Evolving large-scale neural networks for vision-based reinforcement learning.” Proceedings of the 15th annual conference on Genetic and evolutionary computation. ACM, 2013. 
-- Levine, Sergey, et al. “End-to-end training of deep visuomotor policies.” Journal of Machine Learning Research 17.39 (2016): 1-40. 
-- Pinto, Lerrel, and Abhinav Gupta. “Supersizing self-supervision: Learning to grasp from 50k tries and 700 robot hours.” arXiv preprint arXiv:1509.06825 (2015). 
-- Levine, Sergey, et al. “Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection.” arXiv preprint arXiv:1603.02199 (2016). 
-- Zhu, Yuke, et al. “Target-driven Visual Navigation in Indoor Scenes using Deep Reinforcement Learning.” arXiv preprint arXiv:1609.05143 (2016). 
-- Yahya, Ali, et al. “Collective Robot Reinforcement Learning with Distributed Asynchronous Guided Policy Search.” arXiv preprint arXiv:1610.00673 (2016). 
-- Gu, Shixiang, et al. “Deep Reinforcement Learning for Robotic Manipulation.” arXiv preprint arXiv:1610.00633 (2016). 
-- A Rusu, M Vecerik, Thomas Rothörl, N Heess, R Pascanu, R Hadsell.”Sim-to-Real Robot Learning from Pixels with Progressive Nets.” arXiv preprint arXiv:1610.04286 (2016). 
-- Mirowski, Piotr, et al. “Learning to navigate in complex environments.” arXiv preprint arXiv:1611.03673 (2016). 
-
-### 3.7 艺术
-- Mordvintsev, Alexander; Olah, Christopher; Tyka, Mike (2015). “Inceptionism: Going Deeper into Neural Networks”. Google Research. 
-- 当前最为成功的艺术风格迁移方案，Prisma：Gatys, Leon A., Alexander S. Ecker, and Matthias Bethge. “A neural algorithm of artistic style.” arXiv preprint arXiv:1508.06576 (2015). 
-- iGAN：Zhu, Jun-Yan, et al. “Generative Visual Manipulation on the Natural Image Manifold.” European Conference on Computer Vision. Springer International Publishing, 2016. 
-- Neural Doodle：Champandard, Alex J. “Semantic Style Transfer and Turning Two-Bit Doodles into Fine Artworks.” arXiv preprint arXiv:1603.01768 (2016). 
-- Zhang, Richard, Phillip Isola, and Alexei A. Efros. “Colorful Image Colorization.” arXiv preprint arXiv:1603.08511 (2016). 
-- 超分辨率，李飞飞：Johnson, Justin, Alexandre Alahi, and Li Fei-Fei. “Perceptual losses for real-time style transfer and super-resolution.” arXiv preprint arXiv:1603.08155 (2016). 
-- Vincent Dumoulin, Jonathon Shlens and Manjunath Kudlur. “A learned representation for artistic style.” arXiv preprint arXiv:1610.07629 (2016). 
-- 基于空间位置、色彩信息与空间尺度的风格迁移：Gatys, Leon and Ecker, et al.”Controlling Perceptual Factors in Neural Style Transfer.” arXiv preprint arXiv:1611.07865 (2016). 
-- 纹理生成与风格迁移：Ulyanov, Dmitry and Lebedev, Vadim, et al. “Texture Networks: Feed-forward Synthesis of Textures and Stylized Images.” arXiv preprint arXiv:1603.03417(2016). 
-
-### 3.8 目标分割
-- J. Long, E. Shelhamer, and T. Darrell, “Fully convolutional networks for semantic segmentation.” in CVPR, 2015. 
-- L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L. Yuille. “Semantic image segmentation with deep convolutional nets and fully connected crfs.” In ICLR, 2015. 
-- Pinheiro, P.O., Collobert, R., Dollar, P. “Learning to segment object candidates.” In: NIPS. 2015. 
-- Dai, J., He, K., Sun, J. “Instance-aware semantic segmentation via multi-task network cascades.” in CVPR. 2016 
-- Dai, J., He, K., Sun, J. “Instance-sensitive Fully Convolutional Networks.” arXiv preprint arXiv:1603.08678 (2016). 
-
-## 其他
-### 4.0 补充
-- Big Data Mining.Deep Learning with Tensorflow(Google TensorFlow  深度学习)
-- Introduction to TensorFlow, Alejandro Solano - EuroPython 2017
-- Learning with TensorFlow, A Mathematical Approach to Advanced Artificial Intelligence in Python
-- Deep Learning with Python
-- Deep Learning with TensorFlow
+贡献前阅读 [维护规范](CONTRIBUTING.md)。后续选题见 [维护计划](docs/maintenance.md)，旧表述修正见 [勘误](docs/errata.md)。
