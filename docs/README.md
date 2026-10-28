@@ -14,6 +14,7 @@
 | [技术关联](connections.md) | 论文间关系、演进图与比较方法 |
 | [实验指南](../experiments/README.md) | 环境、命令、对照、验收和失败诊断 |
 | [实测记录](../experiments/results/README.md) | 数值结果、环境与机器可读输出 |
+| [每日维护记录](daily/README.md) | 当日新增和实质修订的内容与验证记录 |
 | [历史资料](archive/README.md) | 原分类目录、旧清单和稀疏下载方法 |
 
 ## 仓库结构

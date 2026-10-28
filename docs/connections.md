@@ -8,8 +8,8 @@
 |---|---|---|---|
 | VGG → ResNet | 问题延续 | 网络更深之后，训练难度成为关键问题之一 | ResNet 只是增加层数 |
 | BN ↔ LN | 方法对照 | 归一化统计范围从批次对照到单样本特征 | LN 在每个任务都优于 BN |
-| Encoder–Decoder → Bahdanau Attention | 信息读取方式 | 每个解码步骤动态聚合源端表示 | 有注意力就不再需要序列编码器 |
-| Bahdanau Attention → Transformer | 计算组织变化 | 从递归模型中的注意力走向主要依靠注意力的序列架构 | 两者注意力打分函数完全一样 |
+| Encoder–Decoder → [Bahdanau Attention](../notes/bahdanau-attention.md) | 信息读取方式 | 每个解码步骤动态聚合源端表示 | 有注意力就不再需要序列编码器 |
+| [Bahdanau Attention](../notes/bahdanau-attention.md) → Transformer | 计算组织变化 | 从递归模型中的注意力走向主要依靠注意力的序列架构 | 两者注意力打分函数完全一样 |
 | ResNet / LN → Transformer | 组件联系 | 残差连接与层归一化用于子层组织 | 相同组件就保证相同训练性质 |
 | Transformer → BERT | 预训练任务 | 双向上下文与掩码语言建模 | BERT 原模型等同因果生成器 |
 | Transformer → ViT | 输入表示迁移 | 图像块嵌入构成序列 | 任何规模数据下都优于 CNN |

@@ -65,11 +65,23 @@ def main():
             checks = result.get('checks', {})
             if not checks or not all(v is True for v in checks.values()) or result.get('passed') is not True:
                 errors.append(f'{path.name}: inconsistent checks for {name}')
+    supplemental = ROOT / 'experiments/results/additive-attention.json'
+    if not supplemental.exists():
+        errors.append('Missing additive attention experiment report')
+    else:
+        report = json.loads(supplemental.read_text(encoding='utf-8'))
+        script = ROOT / 'experiments/additive_attention.py'
+        digest = hashlib.sha256(script.read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('additive-attention.json: source hash mismatch')
+        checks = report.get('checks', {})
+        if not checks or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('additive-attention.json: missing or failed mechanism checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} matching baseline reports')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

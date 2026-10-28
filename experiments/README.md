@@ -35,3 +35,13 @@ JSON 含配置、数值、逐项检查、总状态、种子、Python/平台及�
 ## 扩展实验
 
 参数位于 [run.py](run.py) 各实验函数中。改代码后用新文件名保存报告，记录假设和变化，不覆盖基线冒充原结果。新增训练实验需要采用 [报告模板](../templates/experiment-report.md)，固定数据版本、划分和预算。
+
+## 加性注意力专题
+
+[中文精读](../notes/bahdanau-attention.md) · [协议与实测](results/additive-attention.md)
+
+```bash
+python3 experiments/additive_attention.py --output /tmp/additive-attention.json
+```
+
+这是第六项独立机制实验，不包含在 `run.py --experiment all` 的核心五项中。固定人工输入，检查 query 依赖、去掉非线性的消融、padding 干预及变长序列一致性。无随机采样或训练；输出单独携带脚本哈希，语义测试由统一 discover 命令运行。没有修改或重生成原有基线。

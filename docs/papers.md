@@ -10,7 +10,7 @@
 | BatchNorm / 2015 | 跨样本统计与训练/推理 | [原文](https://arxiv.org/abs/1502.03167) | [精读初版](../notes/batch-normalization.md)；normalization |
 | LayerNorm / 2016 | 单样本内部统计 | [原文](https://arxiv.org/abs/1607.06450) | [精读初版](../notes/layer-normalization.md)；normalization |
 | Adam / 2014，ICLR 2015 | 自适应矩估计与偏差校正 | [原文](https://arxiv.org/abs/1412.6980) | [精读初版](../notes/adam.md)；adam |
-| Bahdanau Attention / 2014 | 动态读取源序列 | [原文](https://arxiv.org/abs/1409.0473) | 原文入口；精读待补 |
+| Bahdanau Attention / 2014，ICLR 2015 | 动态读取源序列 | [原文](https://arxiv.org/abs/1409.0473) | [精读初版](../notes/bahdanau-attention.md)；additive_attention.py |
 | Transformer / 2017 | 用注意力组织序列计算 | [原文](https://arxiv.org/abs/1706.03762) | [精读初版](../notes/transformer.md)；attention |
 | VAE / 2013 | 近似后验、变分目标与重参数化 | [原文](https://arxiv.org/abs/1312.6114) | 原文入口；精读待补 |
 | GAN / 2014 | 对抗式生成目标 | [原文](https://arxiv.org/abs/1406.2661) | 原文入口；精读待补 |

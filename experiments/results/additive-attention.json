@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "scope": "hand-set additive attention; no training or BLEU reproduction",
+  "source_sha256": "28cfe03e71145b65a40f9d6294844796fdd3932ef0b96acf91a57fb32718ffb1",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "config": {
+    "queries": [
+      [
+        1.0
+      ],
+      [
+        -1.0
+      ]
+    ],
+    "annotations": [
+      [
+        -2.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        4.0
+      ]
+    ],
+    "wq": [
+      [
+        1.0
+      ],
+      [
+        -1.0
+      ]
+    ],
+    "wh": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "v": [
+      1.0,
+      -1.0
+    ],
+    "padded_annotations": [
+      [
+        -2.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        4.0
+      ],
+      [
+        1000.0,
+        -1000.0
+      ],
+      [
+        -2000.0,
+        2000.0
+      ]
+    ],
+    "valid_lengths": [
+      3,
+      2
+    ],
+    "seed": null,
+    "randomness": "none; hand-set inputs and projections"
+  },
+  "metrics": {
+    "contexts": [
+      [
+        0.0,
+        1.4205056114854333
+      ],
+      [
+        0.0,
+        3.5159491762427764
+      ]
+    ],
+    "weights": [
+      [
+        0.17756320143567916,
+        0.6448735971286418,
+        0.17756320143567916
+      ],
+      [
+        0.43949364703034705,
+        0.12101270593930595,
+        0.43949364703034705
+      ]
+    ],
+    "fixed_mean_contexts": [
+      [
+        0.0,
+        2.6666666666666665
+      ],
+      [
+        0.0,
+        2.6666666666666665
+      ]
+    ],
+    "query_context_change": 2.095443564757343,
+    "fixed_mean_query_change": 0.0,
+    "linear_scorer_query_change": 0.0,
+    "padding_context_change": 0.0,
+    "short_sequence_padding_change": 0.0,
+    "unmasked_padding_change": 263.04760424128955,
+    "zero_scorer_mean_error": 0.0,
+    "padded_weights": [
+      [
+        0.17756320143567916,
+        0.6448735971286418,
+        0.17756320143567916,
+        0.0,
+        0.0
+      ],
+      [
+        0.43949364703034705,
+        0.12101270593930595,
+        0.43949364703034705,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "checks": {
+    "weights_sum_to_one": true,
+    "padded_weights_zero": true,
+    "query_changes_context_gt_1": true,
+    "fixed_mean_unchanged": true,
+    "linear_scorer_query_cancels": true,
+    "padding_invariant_lt_1e-12": true,
+    "short_sequence_invariant_lt_1e-12": true,
+    "unmasked_control_changes_gt_1": true,
+    "zero_scorer_matches_mean_lt_1e-12": true
+  },
+  "passed": true
+}

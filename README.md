@@ -32,10 +32,11 @@
 | [Batch Normalization](notes/batch-normalization.md) | 归一化统计量来自哪里，为什么会受同批样本影响？ | 改变同批样本，观察输出变化 |
 | [Layer Normalization](notes/layer-normalization.md) | 改变统计轴后，哪些批次依赖消失了？ | 与 BatchNorm 使用相同输入对照 |
 | [Adam](notes/adam.md) | 梯度历史如何影响参数更新，为什么需要偏差校正？ | 二次函数优化与手算第一步更新 |
+| [Bahdanau Attention](notes/bahdanau-attention.md) | 每一步解码如何重新读取源端信息，padding 怎样排除？ | 加性打分、非线性消融与变长掩码 |
 | [Transformer](notes/transformer.md) | Q、K、V 怎样协作，因果掩码如何限制信息可见性？ | 修改未来位置，检查前缀输出 |
 | [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
 
-目前有 **6 篇精读初版、5 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
+目前有 **7 篇精读初版、6 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
 
 ## 动手验证
 
@@ -44,6 +45,8 @@
 ```bash
 python3 experiments/run.py --experiment all --seed 7
 ```
+
+上面的命令运行核心五项实验。新增的加性注意力专题单独运行：`python3 experiments/additive_attention.py`。
 
 也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 

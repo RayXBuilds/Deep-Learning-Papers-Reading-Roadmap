@@ -31,3 +31,5 @@ jobs:
         run: python -m unittest discover -s experiments -p 'test_*.py' -v
       - name: Run mechanism experiments
         run: python experiments/run.py --experiment all --seed 7 --output /tmp/roadmap-ci.json
+      - name: Run additive attention and padding checks
+        run: python experiments/additive_attention.py --output /tmp/additive-attention-ci.json
