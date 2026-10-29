@@ -34,9 +34,11 @@
 | [Adam](notes/adam.md) | 梯度历史如何影响参数更新，为什么需要偏差校正？ | 二次函数优化与手算第一步更新 |
 | [Bahdanau Attention](notes/bahdanau-attention.md) | 每一步解码如何重新读取源端信息，padding 怎样排除？ | 加性打分、非线性消融与变长掩码 |
 | [Transformer](notes/transformer.md) | Q、K、V 怎样协作，因果掩码如何限制信息可见性？ | 修改未来位置，检查前缀输出 |
+| [VAE](notes/vae.md) | 近似后验、下界和重参数化怎样配合？ | 高斯闭式参照与采样梯度 |
+| [VAE 输入跳跃](notes/vae-input-skip.md) | 重构误差下降为何不保证生成分布更好？ | 与 VAE 共用实验：密度、坐标缩放与负对照 |
 | [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
 
-目前有 **7 篇精读初版、6 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
+目前有 **9 篇精读初版、7 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
 
 ## 动手验证
 
@@ -46,7 +48,7 @@
 python3 experiments/run.py --experiment all --seed 7
 ```
 
-上面的命令运行核心五项实验。新增的加性注意力专题单独运行：`python3 experiments/additive_attention.py`。
+上面的命令运行核心五项实验。加性注意力专题单独运行：`python3 experiments/additive_attention.py`；VAE 目标与评价专题运行：`python3 experiments/vae_objectives.py`。
 
 也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 

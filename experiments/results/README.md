@@ -41,6 +41,7 @@ python3 -m unittest discover -s experiments -p 'test_*.py' -v
 ## 后续专题记录
 
 - [2026-10-28：加性注意力、非线性消融与 padding](additive-attention.md)
+- [2026-10-29：VAE 下界、重参数化与生成评价](vae-objectives.md)
 
 ## 局限
 

@@ -1,0 +1,79 @@
+{
+  "config": {
+    "x": 1.2,
+    "mu": 0.4,
+    "logvar": -0.7,
+    "slope": 1.5,
+    "noise_variance": 0.7,
+    "seeds": [
+      7,
+      42,
+      2026
+    ],
+    "samples_per_seed": 100000,
+    "alpha": 0.8,
+    "training": "none; fixed parameters, analytic reference, independent MC streams"
+  },
+  "analytic": {
+    "reconstruction": -1.795827442328643,
+    "kl": 0.17829265189570487,
+    "elbo": -1.974120094224348,
+    "log_marginal": -1.7039089149907065,
+    "posterior_kl": 0.2702111792336416,
+    "grad_mu": 0.8857142857142856,
+    "grad_logvar": -0.5463761758461845
+  },
+  "mc_runs": [
+    {
+      "seed": 7,
+      "reconstruction": -1.7918646943989227,
+      "kl": 0.17829265189570487,
+      "elbo": -1.9701573462946198,
+      "grad_mu": 0.8799455099308233,
+      "grad_logvar": -0.5435671830731641
+    },
+    {
+      "seed": 42,
+      "reconstruction": -1.7979798305030257,
+      "kl": 0.17829265189570487,
+      "elbo": -1.9762724823987428,
+      "grad_mu": 0.8805934345003659,
+      "grad_logvar": -0.549552734263347
+    },
+    {
+      "seed": 2026,
+      "reconstruction": -1.78923392419369,
+      "kl": 0.17829265189570487,
+      "elbo": -1.9675265760893808,
+      "grad_mu": 0.8813333278691083,
+      "grad_logvar": -0.540658849280278
+    }
+  ],
+  "skip": {
+    "original_log_density": -2.6026306938991848,
+    "transformed_log_density": -2.6026306938991848,
+    "original_mse": 0.7850000000000001,
+    "skip_mse": 0.031399999999999983,
+    "mse_ratio": 0.03999999999999997,
+    "sample_difference": 1.1102230246251565e-16,
+    "missing_jacobian_log_density_error": 3.218875824868201,
+    "fixed_residual_variance": 25.000000000000014,
+    "base_population_nll": 1.4189385332046727,
+    "fixed_residual_population_nll": 2.548376445638773
+  },
+  "checks": {
+    "elbo_gap_equals_posterior_kl": true,
+    "exact_posterior_makes_bound_tight": true,
+    "mc_reconstruction_all_seeds": true,
+    "mc_gradients_all_seeds": true,
+    "skip_normalized_density_preserved": true,
+    "skip_coupled_sample_preserved": true,
+    "skip_mse_ratio_is_b_squared": true,
+    "missing_jacobian_negative_control": true,
+    "fixed_residual_variance_worsens_nll": true
+  },
+  "passed": true,
+  "source_sha256": "c5ae0ed1d67ea722976af75246a96afd8666ff3a270df2eba73185dc952339b8",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}

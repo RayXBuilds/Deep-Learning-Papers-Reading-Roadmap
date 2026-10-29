@@ -2,7 +2,7 @@
 
 [首页](../README.md) · [实测报告](results/README.md)
 
-环境：Python 3.10+、CPU、仅标准库。无需安装依赖或下载数据。脚本默认固定 seed=7；只有 diffusion 使用随机数，其余输入确定。运行目录为仓库根目录。
+环境：Python 3.10+、CPU、仅标准库。无需安装依赖或下载数据。核心 `run.py` 默认固定 seed=7；核心五项中只有 diffusion 使用随机数，其余输入确定。独立专题的种子另见下文。运行目录为仓库根目录。
 
 ```bash
 python3 experiments/run.py --experiment all --seed 7 --output /tmp/roadmap-results.json
@@ -45,3 +45,13 @@ python3 experiments/additive_attention.py --output /tmp/additive-attention.json
 ```
 
 这是第六项独立机制实验，不包含在 `run.py --experiment all` 的核心五项中。固定人工输入，检查 query 依赖、去掉非线性的消融、padding 干预及变长序列一致性。无随机采样或训练；输出单独携带脚本哈希，语义测试由统一 discover 命令运行。没有修改或重生成原有基线。
+
+## VAE 目标与生成评价专题
+
+[经典精读](../notes/vae.md) · [输入跳跃精读](../notes/vae-input-skip.md) · [协议与实测](results/vae-objectives.md)
+
+```bash
+python3 experiments/vae_objectives.py --output /tmp/vae-objectives.json
+```
+
+第七项独立机制实验，两个精读共享，不包含在核心 `run.py --experiment all` 中。标准库 CPU：固定线性高斯模型，种子 7 / 42 / 2026 各抽样 100,000 次，检查 ELBO、路径梯度、归一化密度与重构坐标。它也使用随机数，但不训练参数；不验证图像生成或 DART 数据表现。验收条件和负对照见实测协议。

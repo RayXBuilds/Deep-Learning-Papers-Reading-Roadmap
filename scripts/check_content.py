@@ -77,11 +77,32 @@ def main():
         checks = report.get('checks', {})
         if not checks or not all(v is True for v in checks.values()) or report.get('passed') is not True:
             errors.append('additive-attention.json: missing or failed mechanism checks')
+    vae_path = ROOT / 'experiments/results/vae-objectives.json'
+    if not vae_path.exists():
+        errors.append('Missing VAE objective experiment report')
+    else:
+        report = json.loads(vae_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/vae_objectives.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('vae-objectives.json: source hash mismatch')
+        expected_checks = {
+            'elbo_gap_equals_posterior_kl', 'exact_posterior_makes_bound_tight',
+            'mc_reconstruction_all_seeds', 'mc_gradients_all_seeds',
+            'skip_normalized_density_preserved', 'skip_coupled_sample_preserved',
+            'skip_mse_ratio_is_b_squared', 'missing_jacobian_negative_control',
+            'fixed_residual_variance_worsens_nll',
+        }
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('vae-objectives.json: missing or failed mechanism checks')
+        if [r.get('seed') for r in report.get('mc_runs', [])] != [7, 42, 2026]:
+            errors.append('vae-objectives.json: missing required sampling seeds')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

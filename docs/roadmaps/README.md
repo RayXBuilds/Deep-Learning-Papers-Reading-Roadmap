@@ -23,7 +23,7 @@
 | 2 | [BN](../../notes/batch-normalization.md) → [LN](../../notes/layer-normalization.md) | 在 3×3 矩阵上标出各自统计轴 |
 | 3 | [Adam](../../notes/adam.md) | 手算第一步偏差校正，比较至少两个学习率 |
 | 4 | Encoder–Decoder → Attention → [Transformer](../../notes/transformer.md) | 改变未来 token，确认掩码使早期输出不变 |
-| 5（生成方向选读） | VAE / GAN 概念 → [DDPM](../../notes/ddpm.md) | 区分已知前向噪声、预测噪声与逆向采样 |
+| 5（生成方向选读） | [VAE](../../notes/vae.md) / GAN 概念 → [DDPM](../../notes/ddpm.md) | 区分已知前向噪声、预测噪声与逆向采样 |
 
 ## 按目标分流
 

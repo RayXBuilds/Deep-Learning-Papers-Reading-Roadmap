@@ -33,3 +33,5 @@ jobs:
         run: python experiments/run.py --experiment all --seed 7 --output /tmp/roadmap-ci.json
       - name: Run additive attention and padding checks
         run: python experiments/additive_attention.py --output /tmp/additive-attention-ci.json
+      - name: Run VAE objective and generation evaluation checks
+        run: python experiments/vae_objectives.py --output /tmp/vae-objectives-ci.json
