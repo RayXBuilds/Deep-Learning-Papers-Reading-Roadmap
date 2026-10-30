@@ -35,3 +35,5 @@ jobs:
         run: python experiments/additive_attention.py --output /tmp/additive-attention-ci.json
       - name: Run VAE objective and generation evaluation checks
         run: python experiments/vae_objectives.py --output /tmp/vae-objectives-ci.json
+      - name: Run AdamW and L2 regularization checks
+        run: python experiments/adamw_decay.py --output /tmp/adamw-decay-ci.json

@@ -98,11 +98,34 @@ def main():
             errors.append('vae-objectives.json: missing or failed mechanism checks')
         if [r.get('seed') for r in report.get('mc_runs', [])] != [7, 42, 2026]:
             errors.append('vae-objectives.json: missing required sampling seeds')
+    adamw_path = ROOT / 'experiments/results/adamw-decay.json'
+    if not adamw_path.exists():
+        errors.append('Missing AdamW decay experiment report')
+    else:
+        report = json.loads(adamw_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/adamw_decay.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('adamw-decay.json: source hash mismatch')
+        expected_checks = {
+            'l2_first_step_matches_hand_calculation', 'adamw_first_step_matches_uniform_shrinkage',
+            'l2_and_adamw_are_different', 'adamw_does_not_put_decay_into_moments',
+            'scheduled_decay_matches_product', 'plain_sgd_equivalence',
+            'all_fixed_budget_trajectories_finite',
+        }
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('adamw-decay.json: missing or failed mechanism checks')
+        trajectories = report.get('trajectories', {})
+        if set(trajectories) != {'adam', 'adam_l2', 'adamw'} or any(
+                [row.get('step') for row in rows] != list(range(201))
+                for rows in trajectories.values()):
+            errors.append('adamw-decay.json: missing fixed-budget trajectory steps')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

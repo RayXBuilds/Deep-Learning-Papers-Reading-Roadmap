@@ -55,3 +55,13 @@ python3 experiments/vae_objectives.py --output /tmp/vae-objectives.json
 ```
 
 第七项独立机制实验，两个精读共享，不包含在核心 `run.py --experiment all` 中。标准库 CPU：固定线性高斯模型，种子 7 / 42 / 2026 各抽样 100,000 次，检查 ELBO、路径梯度、归一化密度与重构坐标。它也使用随机数，但不训练参数；不验证图像生成或 DART 数据表现。验收条件和负对照见实测协议。
+
+## AdamW 权重衰减专题
+
+[中文精读](../notes/adamw.md) · [协议与实测](results/adamw-decay.md)
+
+```bash
+python3 experiments/adamw_decay.py --output /tmp/adamw-decay.json
+```
+
+第八项独立机制实验，不包含在 `run.py --experiment all` 中。固定输入、无随机数和第三方依赖；比较首步手算、梯度历史、衰减系数约定与同预算二次目标轨迹。完整逐步记录写入 `--output` 指定的 JSON；终端只输出检查与终值。没有图像训练或泛化排名。

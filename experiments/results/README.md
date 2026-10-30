@@ -42,6 +42,7 @@ python3 -m unittest discover -s experiments -p 'test_*.py' -v
 
 - [2026-10-28：加性注意力、非线性消融与 padding](additive-attention.md)
 - [2026-10-29：VAE 下界、重参数化与生成评价](vae-objectives.md)
+- [2026-10-30：AdamW 与 L2 正则的更新差异](adamw-decay.md)
 
 ## 局限
 
