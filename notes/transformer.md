@@ -23,7 +23,7 @@ Attention(Q,K,V)=softmax(QKᵀ/sqrt(d_k))V。Q 为 n×d_k、K 为 m×d_k、V 为
 
 ## 与其他论文的关系
 
-Bahdanau Attention 为动态读取源序列提供前置理解；Transformer 的自注意力重新组织序列计算。残差与 LN 是共享组件。BERT、ViT 分别改变预训练任务与输入表示，具体关系见 [关联表](../docs/connections.md)。
+Bahdanau Attention 为动态读取源序列提供前置理解；Transformer 的自注意力重新组织序列计算。残差与 LN 是共享组件。[BERT](bert.md)、ViT 分别改变预训练任务与输入表示，具体关系见 [关联表](../docs/connections.md)。
 
 ## 可验证实验
 

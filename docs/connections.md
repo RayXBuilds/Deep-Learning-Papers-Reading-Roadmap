@@ -11,7 +11,7 @@
 | Encoder–Decoder → [Bahdanau Attention](../notes/bahdanau-attention.md) | 信息读取方式 | 每个解码步骤动态聚合源端表示 | 有注意力就不再需要序列编码器 |
 | [Bahdanau Attention](../notes/bahdanau-attention.md) → Transformer | 计算组织变化 | 从递归模型中的注意力走向主要依靠注意力的序列架构 | 两者注意力打分函数完全一样 |
 | ResNet / LN → Transformer | 组件联系 | 残差连接与层归一化用于子层组织 | 相同组件就保证相同训练性质 |
-| Transformer → BERT | 预训练任务 | 双向上下文与掩码语言建模 | BERT 原模型等同因果生成器 |
+| [Transformer](../notes/transformer.md) → [BERT](../notes/bert.md) | 预训练任务 | 双向可见性、输入扰动和监督位置是三个不同选择 | 去掉因果掩码就复现了 BERT，或 MLM 等于下一词预测 |
 | Transformer → ViT | 输入表示迁移 | 图像块嵌入构成序列 | 任何规模数据下都优于 CNN |
 | 视觉/文本编码器 → CLIP | 监督与目标 | 学习图文配对的对比表示 | CLIP 本身就是图像生成器 |
 | 预训练模型 → LoRA | 参数适配 | 用低秩增量适配冻结权重 | 不改变参数化之外的所有训练成本 |
