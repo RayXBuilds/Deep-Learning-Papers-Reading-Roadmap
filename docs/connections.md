@@ -14,7 +14,8 @@
 | [Transformer](../notes/transformer.md) → [BERT](../notes/bert.md) | 预训练任务 | 双向可见性、输入扰动和监督位置是三个不同选择 | 去掉因果掩码就复现了 BERT，或 MLM 等于下一词预测 |
 | Transformer → ViT | 输入表示迁移 | 图像块嵌入构成序列 | 任何规模数据下都优于 CNN |
 | 视觉/文本编码器 → CLIP | 监督与目标 | 学习图文配对的对比表示 | CLIP 本身就是图像生成器 |
-| 预训练模型 → LoRA | 参数适配 | 用低秩增量适配冻结权重 | 不改变参数化之外的所有训练成本 |
+| [BERT](../notes/bert.md) ↔ [LoRA](../notes/lora.md) | 适配策略对照 | 全参数微调对照冻结基础权重、学习任务增量；不改变预训练目标的定义 | 低秩增量意味着基础模型被压缩，或冻结权重就能停止输入梯度 |
+| Transformer → [LoRA](../notes/lora.md) | 组件联系 | 选择注意力投影等线性层学习增量；合并要求确定性的线性分支 | 训练态 dropout 或合并后仍开启分支也自动等价 |
 | [Adam](../notes/adam.md) → [AdamW](../notes/adamw.md) | 优化与正则化 | 衰减不进入一阶/二阶矩；比较实现前统一学习率与衰减系数约定 | L2 与解耦衰减总等价，或解耦后衰减量就与学习率无关 |
 | [VAE](../notes/vae.md) ↔ [DDPM](../notes/ddpm.md) | 概率建模对照 | 学习近似后验与固定前向加噪链的变分目标对照 | DDPM 只是给 VAE 更换编码器 |
 | [VAE](../notes/vae.md) → [输入跳跃](../notes/vae-input-skip.md) | 评价问题延续 | 先写出归一化似然，再区分重构坐标与生成分布 | MSE 降低必然改善生成质量 |
@@ -34,6 +35,8 @@ flowchart LR
   ResNet -.组件联系.-> TF
   LN -.组件联系.-> TF
   TF -->|预训练目标| BERT[BERT]
+  BERT -.适配策略对照.-> LoRA[LoRA]
+  TF -.投影组件联系.-> LoRA
   TF -->|图像块序列| ViT[ViT]
   VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
   GAN[GAN] -.生成目标对照.-> DDPM

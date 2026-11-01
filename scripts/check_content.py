@@ -121,11 +121,35 @@ def main():
                 [row.get('step') for row in rows] != list(range(201))
                 for rows in trajectories.values()):
             errors.append('adamw-decay.json: missing fixed-budget trajectory steps')
+    lora_path = ROOT / 'experiments/results/lora-mechanics.json'
+    if not lora_path.exists():
+        errors.append('Missing LoRA mechanism experiment report')
+    else:
+        report = json.loads(lora_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/lora_mechanics.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('lora-mechanics.json: source hash mismatch')
+        expected_checks = {
+            'merge_matches_separate_branch', 'factor_and_input_gradients_match_finite_difference',
+            'zero_b_preserves_base_all_seeds', 'first_a_gradient_zero_b_gradient_nonzero_all_seeds',
+            'a_receives_gradient_after_b_update_all_seeds', 'both_zero_is_stationary_despite_positive_loss',
+            'frozen_base_unchanged', 'active_dropout_breaks_naive_merge',
+            'double_counted_branch_negative_control', 'low_rank_update_can_leave_full_rank_weight',
+        }
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('lora-mechanics.json: missing or failed mechanism checks')
+        runs = report.get('initializations', [])
+        if [row.get('seed') for row in runs] != [7, 42, 2026] or any(
+                len(row.get('losses', [])) != 3 or not all(
+                    key in row for key in ('a0', 'b0', 'a1', 'b1', 'a2', 'b2')) for row in runs):
+            errors.append('lora-mechanics.json: missing initialization seeds or two-step records')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

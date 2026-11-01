@@ -63,7 +63,7 @@ NSP 是另一项二分类任务：给定文本 A/B，判断 B 是真实后续片
 - **[Transformer](transformer.md) → BERT：预训练任务与使用方式。** 复用编码器组件，以 MLM/NSP 预训练；并非把原翻译模型的解码器直接改名。
 - **[Bahdanau Attention](bahdanau-attention.md) ↔ BERT：掩码用途对照。** 前者专题的 padding 是排除无效源位置；MLM 的输入替换是制造监督问题，两者可以同时存在。
 - **[LayerNorm](layer-normalization.md) → BERT：组件联系。** 相同归一化组件不意味着预训练目标或迁移效果相同。
-- **BERT ↔ LoRA：后续阅读问题。** 本文全参数微调与精选索引中 LoRA 的低秩增量适配可对照；本轮不宣称实现或验证了 LoRA。
+- **BERT ↔ [LoRA](lora.md)：适配策略对照。** 本文全参数微调与 LoRA 的低秩增量适配可对照；LoRA 专题已有代数与梯度实验，尚未运行 BERT 的真实任务适配。
 
 ## 可验证实验
 

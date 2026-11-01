@@ -65,3 +65,13 @@ python3 experiments/adamw_decay.py --output /tmp/adamw-decay.json
 ```
 
 第八项独立机制实验，不包含在 `run.py --experiment all` 中。固定输入、无随机数和第三方依赖；比较首步手算、梯度历史、衰减系数约定与同预算二次目标轨迹。完整逐步记录写入 `--output` 指定的 JSON；终端只输出检查与终值。没有图像训练或泛化排名。
+
+## LoRA 初始化与合并专题
+
+[中文精读](../notes/lora.md) · [协议与实测](results/lora-mechanics.md)
+
+```bash
+python3 experiments/lora_mechanics.py --output /tmp/lora-mechanics.json
+```
+
+第九项独立机制实验，不包含在 `run.py --experiment all` 中。CPU 标准库：手工矩阵、有限差分与种子 7 / 42 / 2026 的初始化，两步 SGD 追踪梯度；含双零初始化、固定 dropout 和重复增量负对照。没有语言模型、数据集或显存测量；小矩阵主配置不用于证明参数效率。
