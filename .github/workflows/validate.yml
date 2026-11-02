@@ -39,3 +39,5 @@ jobs:
         run: python experiments/adamw_decay.py --output /tmp/adamw-decay-ci.json
       - name: Run LoRA initialization, gradient and merge checks
         run: python experiments/lora_mechanics.py --output /tmp/lora-mechanics-ci.json
+      - name: Run ViT patch and position permutation checks
+        run: python experiments/vit_patches.py --output /tmp/vit-patches-ci.json

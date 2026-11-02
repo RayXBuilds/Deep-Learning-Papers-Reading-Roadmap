@@ -12,7 +12,7 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 | BN / LN | 统计对象和推理方式怎样不同？ | [BN](../../notes/batch-normalization.md)、[LN](../../notes/layer-normalization.md)；改变同批其他样本 |
 | Adam | 梯度历史怎样影响步长？ | [精读](../../notes/adam.md)；记录不同学习率与停止条件 |
 | AdamW | L2 正则进入矩估计后，和参数直接衰减有何区别？ | [精读](../../notes/adamw.md)；核对首步、矩状态与学习率约定 |
-| ViT | 图像块成为 token 后，先验和数据需求怎样变化？ | 仅原文入口，精读待补；先完成注意力路线 |
+| ViT | 图像块成为 token 后，先验和数据需求怎样变化？ | [精读](../../notes/vit.md)；块投影/卷积等价、位置排列实验；分类训练未复现 |
 
 ## 下一阶段实验（尚未实现）
 

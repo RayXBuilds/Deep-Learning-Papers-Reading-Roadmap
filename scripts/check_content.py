@@ -145,11 +145,29 @@ def main():
                 len(row.get('losses', [])) != 3 or not all(
                     key in row for key in ('a0', 'b0', 'a1', 'b1', 'a2', 'b2')) for row in runs):
             errors.append('lora-mechanics.json: missing initialization seeds or two-step records')
+    vit_path = ROOT / 'experiments/results/vit-patches.json'
+    if not vit_path.exists():
+        errors.append('Missing ViT patch experiment report')
+    else:
+        report = json.loads(vit_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/vit_patches.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('vit-patches.json: source hash mismatch')
+        expected_checks = {
+            'patch_projection_matches_convolution', 'wrong_channel_layout_detected',
+            'no_position_attention_is_equivariant', 'no_position_cls_is_invariant',
+            'fixed_positions_distinguish_content_permutation',
+            'joint_content_position_permutation_is_equivariant', 'joint_content_position_cls_is_invariant',
+        }
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('vit-patches.json: missing or failed mechanism checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

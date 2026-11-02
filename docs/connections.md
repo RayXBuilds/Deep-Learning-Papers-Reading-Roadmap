@@ -12,7 +12,8 @@
 | [Bahdanau Attention](../notes/bahdanau-attention.md) → Transformer | 计算组织变化 | 从递归模型中的注意力走向主要依靠注意力的序列架构 | 两者注意力打分函数完全一样 |
 | ResNet / LN → Transformer | 组件联系 | 残差连接与层归一化用于子层组织 | 相同组件就保证相同训练性质 |
 | [Transformer](../notes/transformer.md) → [BERT](../notes/bert.md) | 预训练任务 | 双向可见性、输入扰动和监督位置是三个不同选择 | 去掉因果掩码就复现了 BERT，或 MLM 等于下一词预测 |
-| Transformer → ViT | 输入表示迁移 | 图像块嵌入构成序列 | 任何规模数据下都优于 CNN |
+| [Transformer](../notes/transformer.md) → [ViT](../notes/vit.md) | 输入表示迁移 | 图像块投影构成连续 token；区分只换内容与内容/位置联合重排 | 数组排列本身就给注意力提供空间标签 |
+| [ResNet](../notes/resnet.md) ↔ [ViT](../notes/vit.md) | 架构与数据需求对照 | 局部卷积先验对照图像块上的全局注意力；结合预训练规模与预算读结果 | ViT 在任何数据规模、训练配方下都优于 CNN |
 | 视觉/文本编码器 → CLIP | 监督与目标 | 学习图文配对的对比表示 | CLIP 本身就是图像生成器 |
 | [BERT](../notes/bert.md) ↔ [LoRA](../notes/lora.md) | 适配策略对照 | 全参数微调对照冻结基础权重、学习任务增量；不改变预训练目标的定义 | 低秩增量意味着基础模型被压缩，或冻结权重就能停止输入梯度 |
 | Transformer → [LoRA](../notes/lora.md) | 组件联系 | 选择注意力投影等线性层学习增量；合并要求确定性的线性分支 | 训练态 dropout 或合并后仍开启分支也自动等价 |
@@ -38,6 +39,7 @@ flowchart LR
   BERT -.适配策略对照.-> LoRA[LoRA]
   TF -.投影组件联系.-> LoRA
   TF -->|图像块序列| ViT[ViT]
+  ResNet -.架构与数据需求对照.-> ViT
   VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
   GAN[GAN] -.生成目标对照.-> DDPM
 ```

@@ -7,7 +7,7 @@
 3. Transformer：完成 [精读](../../notes/transformer.md) 和 attention 实验，区分 self-attention、cross-attention、因果掩码。
 4. [BERT 精读](../../notes/bert.md)：区分双向可见性、输入扰动与损失位置；复用 attention 实验。MLM/NSP 训练未验证，不等同自回归聊天模型。
 5. [LoRA 精读](../../notes/lora.md)：从全参数微调转向冻结权重与低秩增量，验证初始化梯度和线性合并；语言模型适配尚未运行。
-6. ViT / CLIP：分别考察输入表示、监督信号，精读与实验待补；它们与 LoRA 不构成替代链。
+6. [ViT](../../notes/vit.md)：考察图像块投影与位置标签，已有机制实验；CLIP 的图文监督精读待补。它们与 LoRA 不构成替代链。
 
 ## 先修与验收
 

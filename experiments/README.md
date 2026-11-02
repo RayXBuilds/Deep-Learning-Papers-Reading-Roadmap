@@ -75,3 +75,13 @@ python3 experiments/lora_mechanics.py --output /tmp/lora-mechanics.json
 ```
 
 第九项独立机制实验，不包含在 `run.py --experiment all` 中。CPU 标准库：手工矩阵、有限差分与种子 7 / 42 / 2026 的初始化，两步 SGD 追踪梯度；含双零初始化、固定 dropout 和重复增量负对照。没有语言模型、数据集或显存测量；小矩阵主配置不用于证明参数效率。
+
+## ViT 图像块与位置专题
+
+[中文精读](../notes/vit.md) · [协议与实测](results/vit-patches.md)
+
+```bash
+python3 experiments/vit_patches.py --output /tmp/vit-patches.json
+```
+
+第十项独立机制实验，不包含在核心 `run.py --experiment all` 中。固定人工图像、无随机数，以独立卷积循环与手算验证块投影，并比较有/无位置标签时的 token 排列干预。CPU 标准库，无训练、权重下载或图像分类指标。
