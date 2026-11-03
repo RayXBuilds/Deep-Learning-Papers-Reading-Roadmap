@@ -35,14 +35,14 @@
 | [AdamW](notes/adamw.md) | 为什么 L2 正则不等于自适应优化中的权重衰减？ | 首步手算、矩状态与累计衰减对照 |
 | [Bahdanau Attention](notes/bahdanau-attention.md) | 每一步解码如何重新读取源端信息，padding 怎样排除？ | 加性打分、非线性消融与变长掩码 |
 | [Transformer](notes/transformer.md) | Q、K、V 怎样协作，因果掩码如何限制信息可见性？ | 修改未来位置，检查前缀输出 |
-| [BERT](notes/bert.md) | 输入遮盖、双向可见性与监督位置怎样配合？ | 复用 attention 可见性实验；MLM 训练未验证 |
+| [BERT](notes/bert.md) | 输入遮盖、双向可见性与监督位置怎样配合？ | 可见性与 MLM 损失权重；预训练未复现 |
 | [ViT](notes/vit.md) | 图像块如何投影，位置标签怎样改变排列关系？ | 块投影/卷积等价与位置排列干预 |
 | [LoRA](notes/lora.md) | 冻结权重后梯度怎样流动，低秩增量何时可合并？ | 初始化、有限差分与合并负对照 |
 | [VAE](notes/vae.md) | 近似后验、下界和重参数化怎样配合？ | 高斯闭式参照与采样梯度 |
 | [VAE 输入跳跃](notes/vae-input-skip.md) | 重构误差下降为何不保证生成分布更好？ | 与 VAE 共用实验：密度、坐标缩放与负对照 |
 | [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
 
-目前有 **13 篇精读初版、10 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
+目前有 **13 篇精读初版、11 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
 
 ## 动手验证
 
@@ -52,7 +52,7 @@
 python3 experiments/run.py --experiment all --seed 7
 ```
 
-上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT 五个专题的独立命令见[实验指南](experiments/README.md)。
+上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT、BERT MLM 六个专题的独立命令见[实验指南](experiments/README.md)。
 
 也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 

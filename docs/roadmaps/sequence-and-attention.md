@@ -5,7 +5,7 @@
 1. Encoder–Decoder：画出输入表示与逐步解码。原始序列模型资料在历史目录。
 2. [Bahdanau Attention](../../notes/bahdanau-attention.md)：比较固定上下文与动态读取，运行加性打分、非线性消融和变长 padding 实验。
 3. Transformer：完成 [精读](../../notes/transformer.md) 和 attention 实验，区分 self-attention、cross-attention、因果掩码。
-4. [BERT 精读](../../notes/bert.md)：区分双向可见性、输入扰动与损失位置；复用 attention 实验。MLM/NSP 训练未验证，不等同自回归聊天模型。
+4. [BERT 精读](../../notes/bert.md)：区分双向可见性、输入扰动与损失位置；已有 attention 和 MLM 损失权重实验。输入扰动与 MLM/NSP 训练未验证，不等同自回归聊天模型。
 5. [LoRA 精读](../../notes/lora.md)：从全参数微调转向冻结权重与低秩增量，验证初始化梯度和线性合并；语言模型适配尚未运行。
 6. [ViT](../../notes/vit.md)：考察图像块投影与位置标签，已有机制实验；CLIP 的图文监督精读待补。它们与 LoRA 不构成替代链。
 

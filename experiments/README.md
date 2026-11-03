@@ -85,3 +85,13 @@ python3 experiments/vit_patches.py --output /tmp/vit-patches.json
 ```
 
 第十项独立机制实验，不包含在核心 `run.py --experiment all` 中。固定人工图像、无随机数，以独立卷积循环与手算验证块投影，并比较有/无位置标签时的 token 排列干预。CPU 标准库，无训练、权重下载或图像分类指标。
+
+## BERT MLM 损失专题
+
+[精读](../notes/bert.md) · [协议与实测](results/bert-mlm.md)
+
+```bash
+python3 experiments/bert_mlm.py --output /tmp/bert-mlm.json
+```
+
+第十一项独立机制实验，不包含在核心 `run.py --experiment all` 中。固定 logits、标签与权重，验证选中未替换位置和 padding 的损失语义；CPU 标准库，无随机数、输入扰动采样或预训练。

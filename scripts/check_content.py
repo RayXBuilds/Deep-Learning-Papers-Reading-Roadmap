@@ -163,11 +163,27 @@ def main():
         if (set(checks) != expected_checks or not all(v is True for v in checks.values())
                 or report.get('passed') is not True):
             errors.append('vit-patches.json: missing or failed mechanism checks')
+    mlm_path = ROOT / 'experiments/results/bert-mlm.json'
+    if not mlm_path.exists():
+        errors.append('Missing BERT MLM experiment report')
+    else:
+        report = json.loads(mlm_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/bert_mlm.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('bert-mlm.json: source hash mismatch')
+        expected_checks = {'matches_hand_reference', 'unselected_label_is_ignored',
+                           'unchanged_selected_label_matters', 'random_selected_label_matters',
+                           'padding_excluded_from_numerator_and_denominator',
+                           'mask_id_only_is_wrong', 'zero_weights_return_zero'}
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('bert-mlm.json: missing or failed checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

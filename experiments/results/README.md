@@ -46,6 +46,8 @@ python3 -m unittest discover -s experiments -p 'test_*.py' -v
 - [2026-11-01：LoRA 的初始化、梯度与合并](lora-mechanics.md)
 - [2026-11-02：ViT 图像块与位置排列](vit-patches.md)
 
+- [2026-11-03：BERT MLM 的监督位置与权重](bert-mlm.md)
+
 ## 局限
 
 没有运行 ImageNet、机器翻译或图像扩散训练；没有 GPU 性能测量。归一化、注意力与残差只做前向/导数机制检查。Adam 的对照学习率并非搜索后的最佳配置，不能排名算法。diffusion 仅单时刻线性回归；没有完整逆向采样。

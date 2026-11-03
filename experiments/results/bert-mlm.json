@@ -1,0 +1,65 @@
+{
+  "config": {
+    "logits": [
+      [
+        1.0986122886681098,
+        0,
+        0
+      ],
+      [
+        0,
+        0.6931471805599453,
+        0
+      ],
+      [
+        0,
+        0,
+        1.3862943611198906
+      ],
+      [
+        5,
+        -2,
+        1
+      ]
+    ],
+    "labels": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "weights": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "epsilon": 1e-05,
+    "seed": null,
+    "scope": "fixed prediction logits; slot labels supplied explicitly; no input corruption implementation"
+  },
+  "metrics": {
+    "loss": 0.5364775158863138,
+    "hand_reference": 0.5364775158863138,
+    "unselected_label_delta": 0.0,
+    "unchanged_selected_label_delta": 0.23104829002568184,
+    "random_selected_label_delta": 0.46209658005136334,
+    "padding_logits_delta": 0.0,
+    "padding_removed_delta": 0.0,
+    "masked_only_loss": 0.510820515560835,
+    "all_zero_weight_loss": 0.0
+  },
+  "checks": {
+    "matches_hand_reference": true,
+    "unselected_label_is_ignored": true,
+    "unchanged_selected_label_matters": true,
+    "random_selected_label_matters": true,
+    "padding_excluded_from_numerator_and_denominator": true,
+    "mask_id_only_is_wrong": true,
+    "zero_weights_return_zero": true
+  },
+  "passed": true,
+  "source_sha256": "a3d650e12ff56e905a4bc0bd9df20637039fe44079e0b6f462f8686b5e01784f",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}
