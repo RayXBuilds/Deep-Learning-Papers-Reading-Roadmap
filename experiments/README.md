@@ -95,3 +95,13 @@ python3 experiments/bert_mlm.py --output /tmp/bert-mlm.json
 ```
 
 第十一项独立机制实验，不包含在核心 `run.py --experiment all` 中。固定 logits、标签与权重，验证选中未替换位置和 padding 的损失语义；CPU 标准库，无随机数、输入扰动采样或预训练。
+
+## CLIP 配对目标专题
+
+[精读](../notes/clip.md) · [协议与实测](results/clip-objective.md)
+
+```bash
+python3 experiments/clip_objective.py --output /tmp/clip-objective.json
+```
+
+第十二项独立机制实验，不包含在核心 `run.py --experiment all` 中。固定二维向量、CPU 标准库、无随机数；检查双向损失、配对置换、重复表示、归一化与候选概率。没有编码器训练、官方权重下载或零样本准确率。

@@ -14,7 +14,8 @@
 | [Transformer](../notes/transformer.md) → [BERT](../notes/bert.md) | 预训练任务 | 双向可见性、输入扰动和监督位置是三个不同选择；固定 logits 的标签/padding 干预已有验证 | 去掉因果掩码就复现了 BERT，或 MLM 等于下一词预测 |
 | [Transformer](../notes/transformer.md) → [ViT](../notes/vit.md) | 输入表示迁移 | 图像块投影构成连续 token；区分只换内容与内容/位置联合重排 | 数组排列本身就给注意力提供空间标签 |
 | [ResNet](../notes/resnet.md) ↔ [ViT](../notes/vit.md) | 架构与数据需求对照 | 局部卷积先验对照图像块上的全局注意力；结合预训练规模与预算读结果 | ViT 在任何数据规模、训练配方下都优于 CNN |
-| 视觉/文本编码器 → CLIP | 监督与目标 | 学习图文配对的对比表示 | CLIP 本身就是图像生成器 |
+| [ViT](../notes/vit.md) / Transformer → [CLIP](../notes/clip.md) | 组件联系与监督目标 | 双编码器输出归一化向量，以双向交叉熵学习配对；同步置换保留标签关系 | CLIP 等同于 ViT，或图文匹配就是交叉注意力 |
+| [BERT](../notes/bert.md) ↔ [CLIP](../notes/clip.md) | 目标对照 | token 标签的 MLM 对照批内图文配对索引；候选文本改变分类接口 | 共用 Transformer 就具有相同预训练任务，或 CLIP 本身生成图像 |
 | [BERT](../notes/bert.md) ↔ [LoRA](../notes/lora.md) | 适配策略对照 | 全参数微调对照冻结基础权重、学习任务增量；不改变预训练目标的定义 | 低秩增量意味着基础模型被压缩，或冻结权重就能停止输入梯度 |
 | Transformer → [LoRA](../notes/lora.md) | 组件联系 | 选择注意力投影等线性层学习增量；合并要求确定性的线性分支 | 训练态 dropout 或合并后仍开启分支也自动等价 |
 | [Adam](../notes/adam.md) → [AdamW](../notes/adamw.md) | 优化与正则化 | 衰减不进入一阶/二阶矩；比较实现前统一学习率与衰减系数约定 | L2 与解耦衰减总等价，或解耦后衰减量就与学习率无关 |
@@ -40,6 +41,9 @@ flowchart LR
   TF -.投影组件联系.-> LoRA
   TF -->|图像块序列| ViT[ViT]
   ResNet -.架构与数据需求对照.-> ViT
+  ViT -.视觉编码器组件.-> CLIP[CLIP]
+  TF -.文本编码器组件.-> CLIP
+  BERT -.监督目标对照.-> CLIP
   VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
   GAN[GAN] -.生成目标对照.-> DDPM
 ```

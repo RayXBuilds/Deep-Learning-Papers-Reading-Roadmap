@@ -19,7 +19,7 @@
 | AdamW / 2017，ICLR 2019 | 解耦权重衰减 | [原文](https://arxiv.org/abs/1711.05101) | [精读初版](../notes/adamw.md)；adamw_decay.py |
 | BERT / 2018，NAACL 2019 | 双向 Transformer 预训练 | [原文](https://arxiv.org/abs/1810.04805) | [精读初版](../notes/bert.md)；attention 与 bert_mlm.py；输入扰动和 MLM/NSP 训练未运行 |
 | ViT / 2020，ICLR 2021 | 图像块序列的 Transformer | [原文](https://arxiv.org/abs/2010.11929) | [精读初版](../notes/vit.md)；vit_patches.py；分类训练未复现 |
-| CLIP / 2021 | 图文配对监督与对比学习 | [原文](https://arxiv.org/abs/2103.00020) | 原文入口；精读待补 |
+| CLIP / 2021，ICML 2021 | 图文配对监督与对比学习 | [原文](https://arxiv.org/abs/2103.00020) | [精读初版](../notes/clip.md)；clip_objective.py；预训练及零样本分类未复现 |
 | LoRA / 2021，ICLR 2022 | 冻结权重与低秩适配 | [原文](https://arxiv.org/abs/2106.09685) | [精读初版](../notes/lora.md)；lora_mechanics.py；任务微调未复现 |
 
-本表最近维护：2026-11-03；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。AlexNet、VGG、GoogLeNet 等历史条目见历史目录；其新格式精读尚未完成。
+本表最近维护：2026-11-04；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。AlexNet、VGG、GoogLeNet 等历史条目见历史目录；其新格式精读尚未完成。

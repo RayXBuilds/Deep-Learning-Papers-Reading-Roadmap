@@ -1,0 +1,52 @@
+{
+  "config": {
+    "images": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "texts": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "scale": 2,
+    "seed": null,
+    "randomness": "none"
+  },
+  "metrics": {
+    "loss": 0.1269280110429727,
+    "reference": 0.1269280110429725,
+    "text_only_shuffle_loss": 2.1269280110429727,
+    "joint_shuffle_loss": 0.1269280110429727,
+    "duplicate_loss": 0.6931471805599454,
+    "rescaling_error": 0.0,
+    "transpose_error": 0.0,
+    "probability_scale1": 0.7310585786300049,
+    "probability_scale2": 0.8807970779778823,
+    "probability_added_duplicate_candidate": 0.4683105308334812
+  },
+  "checks": {
+    "hand_reference": true,
+    "text_only_shuffle_breaks_pairs": true,
+    "joint_shuffle_preserves_pairs": true,
+    "duplicates_have_log2_loss": true,
+    "positive_rescaling_removed_by_normalization": true,
+    "symmetric_loss_transpose_invariant": true,
+    "scale_and_candidate_set_change_probabilities": true
+  },
+  "passed": true,
+  "source_sha256": "f4d4fa8550c70306008ac5d6f0bfdc6d66e301d4aac5d6322e0c2cf30d49ad2a",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}

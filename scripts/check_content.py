@@ -179,11 +179,28 @@ def main():
         if (set(checks) != expected_checks or not all(v is True for v in checks.values())
                 or report.get('passed') is not True):
             errors.append('bert-mlm.json: missing or failed checks')
+    clip_path = ROOT / 'experiments/results/clip-objective.json'
+    if not clip_path.exists():
+        errors.append('Missing CLIP objective experiment report')
+    else:
+        report = json.loads(clip_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/clip_objective.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('clip-objective.json: source hash mismatch')
+        expected_checks = {'hand_reference', 'text_only_shuffle_breaks_pairs',
+                           'joint_shuffle_preserves_pairs', 'duplicates_have_log2_loss',
+                           'positive_rescaling_removed_by_normalization',
+                           'symmetric_loss_transpose_invariant',
+                           'scale_and_candidate_set_change_probabilities'}
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('clip-objective.json: missing or failed checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 
