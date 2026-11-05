@@ -196,11 +196,26 @@ def main():
         if (set(checks) != expected_checks or not all(v is True for v in checks.values())
                 or report.get('passed') is not True):
             errors.append('clip-objective.json: missing or failed checks')
+    gan_path = ROOT / 'experiments/results/gan-objective.json'
+    if not gan_path.exists():
+        errors.append('Missing GAN objective experiment report')
+    else:
+        report = json.loads(gan_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/gan_objective.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('gan-objective.json: source hash mismatch')
+        expected_checks = {'js_identity', 'matched_equilibrium', 'disjoint_extreme',
+                           'optimal_beats_constant', 'gradient_finite_difference',
+                           'non_saturating_signal'}
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('gan-objective.json: missing or failed checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

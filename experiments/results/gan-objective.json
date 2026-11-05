@@ -1,0 +1,80 @@
+{
+  "config": {
+    "seed": null,
+    "randomness": "none",
+    "difference_step": 1e-05
+  },
+  "cases": {
+    "matched": {
+      "discriminator": [
+        0.5,
+        0.5
+      ],
+      "value": -1.3862943611198906,
+      "js": 0.0
+    },
+    "mismatched": {
+      "discriminator": [
+        0.75,
+        0.25
+      ],
+      "value": -1.1246702892376166,
+      "js": 0.13081203594113697
+    },
+    "disjoint": {
+      "discriminator": [
+        1.0,
+        0.0
+      ],
+      "value": 0.0,
+      "js": 0.6931471805599453
+    }
+  },
+  "gradients": [
+    {
+      "logit": -8,
+      "analytic": [
+        -0.0003353501304664781,
+        -0.9996646498695335
+      ],
+      "finite_difference": [
+        -0.00033535013045562356,
+        -0.9996646498144911
+      ]
+    },
+    {
+      "logit": 0,
+      "analytic": [
+        -0.5,
+        -0.5
+      ],
+      "finite_difference": [
+        -0.49999999999772443,
+        -0.49999999999772443
+      ]
+    },
+    {
+      "logit": 8,
+      "analytic": [
+        -0.9996646498695336,
+        -0.00033535013046637197
+      ],
+      "finite_difference": [
+        -0.9996646498144911,
+        -0.00033535013045562356
+      ]
+    }
+  ],
+  "checks": {
+    "js_identity": true,
+    "matched_equilibrium": true,
+    "disjoint_extreme": true,
+    "optimal_beats_constant": true,
+    "gradient_finite_difference": true,
+    "non_saturating_signal": true
+  },
+  "passed": true,
+  "source_sha256": "9ece58a97ed8db55d477a668fc7407b24b52d8189b66e88d5921daf2501c91d5",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}

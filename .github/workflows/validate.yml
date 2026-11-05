@@ -45,3 +45,5 @@ jobs:
         run: python experiments/bert_mlm.py --output /tmp/bert-mlm-ci.json
       - name: Run CLIP paired objective checks
         run: python experiments/clip_objective.py --output /tmp/clip-objective-ci.json
+      - name: Run GAN objective and gradient checks
+        run: python experiments/gan_objective.py --output /tmp/gan-objective-ci.json
