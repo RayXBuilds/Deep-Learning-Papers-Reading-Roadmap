@@ -109,3 +109,7 @@ python3 experiments/clip_objective.py --output /tmp/clip-objective.json
 ## GAN 目标专题
 
 运行 `python3 experiments/gan_objective.py --output /tmp/gan-objective.json`，检查有限概率表上的最优判别器、JS 等式与两种生成器损失的梯度。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../notes/gan.md) · [协议与实测](results/gan-objective.md)
+
+## WGAN 距离专题
+
+运行 `python3 experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry.json`，检查一维等权经验分布的运输代价、JS 和 critic 约束。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../notes/wgan.md) · [实测](results/wasserstein-geometry.md)

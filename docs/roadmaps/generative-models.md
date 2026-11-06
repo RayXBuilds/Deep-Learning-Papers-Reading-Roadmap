@@ -9,11 +9,14 @@
 | VAE | 为什么用近似后验和变分下界？重参数化把随机性放在哪里？ | [精读](../../notes/vae.md) 与高斯目标机制实验 |
 | VAE 输入跳跃（评价专题） | 重构误差为什么不等于生成质量？ | [精读](../../notes/vae-input-skip.md) 与共享密度对照实验 |
 | GAN | 判别器提供什么信号？如何评价训练平衡和样本覆盖？ | [精读](../../notes/gan.md) 与有限概率表、生成器梯度实验 |
+| WGAN | 分布靠近时距离如何变化？critic 容量与尺度怎样影响估计？ | [精读](../../notes/wgan.md) 与一维运输机制实验 |
 | DDPM | 固定加噪如何产生监督？预测噪声如何用于逆向生成？ | [精读](../../notes/ddpm.md) 与一维机制实验 |
 
 先读 [VAE 的潜变量与目标](../../notes/vae.md)，再用[输入跳跃专题](../../notes/vae-input-skip.md)检查评价指标；用 GAN 的对抗训练作对照，再读 DDPM 第 2、3 节。无需先完整复现 VAE 和 GAN 才开始 DDPM。
 
 ## 实验验收
+
+GAN 之后可读 WGAN，并运行 `python3 experiments/wasserstein_geometry.py`，检查排序运输、JS 和线性 critic 的负对照。[实测](../../experiments/results/wasserstein-geometry.md)
 
 运行 `python3 experiments/gan_objective.py`，核对最优判别器与 JS 等式，并对两种生成器损失做有限差分。进一步训练仍待实现。[实测报告](../../experiments/results/gan-objective.md)
 

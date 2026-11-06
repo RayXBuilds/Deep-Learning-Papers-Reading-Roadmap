@@ -22,6 +22,7 @@
 | [VAE](../notes/vae.md) ↔ [DDPM](../notes/ddpm.md) | 概率建模对照 | 学习近似后验与固定前向加噪链的变分目标对照 | DDPM 只是给 VAE 更换编码器 |
 | [VAE](../notes/vae.md) → [输入跳跃](../notes/vae-input-skip.md) | 评价问题延续 | 先写出归一化似然，再区分重构坐标与生成分布 | MSE 降低必然改善生成质量 |
 | Adam → [输入跳跃](../notes/vae-input-skip.md) | 优化联系 | 等价参数表示可能具有不同更新轨迹；训练部分未本地验证 | 分布等价就保证重新训练结果相同 |
+| [GAN](../notes/gan.md) → [WGAN](../notes/wgan.md) | 问题延续 | 从 JS 对照运输距离，明确 critic 的函数约束、容量和优化程度 | 任意 critic 差值就是精确运输距离 |
 | [GAN](../notes/gan.md) ↔ [DDPM](../notes/ddpm.md) | 生成目标对照 | 学习中的判别器提供梯度，对照已知加噪过程构造的监督 | 局部梯度大小能决定完整训练的优劣 |
 | [VAE](../notes/vae.md) ↔ [GAN](../notes/gan.md) | 目标与评价对照 | ELBO 与对抗目标分别分析，区分密度评价、质量与覆盖 | 恒定判别器输出 1/2 就证明分布匹配 |
 
@@ -47,6 +48,7 @@ flowchart LR
   BERT -.监督目标对照.-> CLIP
   VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
   GAN[GAN] -.生成目标对照.-> DDPM
+  GAN -->|距离与训练信号| WGAN[WGAN]
 ```
 
 实线表示问题延续或应用方向，虚线表示组件联系或教学对照。具体含义与边界以上表为准。

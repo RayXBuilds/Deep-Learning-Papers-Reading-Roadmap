@@ -1,0 +1,70 @@
+{
+  "config": {
+    "seed": null,
+    "randomness": "none",
+    "difference_step": 1e-05
+  },
+  "shifts": [
+    {
+      "shift": -1,
+      "w1": 1.0,
+      "js": 0.6931471805599453,
+      "critic_gap": 1
+    },
+    {
+      "shift": -0.1,
+      "w1": 0.1,
+      "js": 0.6931471805599453,
+      "critic_gap": 0.1
+    },
+    {
+      "shift": -0.001,
+      "w1": 0.001,
+      "js": 0.6931471805599453,
+      "critic_gap": 0.001
+    },
+    {
+      "shift": 0,
+      "w1": 0.0,
+      "js": 0.0,
+      "critic_gap": 0
+    },
+    {
+      "shift": 0.001,
+      "w1": 0.001,
+      "js": 0.6931471805599453,
+      "critic_gap": 0.001
+    },
+    {
+      "shift": 0.1,
+      "w1": 0.1,
+      "js": 0.6931471805599453,
+      "critic_gap": 0.1
+    },
+    {
+      "shift": 1,
+      "w1": 1.0,
+      "js": 0.6931471805599453,
+      "critic_gap": 1
+    }
+  ],
+  "translated_pair_w1": 0.29999999999999993,
+  "gradient": 1.000000000001,
+  "equal_mean_w1": 1.0,
+  "equal_mean_linear_gap": 0.0,
+  "slope_ten_gap": 2.9999999999999982,
+  "checks": {
+    "point_mass_primal_dual_agree": true,
+    "disjoint_js_constant": true,
+    "coincident_js_zero": true,
+    "translated_pair_cost": true,
+    "positive_shift_gradient": true,
+    "limited_critic_misses_equal_means": true,
+    "unconstrained_scale_exceeds_w1": true
+  },
+  "passed": true,
+  "source_sha256": "5caa956e08105d106dad3d2c5dbe48726c7c3eba6e8d2fdca361555d40f9248c",
+  "dependency_sha256": "9ece58a97ed8db55d477a668fc7407b24b52d8189b66e88d5921daf2501c91d5",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}

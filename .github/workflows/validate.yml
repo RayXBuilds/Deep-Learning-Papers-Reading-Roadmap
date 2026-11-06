@@ -47,3 +47,5 @@ jobs:
         run: python experiments/clip_objective.py --output /tmp/clip-objective-ci.json
       - name: Run GAN objective and gradient checks
         run: python experiments/gan_objective.py --output /tmp/gan-objective-ci.json
+      - name: Run Wasserstein geometry checks
+        run: python experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry-ci.json
