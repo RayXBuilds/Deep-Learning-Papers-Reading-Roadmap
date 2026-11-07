@@ -10,11 +10,14 @@
 | VAE 输入跳跃（评价专题） | 重构误差为什么不等于生成质量？ | [精读](../../notes/vae-input-skip.md) 与共享密度对照实验 |
 | GAN | 判别器提供什么信号？如何评价训练平衡和样本覆盖？ | [精读](../../notes/gan.md) 与有限概率表、生成器梯度实验 |
 | WGAN | 分布靠近时距离如何变化？critic 容量与尺度怎样影响估计？ | [精读](../../notes/wgan.md) 与一维运输机制实验 |
+| EBGAN | 能量、间隔和表示方向分别提供什么约束？ | [精读](../../notes/ebgan.md) 与有限分布、PT 机制实验 |
 | DDPM | 固定加噪如何产生监督？预测噪声如何用于逆向生成？ | [精读](../../notes/ddpm.md) 与一维机制实验 |
 
 先读 [VAE 的潜变量与目标](../../notes/vae.md)，再用[输入跳跃专题](../../notes/vae-input-skip.md)检查评价指标；用 GAN 的对抗训练作对照，再读 DDPM 第 2、3 节。无需先完整复现 VAE 和 GAN 才开始 DDPM。
 
 ## 实验验收
+
+GAN 之后也可读 EBGAN，运行 `python3 experiments/ebgan_energy.py`，检查单方最优与联合均衡的条件，以及间隔和表示方向的几何对照。[实测](../../experiments/results/ebgan-energy.md)
 
 GAN 之后可读 WGAN，并运行 `python3 experiments/wasserstein_geometry.py`，检查排序运输、JS 和线性 critic 的负对照。[实测](../../experiments/results/wasserstein-geometry.md)
 

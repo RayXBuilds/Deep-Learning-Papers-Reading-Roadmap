@@ -1,0 +1,87 @@
+{
+  "config": {
+    "seed": null,
+    "randomness": "none",
+    "margin": 2.0,
+    "difference_step": 1e-05
+  },
+  "distributions": [
+    {
+      "real": [
+        0.75,
+        0.25
+      ],
+      "generated": [
+        0.25,
+        0.75
+      ],
+      "energies": [
+        0.0,
+        2.0
+      ],
+      "loss": 1.0,
+      "grid_minimum": 1.0,
+      "total_variation": 0.5
+    },
+    {
+      "real": [
+        0.75,
+        0.25
+      ],
+      "generated": [
+        0.75,
+        0.25
+      ],
+      "energies": [
+        0.0,
+        0.0
+      ],
+      "loss": 2.0,
+      "grid_minimum": 2.0,
+      "total_variation": 0.0
+    },
+    {
+      "real": [
+        1.0,
+        0.0
+      ],
+      "generated": [
+        0.0,
+        1.0
+      ],
+      "energies": [
+        0.0,
+        2.0
+      ],
+      "loss": 0.0,
+      "grid_minimum": 0.0,
+      "total_variation": 1.0
+    }
+  ],
+  "equal_distribution_losses": [
+    2.0,
+    2.0,
+    2.0
+  ],
+  "generator_energy_derivative": 1.0000000000065512,
+  "hinge_derivative": 0.0,
+  "pt": {
+    "orthogonal": 0.0,
+    "duplicate": 1.0,
+    "opposite": 1.0,
+    "three_vectors": 0.33333333333333326,
+    "rescaled": 0.33333333333333326
+  },
+  "checks": {
+    "analytic_optimum_matches_grid": true,
+    "optimal_loss_matches_tv": true,
+    "equal_distribution_energy_nonunique": true,
+    "generator_energy_gradient_above_margin": true,
+    "pt_geometry_controls": true,
+    "pt_scale_invariance": true
+  },
+  "passed": true,
+  "source_sha256": "2c99e1211bee6c9182d43544c2f363dc4270f4799bbbdaa44015d550aaae2801",
+  "python": "3.9.6",
+  "platform": "macOS-27.0.1-arm64-arm-64bit"
+}

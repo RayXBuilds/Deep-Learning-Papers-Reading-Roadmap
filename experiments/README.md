@@ -113,3 +113,13 @@ python3 experiments/clip_objective.py --output /tmp/clip-objective.json
 ## WGAN 距离专题
 
 运行 `python3 experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry.json`，检查一维等权经验分布的运输代价、JS 和 critic 约束。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../notes/wgan.md) · [实测](results/wasserstein-geometry.md)
+
+## EBGAN 能量专题
+
+[精读](../notes/ebgan.md) · [实测](results/ebgan-energy.md)
+
+```bash
+python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
+```
+
+第十五项机制实验，独立于核心五项。CPU 标准库、人工输入、seed=null，检查有限能量表的最优响应、间隔导数与 pulling-away 几何。自编码器及生成器训练未运行。

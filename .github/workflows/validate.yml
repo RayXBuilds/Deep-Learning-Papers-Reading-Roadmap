@@ -49,3 +49,5 @@ jobs:
         run: python experiments/gan_objective.py --output /tmp/gan-objective-ci.json
       - name: Run Wasserstein geometry checks
         run: python experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry-ci.json
+      - name: Run EBGAN energy and pulling-away checks
+        run: python experiments/ebgan_energy.py --output /tmp/ebgan-energy-ci.json
