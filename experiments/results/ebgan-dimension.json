@@ -1,0 +1,109 @@
+{
+  "config": {
+    "seed": null,
+    "randomness": "none",
+    "tolerance": 1e-12
+  },
+  "cases": {
+    "two_orthogonal": {
+      "inputs": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "count": 2,
+      "dimension": 2,
+      "lower_bound": 0,
+      "pt": 0.0,
+      "matrix_reference": 0.0
+    },
+    "three_equiangular": {
+      "inputs": [
+        [
+          1,
+          0
+        ],
+        [
+          -0.5,
+          0.8660254037844386
+        ],
+        [
+          -0.5,
+          -0.8660254037844386
+        ]
+      ],
+      "count": 3,
+      "dimension": 2,
+      "lower_bound": 0.25,
+      "pt": 0.24999999999999997,
+      "matrix_reference": 0.25
+    },
+    "four_repeated_axes": {
+      "inputs": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "count": 4,
+      "dimension": 2,
+      "lower_bound": 0.3333333333333333,
+      "pt": 0.3333333333333333,
+      "matrix_reference": 0.3333333333333333
+    },
+    "four_collinear": {
+      "inputs": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "count": 4,
+      "dimension": 2,
+      "lower_bound": 0.3333333333333333,
+      "pt": 1.0,
+      "matrix_reference": 1.0
+    }
+  },
+  "checks": {
+    "pair_and_matrix_formulas_agree": true,
+    "all_respect_dimension_bound": true,
+    "three_vectors_attain_quarter": true,
+    "duplicates_attain_bound": true,
+    "collinear_negative_control": true
+  },
+  "passed": true,
+  "source_sha256": "944403639cd25715aac59b629ecce631e4d3b636c168826811616c8e73591e84",
+  "dependency_sha256": "2c99e1211bee6c9182d43544c2f363dc4270f4799bbbdaa44015d550aaae2801",
+  "python": "3.9.6",
+  "platform": "macOS-27.2-arm64-arm-64bit"
+}

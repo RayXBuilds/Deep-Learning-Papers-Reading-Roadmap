@@ -51,3 +51,5 @@ jobs:
         run: python experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry-ci.json
       - name: Run EBGAN energy and pulling-away checks
         run: python experiments/ebgan_energy.py --output /tmp/ebgan-energy-ci.json
+      - name: Run EBGAN dimension controls
+        run: python experiments/ebgan_dimension.py --output /tmp/ebgan-dimension-ci.json

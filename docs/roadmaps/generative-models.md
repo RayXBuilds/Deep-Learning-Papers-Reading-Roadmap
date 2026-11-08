@@ -17,6 +17,8 @@
 
 ## 实验验收
 
+EBGAN 的 PT 专题继续检查批大小与表示维数的关系，并手算重复表示达到下界的构造。[推导与实验](../../notes/ebgan.md)
+
 GAN 之后也可读 EBGAN，运行 `python3 experiments/ebgan_energy.py`，检查单方最优与联合均衡的条件，以及间隔和表示方向的几何对照。[实测](../../experiments/results/ebgan-energy.md)
 
 GAN 之后可读 WGAN，并运行 `python3 experiments/wasserstein_geometry.py`，检查排序运输、JS 和线性 critic 的负对照。[实测](../../experiments/results/wasserstein-geometry.md)

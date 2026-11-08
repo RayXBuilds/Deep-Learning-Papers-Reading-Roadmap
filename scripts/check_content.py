@@ -245,11 +245,28 @@ def main():
         if (set(checks) != expected_checks or not all(v is True for v in checks.values())
                 or report.get('passed') is not True):
             errors.append('ebgan-energy.json: missing or failed checks')
+    dimension_path = ROOT / 'experiments/results/ebgan-dimension.json'
+    if not dimension_path.exists():
+        errors.append('Missing EBGAN dimension report')
+    else:
+        report = json.loads(dimension_path.read_text(encoding='utf-8'))
+        for field, script in [('source_sha256', 'ebgan_dimension.py'),
+                              ('dependency_sha256', 'ebgan_energy.py')]:
+            digest = hashlib.sha256((ROOT / 'experiments' / script).read_bytes()).hexdigest()
+            if report.get(field) != digest:
+                errors.append(f'ebgan-dimension.json: hash mismatch for {script}')
+        expected_checks = {'pair_and_matrix_formulas_agree', 'all_respect_dimension_bound',
+                           'three_vectors_attain_quarter', 'duplicates_attain_bound',
+                           'collinear_negative_control'}
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('ebgan-dimension.json: missing or failed checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 
