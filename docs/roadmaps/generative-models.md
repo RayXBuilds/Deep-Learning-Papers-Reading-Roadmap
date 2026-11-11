@@ -15,6 +15,8 @@
 
 先读 [VAE 的潜变量与目标](../../notes/vae.md)，再用[输入跳跃专题](../../notes/vae-input-skip.md)检查评价指标；用 GAN 的对抗训练作对照，再读 DDPM 第 2、3 节。无需先完整复现 VAE 和 GAN 才开始 DDPM。
 
+DDPM 之后可读近期应用专题 [DualCast](../../notes/dualcast.md)，结合 VAE 和 CLIP 检查角色条件与区域监督。原文采用 flow matching，需补充线性插值速度目标。
+
 ## 实验验收
 
 EBGAN 的 PT 专题继续检查批大小与表示维数的关系，并手算重复表示达到下界的构造。[推导与实验](../../notes/ebgan.md)

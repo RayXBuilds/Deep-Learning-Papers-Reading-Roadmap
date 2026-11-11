@@ -262,11 +262,26 @@ def main():
         if (set(checks) != expected_checks or not all(v is True for v in checks.values())
                 or report.get('passed') is not True):
             errors.append('ebgan-dimension.json: missing or failed checks')
+    region_path = ROOT / 'experiments/results/dualcast-regions.json'
+    if not region_path.exists():
+        errors.append('Missing DualCast region report')
+    else:
+        report = json.loads(region_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/dualcast_regions.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('dualcast-regions.json: source hash mismatch')
+        expected_checks = {'overlap_has_own_weight', 'dropout_recomputes_regions',
+                           'two_channels_match_hand_sum', 'constant_error_scale',
+                           'common_scale_nearly_invariant'}
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('dualcast-regions.json: missing or failed checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

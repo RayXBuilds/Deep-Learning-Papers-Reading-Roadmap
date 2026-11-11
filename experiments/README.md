@@ -125,3 +125,9 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 第十五项机制实验，独立于核心五项。CPU 标准库、人工输入、seed=null，检查有限能量表的最优响应、间隔导数与 pulling-away 几何。自编码器及生成器训练未运行。
 
 2026-11-08 增加同一专题的维数补充，运行 `python3 experiments/ebgan_dimension.py`，检查 PT 下界与达到下界的重复表示。[配置与结果](results/ebgan-dimension.md)
+
+## DualCast 区域监督专题
+
+[精读](../notes/dualcast.md) · [实测](results/dualcast-regions.md)
+
+运行 `python3 experiments/dualcast_regions.py`。第十六项机制实验，CPU 标准库，固定掩码和残差，检查重叠权重、条件丢弃与损失归一化。

@@ -1,0 +1,59 @@
+{
+  "config": {
+    "seed": null,
+    "epsilon": 1e-08,
+    "time_weight": 1
+  },
+  "product": [
+    0,
+    1,
+    0,
+    1
+  ],
+  "face": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "weights": [
+    0.5,
+    2.0,
+    2.0,
+    3.0
+  ],
+  "face_dropped_weights": [
+    0.5,
+    2.0,
+    0.5,
+    2.0
+  ],
+  "residuals": [
+    [
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      4,
+      3,
+      2,
+      1
+    ]
+  ],
+  "loss": 7.433333328377778,
+  "constant_error_loss": 3.999999997333333,
+  "double_weight_loss": 7.433333330855556,
+  "checks": {
+    "overlap_has_own_weight": true,
+    "dropout_recomputes_regions": true,
+    "two_channels_match_hand_sum": true,
+    "constant_error_scale": true,
+    "common_scale_nearly_invariant": true
+  },
+  "passed": true,
+  "source_sha256": "5307fde74a9618408288b3312356dcc71cc6f7ab352d66c154fcaa2ec3ebc8b7",
+  "python": "3.9.6",
+  "platform": "macOS-27.2-arm64-arm-64bit"
+}
