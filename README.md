@@ -20,7 +20,7 @@
 |---|---|---|
 | 训练与视觉 | 网络为什么能加深？归一化与优化器各自改变什么？ | [卷积网络 → 残差连接 → 训练方法 → ViT](docs/roadmaps/training-and-vision.md) |
 | 序列与注意力 | 模型如何读取上下文？注意力怎样组织序列计算？ | [Encoder–Decoder → Attention → Transformer](docs/roadmaps/sequence-and-attention.md) |
-| 生成模型 | 模型如何学习数据分布？不同生成目标怎样比较？ | [VAE / GAN → DDPM](docs/roadmaps/generative-models.md) |
+| 生成模型 | 模型如何学习数据分布？不同生成目标怎样比较？ | [VAE / GAN → DDPM → Flow Matching](docs/roadmaps/generative-models.md) |
 
 路线包含已完成精读和后续阅读入口，具体状态见 [论文索引](docs/papers.md)。箭头表示建议阅读顺序；方法之间的继承、组件联系与对照关系见 [技术关联](docs/connections.md)。
 
@@ -44,10 +44,11 @@
 | [GAN](notes/gan.md) | 最优判别器怎样关联 JS 散度，两种生成器损失怎样影响梯度？ | 有限概率表与 logit 梯度对照 |
 | [WGAN](notes/wgan.md) | 分布靠近时距离如何变化，critic 约束起什么作用？ | 一维运输、JS 与 critic 容量对照 |
 | [EBGAN](notes/ebgan.md) | 能量间隔怎样影响两方目标，表示分散怎样衡量？ | 有限能量表、间隔导数与 PT 几何 |
-| [DualCast](notes/dualcast.md) | 双参考角色与区域权重如何组织？ | 区域损失机制，预印本，视频训练未复现 |
 | [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
+| [Flow Matching](notes/flow-matching.md) | 条件速度怎样变成边缘速度，时间方向如何对齐？ | 高斯回归、解析流与积分符号对照 |
+| [DualCast](notes/dualcast.md) | 双参考角色与区域权重如何组织？ | 区域损失机制，预印本，视频训练未复现 |
 
-目前有 **18 篇精读初版、16 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
+目前有 **19 篇精读初版、17 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
 
 ## 动手验证
 
@@ -57,7 +58,7 @@
 python3 experiments/run.py --experiment all --seed 7
 ```
 
-上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT、BERT MLM、CLIP、GAN、WGAN、EBGAN、DualCast 十一个专题的独立命令见[实验指南](experiments/README.md)。
+上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT、BERT MLM、CLIP、GAN、WGAN、EBGAN、DualCast、Flow Matching 十二个专题的独立命令见[实验指南](experiments/README.md)。
 
 也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 

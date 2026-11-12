@@ -131,3 +131,9 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 [精读](../notes/dualcast.md) · [实测](results/dualcast-regions.md)
 
 运行 `python3 experiments/dualcast_regions.py`。第十六项机制实验，CPU 标准库，固定掩码和残差，检查重叠权重、条件丢弃与损失归一化。
+
+## Flow Matching 速度场专题
+
+[精读](../notes/flow-matching.md) · [实测](results/flow-matching.md)
+
+运行 `python3 experiments/flow_matching.py`。第十七项机制实验，独立于核心五项。CPU 标准库，三个种子的高斯端点回归与确定性解析流对照，检查总体损失常数差、积分误差和时间反转符号。没有神经网络训练或图像基准。

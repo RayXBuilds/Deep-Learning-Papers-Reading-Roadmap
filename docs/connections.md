@@ -28,6 +28,9 @@
 | [GAN](../notes/gan.md) → [WGAN](../notes/wgan.md) | 问题延续 | 从 JS 对照运输距离，明确 critic 的函数约束、容量和优化程度 | 任意 critic 差值就是精确运输距离 |
 | [GAN](../notes/gan.md) ↔ [DDPM](../notes/ddpm.md) | 生成目标对照 | 学习中的判别器提供梯度，对照已知加噪过程构造的监督 | 局部梯度大小能决定完整训练的优劣 |
 | [VAE](../notes/vae.md) ↔ [GAN](../notes/gan.md) | 目标与评价对照 | ELBO 与对抗目标分别分析，区分密度评价、质量与覆盖 | 恒定判别器输出 1/2 就证明分布匹配 |
+| [DDPM](../notes/ddpm.md) ↔ [Flow Matching](../notes/flow-matching.md) | 方法对照 | 从噪声目标读到显式路径与速度目标；FM 也允许扩散路径 | 所有速度回归都有相同路径或采样成本 |
+| [Flow Matching](../notes/flow-matching.md) → [DualCast](../notes/dualcast.md) | 方法前置 | 线性插值与条件速度；应用中反转时间轴并添加参考条件和区域监督 | 沿用速度损失就已经复现视频模型 |
+| [WGAN](../notes/wgan.md) ↔ [Flow Matching](../notes/flow-matching.md) | 运输概念对照 | Wasserstein-1 critic 对照条件高斯的 Wasserstein-2 位移插值 | 条件最优推出边缘流全局最优 |
 
 关系依据分别来自对应原论文的方法段落；精读页给出具体章节。表中的阅读顺序和“不应推断”是本项目的教学解释。
 
@@ -52,6 +55,8 @@ flowchart LR
   TF -.文本编码器组件.-> CLIP
   BERT -.监督目标对照.-> CLIP
   VAE[VAE] -.变分目标对照.-> DDPM[DDPM]
+  DDPM -.路径与目标对照.-> FM[Flow Matching]
+  FM -->|速度目标与时间轴| DualCast[DualCast]
   GAN[GAN] -.生成目标对照.-> DDPM
   GAN -->|距离与训练信号| WGAN[WGAN]
   GAN -->|能量与间隔目标| EBGAN[EBGAN]

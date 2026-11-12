@@ -1,0 +1,248 @@
+{
+  "config": {
+    "mu": 2,
+    "sigma": 0.5,
+    "sigma_min_for_derivative": 0.1,
+    "sigma_min_for_gaussian_controls": 0,
+    "latents": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "finite_difference_h": 1e-05,
+    "regression_coefficient_tolerance": 0.06
+  },
+  "conditional_derivative_error": 1.9241497284383513e-11,
+  "marginal_derivative_error": 1.691726758679124e-10,
+  "population_losses": [
+    {
+      "t": 0.25,
+      "a": 0,
+      "b": 0,
+      "cfm": 5.25,
+      "fm": 4.8175675675675675,
+      "expected_gap": 0.43243243243243246
+    },
+    {
+      "t": 0.25,
+      "a": 1,
+      "b": 0,
+      "cfm": 5.453125,
+      "fm": 5.020692567567568,
+      "expected_gap": 0.43243243243243246
+    },
+    {
+      "t": 0.25,
+      "a": -1,
+      "b": 2,
+      "cfm": 0.703125,
+      "fm": 0.2706925675675676,
+      "expected_gap": 0.43243243243243246
+    },
+    {
+      "t": 0.25,
+      "a": 3,
+      "b": -2,
+      "cfm": 16.828125,
+      "fm": 16.39569256756757,
+      "expected_gap": 0.43243243243243246
+    },
+    {
+      "t": 0.5,
+      "a": 0,
+      "b": 0,
+      "cfm": 5.25,
+      "fm": 4.45,
+      "expected_gap": 0.8
+    },
+    {
+      "t": 0.5,
+      "a": 1,
+      "b": 0,
+      "cfm": 3.3125,
+      "fm": 2.5125,
+      "expected_gap": 0.8
+    },
+    {
+      "t": 0.5,
+      "a": -1,
+      "b": 2,
+      "cfm": 1.8125,
+      "fm": 1.0125,
+      "expected_gap": 0.8
+    },
+    {
+      "t": 0.5,
+      "a": 3,
+      "b": -2,
+      "cfm": 7.3125,
+      "fm": 6.5125,
+      "expected_gap": 0.8
+    },
+    {
+      "t": 0.75,
+      "a": 0,
+      "b": 0,
+      "cfm": 5.25,
+      "fm": 4.019230769230769,
+      "expected_gap": 1.2307692307692308
+    },
+    {
+      "t": 0.75,
+      "a": 1,
+      "b": 0,
+      "cfm": 1.828125,
+      "fm": 0.5973557692307693,
+      "expected_gap": 1.2307692307692308
+    },
+    {
+      "t": 0.75,
+      "a": -1,
+      "b": 2,
+      "cfm": 3.578125,
+      "fm": 2.347355769230769,
+      "expected_gap": 1.2307692307692308
+    },
+    {
+      "t": 0.75,
+      "a": 3,
+      "b": -2,
+      "cfm": 3.703125,
+      "fm": 2.472355769230769,
+      "expected_gap": 1.2307692307692308
+    }
+  ],
+  "regressions": [
+    {
+      "seed": 7,
+      "count": 30000,
+      "rows": [
+        {
+          "t": 0.25,
+          "slope": -1.1903355631687291,
+          "intercept": 2.5989553516754995,
+          "expected_slope": -1.1891891891891893,
+          "expected_intercept": 2.5945945945945947,
+          "max_coefficient_error": 0.004360757080904776
+        },
+        {
+          "t": 0.5,
+          "slope": -1.2050005231855394,
+          "intercept": 3.210704446573498,
+          "expected_slope": -1.2,
+          "expected_intercept": 3.2,
+          "max_coefficient_error": 0.010704446573497783
+        },
+        {
+          "t": 0.75,
+          "slope": -0.3163744885931252,
+          "intercept": 2.4813432174736065,
+          "expected_slope": -0.3076923076923077,
+          "expected_intercept": 2.4615384615384617,
+          "max_coefficient_error": 0.019804755935144858
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "count": 30000,
+      "rows": [
+        {
+          "t": 0.25,
+          "slope": -1.1852660894936162,
+          "intercept": 2.5948401536580796,
+          "expected_slope": -1.1891891891891893,
+          "expected_intercept": 2.5945945945945947,
+          "max_coefficient_error": 0.003923099695573029
+        },
+        {
+          "t": 0.5,
+          "slope": -1.1890638668635731,
+          "intercept": 3.1920388523778254,
+          "expected_slope": -1.2,
+          "expected_intercept": 3.2,
+          "max_coefficient_error": 0.010936133136426829
+        },
+        {
+          "t": 0.75,
+          "slope": -0.294965541482873,
+          "intercept": 2.445322514449334,
+          "expected_slope": -0.3076923076923077,
+          "expected_intercept": 2.4615384615384617,
+          "max_coefficient_error": 0.01621594708912788
+        }
+      ]
+    },
+    {
+      "seed": 2026,
+      "count": 30000,
+      "rows": [
+        {
+          "t": 0.25,
+          "slope": -1.1881999385586404,
+          "intercept": 2.5986118612698723,
+          "expected_slope": -1.1891891891891893,
+          "expected_intercept": 2.5945945945945947,
+          "max_coefficient_error": 0.004017266675277575
+        },
+        {
+          "t": 0.5,
+          "slope": -1.2084824129778267,
+          "intercept": 3.2155453359871338,
+          "expected_slope": -1.2,
+          "expected_intercept": 3.2,
+          "max_coefficient_error": 0.01554533598713359
+        },
+        {
+          "t": 0.75,
+          "slope": -0.3354393407586091,
+          "intercept": 2.5121174204314873,
+          "expected_slope": -0.3076923076923077,
+          "expected_intercept": 2.4615384615384617,
+          "max_coefficient_error": 0.05057895889302566
+        }
+      ]
+    }
+  ],
+  "ode": [
+    {
+      "steps": 400,
+      "outputs": [
+        1.0036975293297805,
+        1.5018487646648893,
+        1.999999999999984,
+        2.4981512353351145,
+        2.9963024706702215
+      ],
+      "max_endpoint_error": 0.0036975293297805134
+    },
+    {
+      "steps": 800,
+      "outputs": [
+        1.001850471995422,
+        1.5009252359977114,
+        1.9999999999999771,
+        2.4990747640022892,
+        2.9981495280045785
+      ],
+      "max_endpoint_error": 0.0018504719954219873
+    }
+  ],
+  "reverse_clock_error": 0.0,
+  "wrong_sign_endpoint": -2.978981688469505,
+  "checks": {
+    "conditional_path_derivative": true,
+    "marginal_flow_derivative": true,
+    "population_loss_gap_constant": true,
+    "regression_all_seeds": true,
+    "euler_converges_to_exact_endpoint": true,
+    "reverse_clock_same_solution": true,
+    "wrong_sign_negative_control": true
+  },
+  "passed": true,
+  "source_sha256": "ed413215490a8d2e6b95126eb3818acb58b3c10c42c410df638d32b3e27c8d58",
+  "python": "3.9.6",
+  "platform": "macOS-27.2.1-arm64-arm-64bit"
+}

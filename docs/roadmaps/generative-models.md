@@ -12,12 +12,15 @@
 | WGAN | 分布靠近时距离如何变化？critic 容量与尺度怎样影响估计？ | [精读](../../notes/wgan.md) 与一维运输机制实验 |
 | EBGAN | 能量、间隔和表示方向分别提供什么约束？ | [精读](../../notes/ebgan.md) 与有限分布、PT 机制实验 |
 | DDPM | 固定加噪如何产生监督？预测噪声如何用于逆向生成？ | [精读](../../notes/ddpm.md) 与一维机制实验 |
+| Flow Matching | 条件速度标签为什么能训练边缘场？时间反转时怎样改符号？ | [精读](../../notes/flow-matching.md) 与高斯回归、ODE 机制实验 |
 
 先读 [VAE 的潜变量与目标](../../notes/vae.md)，再用[输入跳跃专题](../../notes/vae-input-skip.md)检查评价指标；用 GAN 的对抗训练作对照，再读 DDPM 第 2、3 节。无需先完整复现 VAE 和 GAN 才开始 DDPM。
 
-DDPM 之后可读近期应用专题 [DualCast](../../notes/dualcast.md)，结合 VAE 和 CLIP 检查角色条件与区域监督。原文采用 flow matching，需补充线性插值速度目标。
+DDPM 之后先读 [Flow Matching](../../notes/flow-matching.md)，比较噪声目标与条件速度，再读近期应用专题 [DualCast](../../notes/dualcast.md)，结合 VAE 和 CLIP 检查角色条件与区域监督。两篇的时间轴方向相反，需要同步变换速度符号。
 
 ## 实验验收
+
+运行 `python3 experiments/flow_matching.py`，比较三个种子的高斯回归与解析边缘场，检查 Euler 收敛及时间反转负对照。[实测](../../experiments/results/flow-matching.md)；神经网络训练未实现。
 
 EBGAN 的 PT 专题继续检查批大小与表示维数的关系，并手算重复表示达到下界的构造。[推导与实验](../../notes/ebgan.md)
 

@@ -277,11 +277,32 @@ def main():
         if (set(checks) != expected_checks or not all(v is True for v in checks.values())
                 or report.get('passed') is not True):
             errors.append('dualcast-regions.json: missing or failed checks')
+    flow_path = ROOT / 'experiments/results/flow-matching.json'
+    if not flow_path.exists():
+        errors.append('Missing Flow Matching report')
+    else:
+        report = json.loads(flow_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/flow_matching.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('flow-matching.json: source hash mismatch')
+        expected_checks = {'conditional_path_derivative', 'marginal_flow_derivative',
+                           'population_loss_gap_constant', 'regression_all_seeds',
+                           'euler_converges_to_exact_endpoint', 'reverse_clock_same_solution',
+                           'wrong_sign_negative_control'}
+        checks = report.get('checks', {})
+        if (set(checks) != expected_checks or not all(v is True for v in checks.values())
+                or report.get('passed') is not True):
+            errors.append('flow-matching.json: missing or failed checks')
+        runs = report.get('regressions', [])
+        if [r.get('seed') for r in runs] != [7, 42, 2026] or any(
+                r.get('count') != 30000 or [v.get('t') for v in r.get('rows', [])] != [0.25, 0.5, 0.75]
+                for r in runs):
+            errors.append('flow-matching.json: missing regression seeds or times')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

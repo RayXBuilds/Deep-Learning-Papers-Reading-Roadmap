@@ -55,3 +55,5 @@ jobs:
         run: python experiments/ebgan_dimension.py --output /tmp/ebgan-dimension-ci.json
       - name: Run DualCast region checks
         run: python experiments/dualcast_regions.py --output /tmp/dualcast-regions-ci.json
+      - name: Run Flow Matching velocity and time direction checks
+        run: python experiments/flow_matching.py --output /tmp/flow-matching-ci.json

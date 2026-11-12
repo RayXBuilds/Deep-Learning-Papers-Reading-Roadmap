@@ -9,7 +9,7 @@
 | [阅读方法与核心顺序](roadmaps/README.md) | 先修知识、阅读方法和核心学习单元 |
 | [训练与视觉](roadmaps/training-and-vision.md) | 卷积网络、残差、归一化和优化 |
 | [序列与注意力](roadmaps/sequence-and-attention.md) | 序列模型、注意力及 Transformer 的扩展方向 |
-| [生成模型](roadmaps/generative-models.md) | VAE、GAN 与 DDPM 的目标对照 |
+| [生成模型](roadmaps/generative-models.md) | VAE、GAN、DDPM 与 Flow Matching 的目标对照 |
 | [论文索引](papers.md) | 原文来源、阅读问题与精读状态 |
 | [技术关联](connections.md) | 论文间关系、演进图与比较方法 |
 | [实验指南](../experiments/README.md) | 环境、命令、对照、验收和失败诊断 |
