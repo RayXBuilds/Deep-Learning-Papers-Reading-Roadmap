@@ -298,11 +298,27 @@ def main():
                 r.get('count') != 30000 or [v.get('t') for v in r.get('rows', [])] != [0.25, 0.5, 0.75]
                 for r in runs):
             errors.append('flow-matching.json: missing regression seeds or times')
+    mixture_path = ROOT / 'experiments/results/flow-mixture.json'
+    if not mixture_path.exists():
+        errors.append('Missing Flow Matching mixture report')
+    else:
+        report = json.loads(mixture_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/flow_mixture.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('flow-mixture.json: source hash mismatch')
+        expected = {'oracle_beats_fitted_linear_all_seeds', 'field_error_at_midpoint_all_seeds',
+                    'oracle_cdf_converges', 'linear_cdf_negative_control', 'both_peak_masses_recovered'}
+        checks = report.get('checks', {})
+        if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('flow-mixture.json: missing or failed checks')
+        runs = report.get('regressions', [])
+        if [(r.get('seed'), r.get('test_seed')) for r in runs] != [(7,100007),(42,100042),(2026,102026)]:
+            errors.append('flow-mixture.json: missing independent sampling seeds')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

@@ -57,3 +57,5 @@ jobs:
         run: python experiments/dualcast_regions.py --output /tmp/dualcast-regions-ci.json
       - name: Run Flow Matching velocity and time direction checks
         run: python experiments/flow_matching.py --output /tmp/flow-matching-ci.json
+      - name: Run Flow Matching mixture controls
+        run: python experiments/flow_mixture.py --output /tmp/flow-mixture-ci.json

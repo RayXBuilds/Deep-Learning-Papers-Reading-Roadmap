@@ -37,3 +37,5 @@ GAN 之后可读 WGAN，并运行 `python3 experiments/wasserstein_geometry.py`�
 解释边界：一维高斯不是自然图像；单时刻去噪不是完整扩散采样；用真实噪声反解数据只能检查公式。
 
 下一阶段（尚未实现）：二维混合分布、时间条件小网络、完整逆向链；报告分布覆盖、多个种子和采样预算。
+
+Flow Matching 双峰补充：运行 `python3 experiments/flow_mixture.py`，比较线性回归和解析条件均值，分别检查独立测试误差、CDF 与两个峰区间的质量。[实测](../../experiments/results/flow-mixture.md)；属于已有专题的补全。

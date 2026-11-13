@@ -137,3 +137,5 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 [精读](../notes/flow-matching.md) · [实测](results/flow-matching.md)
 
 运行 `python3 experiments/flow_matching.py`。第十七项机制实验，独立于核心五项。CPU 标准库，三个种子的高斯端点回归与确定性解析流对照，检查总体损失常数差、积分误差和时间反转符号。没有神经网络训练或图像基准。
+
+2026-11-13 补充同一 Flow Matching 专题的双峰对照：`python3 experiments/flow_mixture.py`。独立训练/测试数据、三个种子、解析场及总体线性场同预算积分；[协议与结果](results/flow-mixture.md)。专题总数仍为 17。
