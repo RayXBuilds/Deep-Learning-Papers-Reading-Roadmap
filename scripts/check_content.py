@@ -314,11 +314,24 @@ def main():
         runs = report.get('regressions', [])
         if [(r.get('seed'), r.get('test_seed')) for r in runs] != [(7,100007),(42,100042),(2026,102026)]:
             errors.append('flow-mixture.json: missing independent sampling seeds')
+    robust_path = ROOT / 'experiments/results/robust-flow.json'
+    if not robust_path.exists():
+        errors.append('Missing Robust Flow report')
+    else:
+        report = json.loads(robust_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/robust_flow.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('robust-flow.json: source hash mismatch')
+        expected = {'affine_residual_identity', 'midpoint_cancellation', 'label_only_changes_field',
+                    'compare_before_time_average', 'weight_direction_and_tie', 'late_time_mean'}
+        checks = report.get('checks', {})
+        if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('robust-flow.json: missing or failed checks')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

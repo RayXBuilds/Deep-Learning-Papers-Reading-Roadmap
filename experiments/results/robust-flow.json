@@ -1,0 +1,86 @@
+{
+  "config": {
+    "seed": null,
+    "x0": 0,
+    "x1": 1,
+    "endpoint_delta": 1,
+    "a": 2,
+    "b": 0,
+    "temperature": 1,
+    "quadrature_n": 10000
+  },
+  "residuals": [
+    {
+      "t": 0,
+      "state_shift": 0,
+      "clean": -1,
+      "corrupted": -2,
+      "difference": -1,
+      "expected_difference": -1
+    },
+    {
+      "t": 0.25,
+      "state_shift": 0.25,
+      "clean": -0.5,
+      "corrupted": -1.0,
+      "difference": -0.5,
+      "expected_difference": -0.5
+    },
+    {
+      "t": 0.5,
+      "state_shift": 0.5,
+      "clean": 0.0,
+      "corrupted": 0.0,
+      "difference": 0.0,
+      "expected_difference": 0.0
+    },
+    {
+      "t": 0.75,
+      "state_shift": 0.75,
+      "clean": 0.5,
+      "corrupted": 1.0,
+      "difference": 0.5,
+      "expected_difference": 0.5
+    },
+    {
+      "t": 1,
+      "state_shift": 1,
+      "clean": 1,
+      "corrupted": 2,
+      "difference": 1,
+      "expected_difference": 1
+    }
+  ],
+  "label_losses": [
+    [
+      2,
+      1,
+      9
+    ],
+    [
+      2,
+      9,
+      1
+    ]
+  ],
+  "ccs": 1.0,
+  "wrong_order_score": -3,
+  "weights": {
+    "-1": 0.7310585786300049,
+    "0": 0.5,
+    "1": 0.2689414213699951
+  },
+  "late_time_mean": 0.6666667273468012,
+  "checks": {
+    "affine_residual_identity": true,
+    "midpoint_cancellation": true,
+    "label_only_changes_field": true,
+    "compare_before_time_average": true,
+    "weight_direction_and_tie": true,
+    "late_time_mean": true
+  },
+  "passed": true,
+  "source_sha256": "b2476e284d630995a6d46267d15d735350ae68eaef2cfdf7a6e272cdbc7a0098",
+  "python": "3.9.6",
+  "platform": "macOS-27.2.1-arm64-arm-64bit"
+}

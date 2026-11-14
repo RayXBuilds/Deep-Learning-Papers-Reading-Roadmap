@@ -46,9 +46,10 @@
 | [EBGAN](notes/ebgan.md) | 能量间隔怎样影响两方目标，表示分散怎样衡量？ | 有限能量表、间隔导数与 PT 几何 |
 | [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
 | [Flow Matching](notes/flow-matching.md) | 条件速度怎样变成边缘速度，时间方向如何对齐？ | 高斯与双峰回归、解析流及积分对照 |
+| [Robust Flow Matching](notes/robust-flow-matching.md) | 数据污染和错标签怎样改变监督？ | 残差抵消、类间评分与时间采样；训练未复现 |
 | [DualCast](notes/dualcast.md) | 双参考角色与区域权重如何组织？ | 区域损失机制，预印本，视频训练未复现 |
 
-目前有 **19 篇精读初版、17 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
+目前有 **20 篇精读初版、18 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
 
 ## 动手验证
 
@@ -58,7 +59,7 @@
 python3 experiments/run.py --experiment all --seed 7
 ```
 
-上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT、BERT MLM、CLIP、GAN、WGAN、EBGAN、DualCast、Flow Matching 十二个专题的独立命令见[实验指南](experiments/README.md)。
+上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT、BERT MLM、CLIP、GAN、WGAN、EBGAN、DualCast、Flow Matching、Robust Flow Matching 十三个专题的独立命令见[实验指南](experiments/README.md)。
 
 也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 

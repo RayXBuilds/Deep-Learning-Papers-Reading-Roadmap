@@ -59,3 +59,5 @@ jobs:
         run: python experiments/flow_matching.py --output /tmp/flow-matching-ci.json
       - name: Run Flow Matching mixture controls
         run: python experiments/flow_mixture.py --output /tmp/flow-mixture-ci.json
+      - name: Run robust flow residual and score controls
+        run: python experiments/robust_flow.py --output /tmp/robust-flow-ci.json

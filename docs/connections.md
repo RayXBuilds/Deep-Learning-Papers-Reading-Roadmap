@@ -76,3 +76,5 @@ flowchart LR
 例如比较 BN/LN 时先固定输入和仿射参数，仅改变统计轴；比较视觉架构时若训练数据、增强、算力同时改变，就不能直接作单因素归因。
 
 Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能力：[双峰补充](../notes/flow-matching.md)中均值、方差可匹配而两个峰区间的概率质量仍错误；这不构成两种训练算法的优劣排名。
+
+[Flow Matching](../notes/flow-matching.md) → [Robust Flow Matching](../notes/robust-flow-matching.md) 是监督可靠性的问题延续；[DualCast](../notes/dualcast.md) 与后者是区域重要性加权和样本可靠性加权的对照，不能将两类权重解释为同一机制。

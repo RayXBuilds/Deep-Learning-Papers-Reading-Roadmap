@@ -18,6 +18,8 @@
 
 DDPM 之后先读 [Flow Matching](../../notes/flow-matching.md)，比较噪声目标与条件速度，再读近期应用专题 [DualCast](../../notes/dualcast.md)，结合 VAE 和 CLIP 检查角色条件与区域监督。两篇的时间轴方向相反，需要同步变换速度符号。
 
+Flow Matching 后可读 [Robust Flow Matching](../../notes/robust-flow-matching.md)，逐项检查位置、速度标签与条件。先运行固定残差实验，再考虑评分缓冲区和真实训练。
+
 ## 实验验收
 
 运行 `python3 experiments/flow_matching.py`，比较三个种子的高斯回归与解析边缘场，检查 Euler 收敛及时间反转负对照。[实测](../../experiments/results/flow-matching.md)；神经网络训练未实现。
