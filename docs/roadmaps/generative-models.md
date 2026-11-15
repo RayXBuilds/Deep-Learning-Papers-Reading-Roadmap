@@ -41,3 +41,5 @@ GAN 之后可读 WGAN，并运行 `python3 experiments/wasserstein_geometry.py`�
 下一阶段（尚未实现）：二维混合分布、时间条件小网络、完整逆向链；报告分布覆盖、多个种子和采样预算。
 
 Flow Matching 双峰补充：运行 `python3 experiments/flow_mixture.py`，比较线性回归和解析条件均值，分别检查独立测试误差、CDF 与两个峰区间的质量。[实测](../../experiments/results/flow-mixture.md)；属于已有专题的补全。
+
+Robust Flow Matching 的评分实现补充：运行 `python3 experiments/trs_buffer.py`，追踪样本身份、未访问项和分位数变化。[实测](../../experiments/results/trs-buffer.md)；不含优化器训练。

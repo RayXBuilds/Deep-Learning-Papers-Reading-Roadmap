@@ -61,3 +61,5 @@ jobs:
         run: python experiments/flow_mixture.py --output /tmp/flow-mixture-ci.json
       - name: Run robust flow residual and score controls
         run: python experiments/robust_flow.py --output /tmp/robust-flow-ci.json
+      - name: Run TRS score buffer controls
+        run: python experiments/trs_buffer.py --output /tmp/trs-buffer-ci.json

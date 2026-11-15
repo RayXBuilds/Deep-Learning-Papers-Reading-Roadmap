@@ -143,3 +143,5 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## Robust Flow Matching 监督可靠性专题
 
 运行 `python3 experiments/robust_flow.py`。第十八项机制实验，固定仿射场与三类损失表，CPU 标准库，无随机数。检查残差分解、抵消反例、CCS 运算顺序及时间采样；未训练鲁棒生成器。[精读](../notes/robust-flow-matching.md) · [实测](results/robust-flow.md)
+
+2026-11-15 补充同一 Robust Flow Matching 专题：`python3 experiments/trs_buffer.py` 验证样本索引、EMA、暖启动与已访问分数的分位数。[实测](results/trs-buffer.md)。专题数量不变。

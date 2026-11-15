@@ -78,3 +78,5 @@ flowchart LR
 Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能力：[双峰补充](../notes/flow-matching.md)中均值、方差可匹配而两个峰区间的概率质量仍错误；这不构成两种训练算法的优劣排名。
 
 [Flow Matching](../notes/flow-matching.md) → [Robust Flow Matching](../notes/robust-flow-matching.md) 是监督可靠性的问题延续；[DualCast](../notes/dualcast.md) 与后者是区域重要性加权和样本可靠性加权的对照，不能将两类权重解释为同一机制。
+
+[Adam](../notes/adam.md) 与 [Robust Flow Matching](../notes/robust-flow-matching.md) 的 EMA 仅属组件对照：前者按参数更新矩，后者按样本访问更新可靠性分数；未访问样本不应随全局步衰减。[缓冲区验证](../experiments/results/trs-buffer.md)。
