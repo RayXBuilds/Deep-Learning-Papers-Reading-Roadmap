@@ -20,6 +20,7 @@
 | DDPM / 2020 | 加噪与噪声预测 | [原文](https://arxiv.org/abs/2006.11239) | [精读初版](../notes/ddpm.md)；diffusion |
 | Flow Matching / 2022，ICLR 2023 | 条件速度、边缘场与时间方向 | [原文](https://arxiv.org/abs/2210.02747) | [精读初版](../notes/flow-matching.md)，flow_matching.py 与 flow_mixture.py，高斯/双峰机制已验证，图像训练未复现 |
 | Robust Flow Matching / 2026 | 端点污染与条件标签噪声 | [原文](https://arxiv.org/abs/2611.13324) | [精读初版](../notes/robust-flow-matching.md)，robust_flow.py 与 trs_buffer.py（评分缓冲区）；作者标注 NeurIPS 已接收，会议记录未独立核对；训练未复现 |
+| LipsFlower / 2026 | 初值与条件扰动的传播 | [原文](https://arxiv.org/abs/2611.13995v1) | [精读初版](../notes/lipsflower.md)，restoration_stability.py；未同行评审预印本，官方代码未核实，图像训练未复现 |
 | DualCast / 2026 | 双参考条件与区域监督 | [原文](https://arxiv.org/abs/2611.05825) | [精读初版](../notes/dualcast.md)，预印本，dualcast_regions.py，视频训练未复现 |
 | AdamW / 2017，ICLR 2019 | 解耦权重衰减 | [原文](https://arxiv.org/abs/1711.05101) | [精读初版](../notes/adamw.md)；adamw_decay.py |
 | BERT / 2018，NAACL 2019 | 双向 Transformer 预训练 | [原文](https://arxiv.org/abs/1810.04805) | [精读初版](../notes/bert.md)；attention 与 bert_mlm.py；输入扰动和 MLM/NSP 训练未运行 |
@@ -27,4 +28,4 @@
 | CLIP / 2021，ICML 2021 | 图文配对监督与对比学习 | [原文](https://arxiv.org/abs/2103.00020) | [精读初版](../notes/clip.md)；clip_objective.py；预训练及零样本分类未复现 |
 | LoRA / 2021，ICLR 2022 | 冻结权重与低秩适配 | [原文](https://arxiv.org/abs/2106.09685) | [精读初版](../notes/lora.md)；lora_mechanics.py；任务微调未复现 |
 
-本表最近维护：2026-11-15；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。AlexNet、VGG、GoogLeNet 等历史条目见历史目录；其新格式精读尚未完成。
+本表最近维护：2026-11-16；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。AlexNet、VGG、GoogLeNet 等历史条目见历史目录；其新格式精读尚未完成。

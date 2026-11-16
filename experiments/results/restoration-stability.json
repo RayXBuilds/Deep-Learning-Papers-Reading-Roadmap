@@ -1,0 +1,72 @@
+{
+  "config": {
+    "seed": null,
+    "observation": 0.37,
+    "delta": 0.001,
+    "noise": -0.2,
+    "time": 1
+  },
+  "cases": [
+    {
+      "a": 1,
+      "b": 0,
+      "initial_from_y": true,
+      "exact_gain": 2.7182818284590127,
+      "lipschitz_bound": 2.718281828459045
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "initial_from_y": false,
+      "exact_gain": 3.4365636569180236,
+      "lipschitz_bound": 3.4365636569180906
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "initial_from_y": false,
+      "exact_gain": 2.0000000000000018,
+      "lipschitz_bound": 2.0
+    },
+    {
+      "a": -1,
+      "b": 10,
+      "initial_from_y": false,
+      "exact_gain": 6.321205588285306,
+      "lipschitz_bound": 17.182818284590454
+    }
+  ],
+  "euler": [
+    {
+      "steps": 10,
+      "gain": 3.1874849201999345,
+      "absolute_error": 0.24907873671815617
+    },
+    {
+      "steps": 100,
+      "gain": 3.4096276588434504,
+      "absolute_error": 0.0269359980746402
+    },
+    {
+      "steps": 1000,
+      "gain": 3.4338478644709847,
+      "absolute_error": 0.002715792447105958
+    }
+  ],
+  "mismatched_noise_gain": 274.5464646743637,
+  "coarse_contracting_field_gain": 2.9999999999998916,
+  "continuous_contracting_field_gain": 0.01831563888873418,
+  "checks": {
+    "sharp_initial_bound": true,
+    "sharp_condition_bound": true,
+    "zero_state_limit": true,
+    "contractive_state_not_condition_control": true,
+    "euler_converges": true,
+    "fixed_noise_required": true,
+    "coarse_solver_breaks_contraction": true
+  },
+  "passed": true,
+  "source_sha256": "7718967a65042e35d960a90aa40c80e39800581f57ae0370d785ebda1c9f321b",
+  "python": "3.9.6",
+  "platform": "macOS-27.2.1-arm64-arm-64bit"
+}

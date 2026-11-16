@@ -341,11 +341,27 @@ def main():
         checks = report.get('checks', {})
         if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
             errors.append('trs-buffer.json: missing or failed checks')
+    stability_path = ROOT / 'experiments/results/restoration-stability.json'
+    if not stability_path.exists():
+        errors.append('Missing restoration stability report')
+    else:
+        report = json.loads(stability_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/restoration_stability.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('restoration-stability.json: source hash mismatch')
+        expected = {'sharp_initial_bound', 'sharp_condition_bound', 'zero_state_limit',
+                    'contractive_state_not_condition_control', 'euler_converges',
+                    'fixed_noise_required', 'coarse_solver_breaks_contraction'}
+        checks = report.get('checks', {})
+        if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('restoration-stability.json: missing or failed checks')
+        if len(report.get('cases', [])) != 4 or [r.get('steps') for r in report.get('euler', [])] != [10, 100, 1000]:
+            errors.append('restoration-stability.json: missing comparison cases or solver resolutions')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement + 1 restoration stability report')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

@@ -43,3 +43,5 @@ GAN 之后可读 WGAN，并运行 `python3 experiments/wasserstein_geometry.py`�
 Flow Matching 双峰补充：运行 `python3 experiments/flow_mixture.py`，比较线性回归和解析条件均值，分别检查独立测试误差、CDF 与两个峰区间的质量。[实测](../../experiments/results/flow-mixture.md)；属于已有专题的补全。
 
 Robust Flow Matching 的评分实现补充：运行 `python3 experiments/trs_buffer.py`，追踪样本身份、未访问项和分位数变化。[实测](../../experiments/results/trs-buffer.md)；不含优化器训练。
+
+输入敏感性分支：[LipsFlower](../../notes/lipsflower.md) 比较观测进入初值或持续进入速度场的区别。它与 Robust Flow Matching 的训练污染处理是问题对照。运行 `python3 experiments/restoration_stability.py` 检查闭式界、条件注入和离散积分反例；[实测](../../experiments/results/restoration-stability.md)。
