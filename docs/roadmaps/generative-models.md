@@ -45,3 +45,5 @@ Flow Matching 双峰补充：运行 `python3 experiments/flow_mixture.py`，比�
 Robust Flow Matching 的评分实现补充：运行 `python3 experiments/trs_buffer.py`，追踪样本身份、未访问项和分位数变化。[实测](../../experiments/results/trs-buffer.md)；不含优化器训练。
 
 输入敏感性分支：[LipsFlower](../../notes/lipsflower.md) 比较观测进入初值或持续进入速度场的区别。它与 Robust Flow Matching 的训练污染处理是问题对照。运行 `python3 experiments/restoration_stability.py` 检查闭式界、条件注入和离散积分反例；[实测](../../experiments/results/restoration-stability.md)。
+
+数值求解分支：[Flow 直线性与 Euler 误差](../../notes/flow-straightness.md) 区分回归损失、耦合统计量和同场积分误差。运行 `python3 experiments/euler_error.py`，检查主项及二阶余量；[实测](../../experiments/results/euler-error.md)。匹配耦合实验未复现。

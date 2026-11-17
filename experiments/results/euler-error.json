@@ -1,0 +1,82 @@
+{
+  "config": {
+    "seed": null,
+    "initial": 1,
+    "time": 1
+  },
+  "runs": [
+    {
+      "rate": -1,
+      "coefficient": -0.18393972058572117,
+      "unpropagated_coefficient": -0.31606027941427883,
+      "rows": [
+        {
+          "steps": 20,
+          "signed_error": -0.009393518762900122,
+          "scaled_error": -0.18787037525800243,
+          "remainder": -0.00019653273361406286
+        },
+        {
+          "steps": 40,
+          "signed_error": -0.004647001283561714,
+          "scaled_error": -0.18588005134246854,
+          "remainder": -4.8508268918684254e-05
+        },
+        {
+          "steps": 80,
+          "signed_error": -0.0023112971243251512,
+          "scaled_error": -0.1849037699460121,
+          "remainder": -1.2050617003636546e-05
+        },
+        {
+          "steps": 160,
+          "signed_error": -0.0011526264528429198,
+          "scaled_error": -0.18442023245486716,
+          "remainder": -3.0031991821624204e-06
+        }
+      ]
+    },
+    {
+      "rate": 1,
+      "coefficient": -1.3591409142295225,
+      "unpropagated_coefficient": -0.8591409142295227,
+      "rows": [
+        {
+          "steps": 20,
+          "signed_error": -0.06498412331462378,
+          "scaled_error": -1.2996824662924755,
+          "remainder": 0.0029729223968523455
+        },
+        {
+          "steps": 40,
+          "signed_error": -0.03321799006907167,
+          "scaled_error": -1.3287196027628667,
+          "remainder": 0.000760532786666393
+        },
+        {
+          "steps": 80,
+          "signed_error": -0.016796887705706975,
+          "scaled_error": -1.343751016456558,
+          "remainder": 0.000192373722162055
+        },
+        {
+          "steps": 160,
+          "signed_error": -0.00844625215126893,
+          "scaled_error": -1.3514003442030287,
+          "remainder": 4.837856266558596e-05
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "negative_signed_error": true,
+    "coefficient_limit": true,
+    "first_order_error": true,
+    "second_order_remainder": true,
+    "propagation_negative_control": true
+  },
+  "passed": true,
+  "source_sha256": "83e59c8df51156b5335006ba7bf6bf06d6dc6d3ade3fe34342ae436ddbbe8228",
+  "python": "3.9.6",
+  "platform": "macOS-27.2.1-arm64-arm-64bit"
+}

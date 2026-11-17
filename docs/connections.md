@@ -82,3 +82,5 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 [Adam](../notes/adam.md) 与 [Robust Flow Matching](../notes/robust-flow-matching.md) 的 EMA 仅属组件对照：前者按参数更新矩，后者按样本访问更新可靠性分数；未访问样本不应随全局步衰减。[缓冲区验证](../experiments/results/trs-buffer.md)。
 
 [Flow Matching](../notes/flow-matching.md) → [LipsFlower](../notes/lipsflower.md) 是速度学习到输入敏感性的**问题延续**；[Robust Flow Matching](../notes/robust-flow-matching.md) ↔ LipsFlower 是训练污染与推理扰动的**问题对照**；[WGAN](../notes/wgan.md) ↔ LipsFlower 是 critic 与速度场函数约束的**概念对照**，不能推断相同损失或直接继承。
+
+[Flow Matching](../notes/flow-matching.md) → [直线性与 Euler 误差](../notes/flow-straightness.md) 是回归到数值求解的**问题延续**；与 [LipsFlower](../notes/lipsflower.md) 是观测扰动与离散误差的**来源对照**。与 [WGAN](../notes/wgan.md) 是分布距离和同场终点误差的**评价对照**，不能互换验收指标。

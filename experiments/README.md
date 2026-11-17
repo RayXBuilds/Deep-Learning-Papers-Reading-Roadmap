@@ -149,3 +149,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## LipsFlower 输入敏感性专题
 
 运行 `python3 experiments/restoration_stability.py`。第十九项机制实验，CPU 标准库、确定性标量 ODE、seed=null；验证初值与条件增益、配对随机性及积分误差，不含神经网络训练。[精读](../notes/lipsflower.md) · [协议与实测](results/restoration-stability.md)
+
+## Euler 主误差专题
+
+第二十项机制实验：`python3 experiments/euler_error.py`。确定性 CPU 标量场，检查主系数、误差阶和传播项负对照。[精读](../notes/flow-straightness.md) · [实测](results/euler-error.md)。未构造匹配直线性的 FM 耦合。

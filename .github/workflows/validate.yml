@@ -65,3 +65,5 @@ jobs:
         run: python experiments/trs_buffer.py --output /tmp/trs-buffer-ci.json
       - name: Run restoration input sensitivity controls
         run: python experiments/restoration_stability.py --output /tmp/restoration-stability-ci.json
+      - name: Run principal Euler error controls
+        run: python experiments/euler_error.py --output /tmp/euler-error-ci.json
