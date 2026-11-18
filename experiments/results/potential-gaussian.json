@@ -1,0 +1,354 @@
+{
+  "config": {
+    "seed": null,
+    "dimension": 2,
+    "coupling": "independent centered Gaussians"
+  },
+  "rows": [
+    {
+      "case": "isotropic",
+      "t": 0.25,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jacobian": [
+        [
+          -0.39999999999999997,
+          0.39999999999999997
+        ],
+        [
+          0.39999999999999997,
+          -0.39999999999999997
+        ]
+      ],
+      "curl": 0.0,
+      "circulation": 0.0,
+      "score_identity_error": 4.996003610813204e-16
+    },
+    {
+      "case": "isotropic",
+      "t": 0.5,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jacobian": [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "curl": 0.0,
+      "circulation": 0.0,
+      "score_identity_error": 0.0
+    },
+    {
+      "case": "isotropic",
+      "t": 0.75,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "target": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jacobian": [
+        [
+          0.9714285714285713,
+          0.17142857142857149
+        ],
+        [
+          0.17142857142857149,
+          0.9714285714285713
+        ]
+      ],
+      "curl": 0.0,
+      "circulation": 0.0,
+      "score_identity_error": 1.1102230246251565e-16
+    },
+    {
+      "case": "commuting",
+      "t": 0.25,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "target": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jacobian": [
+        [
+          -0.36363636363636365,
+          0.0
+        ],
+        [
+          0.0,
+          -0.923076923076923
+        ]
+      ],
+      "curl": 0.0,
+      "circulation": 0.0,
+      "score_identity_error": 3.3306690738754696e-16
+    },
+    {
+      "case": "commuting",
+      "t": 0.5,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "target": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jacobian": [
+        [
+          0.6666666666666666,
+          0.0
+        ],
+        [
+          0.0,
+          -0.2857142857142857
+        ]
+      ],
+      "curl": 0.0,
+      "circulation": 0.0,
+      "score_identity_error": 1.1102230246251565e-16
+    },
+    {
+      "case": "commuting",
+      "t": 0.75,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "target": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jacobian": [
+        [
+          1.0526315789473684,
+          0.0
+        ],
+        [
+          0.0,
+          0.6451612903225806
+        ]
+      ],
+      "curl": 0.0,
+      "circulation": 5.551115123125783e-17,
+      "score_identity_error": 0.0
+    },
+    {
+      "case": "noncommuting",
+      "t": 0.25,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "target": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jacobian": [
+        [
+          -0.37410071942446044,
+          0.11510791366906474
+        ],
+        [
+          0.460431654676259,
+          -1.0647482014388487
+        ]
+      ],
+      "curl": 0.34532374100719426,
+      "circulation": 0.34532374100719426,
+      "score_identity_error": 3.3306690738754696e-16
+    },
+    {
+      "case": "noncommuting",
+      "t": 0.5,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "target": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jacobian": [
+        [
+          0.5882352941176471,
+          0.23529411764705885
+        ],
+        [
+          0.9411764705882353,
+          -0.823529411764706
+        ]
+      ],
+      "curl": 0.7058823529411764,
+      "circulation": 0.7058823529411764,
+      "score_identity_error": 1.1102230246251565e-16
+    },
+    {
+      "case": "noncommuting",
+      "t": 0.75,
+      "source": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "target": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jacobian": [
+        [
+          0.9851632047477747,
+          0.1424332344213649
+        ],
+        [
+          0.5697329376854601,
+          0.13056379821958458
+        ]
+      ],
+      "curl": 0.42729970326409517,
+      "circulation": 0.42729970326409517,
+      "score_identity_error": 3.3306690738754696e-16
+    }
+  ],
+  "symmetrization_velocity_change": 0.3529411764705882,
+  "checks": {
+    "score_identity": true,
+    "isotropic_and_commuting_curl_zero": true,
+    "noncommuting_curl_nonzero": true,
+    "closed_loop_matches_curl": true,
+    "symmetrization_changes_field": true
+  },
+  "passed": true,
+  "source_sha256": "4de229cc2d99c6d5808450dda6e29bf0df549ac5505899953e191002aefbfed9",
+  "python": "3.9.6",
+  "platform": "macOS-27.2.1-arm64-arm-64bit"
+}

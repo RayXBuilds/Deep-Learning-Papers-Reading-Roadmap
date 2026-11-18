@@ -84,3 +84,5 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 [Flow Matching](../notes/flow-matching.md) → [LipsFlower](../notes/lipsflower.md) 是速度学习到输入敏感性的**问题延续**；[Robust Flow Matching](../notes/robust-flow-matching.md) ↔ LipsFlower 是训练污染与推理扰动的**问题对照**；[WGAN](../notes/wgan.md) ↔ LipsFlower 是 critic 与速度场函数约束的**概念对照**，不能推断相同损失或直接继承。
 
 [Flow Matching](../notes/flow-matching.md) → [直线性与 Euler 误差](../notes/flow-straightness.md) 是回归到数值求解的**问题延续**；与 [LipsFlower](../notes/lipsflower.md) 是观测扰动与离散误差的**来源对照**。与 [WGAN](../notes/wgan.md) 是分布距离和同场终点误差的**评价对照**，不能互换验收指标。
+
+[Flow Matching](../notes/flow-matching.md) 的条件均值 → [势流专题](../notes/flow-straightness.md) 是**公式与归纳偏置联系**：二维高斯使 Jacobian 的对称性可直接检查；各向异性并不必然有旋，必须看源与目标的协方差关系。

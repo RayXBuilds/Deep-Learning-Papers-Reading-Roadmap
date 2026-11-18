@@ -374,11 +374,29 @@ def main():
         if [r.get('rate') for r in runs] != [-1, 1] or any(
                 [v.get('steps') for v in r.get('rows', [])] != [20, 40, 80, 160] for r in runs):
             errors.append('euler-error.json: missing rates or resolutions')
+    potential_path = ROOT / 'experiments/results/potential-gaussian.json'
+    if not potential_path.exists():
+        errors.append('Missing Gaussian potential-flow report')
+    else:
+        report = json.loads(potential_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/potential_gaussian.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('potential-gaussian.json: source hash mismatch')
+        expected = {'score_identity', 'isotropic_and_commuting_curl_zero',
+                    'noncommuting_curl_nonzero', 'closed_loop_matches_curl',
+                    'symmetrization_changes_field'}
+        checks = report.get('checks', {})
+        if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('potential-gaussian.json: missing or failed checks')
+        expected_rows = [(name, t) for name in ('isotropic', 'commuting', 'noncommuting')
+                         for t in (0.25, 0.5, 0.75)]
+        if [(r.get('case'), r.get('t')) for r in report.get('rows', [])] != expected_rows:
+            errors.append('potential-gaussian.json: missing covariance cases or times')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement + 1 restoration stability report + 1 Euler error report')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement + 1 restoration stability report + 1 Euler error report + 1 potential-flow supplement')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

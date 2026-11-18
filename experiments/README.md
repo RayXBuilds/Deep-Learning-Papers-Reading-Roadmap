@@ -153,3 +153,5 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## Euler 主误差专题
 
 第二十项机制实验：`python3 experiments/euler_error.py`。确定性 CPU 标量场，检查主系数、误差阶和传播项负对照。[精读](../notes/flow-straightness.md) · [实测](results/euler-error.md)。未构造匹配直线性的 FM 耦合。
+
+2026-11-18 补充同一 Flow 直线性专题：`python3 experiments/potential_gaussian.py` 比较二维高斯场的旋度、环流和对称化负对照。[实测](results/potential-gaussian.md)。专题总数仍为 20。

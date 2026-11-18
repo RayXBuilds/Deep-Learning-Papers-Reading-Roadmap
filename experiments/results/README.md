@@ -72,6 +72,8 @@ python3 -m unittest discover -s experiments -p 'test_*.py' -v
 
 - [2026-11-17 Euler 主误差与传播项](euler-error.md)
 
+- [2026-11-18 二维高斯势流与旋度补充](potential-gaussian.md)
+
 ## 局限
 
 没有运行 ImageNet、机器翻译或图像扩散训练；没有 GPU 性能测量。归一化、注意力与残差只做前向/导数机制检查。Adam 的对照学习率并非搜索后的最佳配置，不能排名算法。diffusion 仅单时刻线性回归；没有完整逆向采样。
