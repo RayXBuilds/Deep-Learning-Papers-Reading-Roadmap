@@ -69,3 +69,5 @@ jobs:
         run: python experiments/euler_error.py --output /tmp/euler-error-ci.json
       - name: Run Gaussian potential-flow controls
         run: python experiments/potential_gaussian.py --output /tmp/potential-gaussian-ci.json
+      - name: Run residual activation and cancellation controls
+        run: python experiments/residual_gate.py --output /tmp/residual-gate-ci.json

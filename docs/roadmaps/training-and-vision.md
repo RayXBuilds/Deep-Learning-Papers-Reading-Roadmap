@@ -21,3 +21,5 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 同一图像数据集、相同深度和宽度，对比普通网络与残差网络。固定划分、增强、训练预算，运行至少三个种子；记录训练损失、验证指标、参数量和耗时。若同时更换结构与学习率，不能把差异全部归因于残差。
 
 当前标量导数实验不满足上述完整复现条件。
+
+2026-11-19 增加 [ResNet 激活与抵消补充](../../notes/resnet.md)：运行 `python3 experiments/residual_gate.py`，对照 D(I+J_F) 与仅有 I+J_F 的差别。[实测](../../experiments/results/residual-gate.md)。数据集训练计划仍未完成。

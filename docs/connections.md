@@ -86,3 +86,5 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 [Flow Matching](../notes/flow-matching.md) → [直线性与 Euler 误差](../notes/flow-straightness.md) 是回归到数值求解的**问题延续**；与 [LipsFlower](../notes/lipsflower.md) 是观测扰动与离散误差的**来源对照**。与 [WGAN](../notes/wgan.md) 是分布距离和同场终点误差的**评价对照**，不能互换验收指标。
 
 [Flow Matching](../notes/flow-matching.md) 的条件均值 → [势流专题](../notes/flow-straightness.md) 是**公式与归纳偏置联系**：二维高斯使 Jacobian 的对称性可直接检查；各向异性并不必然有旋，必须看源与目标的协方差关系。
+
+[ResNet](../notes/resnet.md) ↔ [BatchNorm](../notes/batch-normalization.md) 是**组件与问题对照**：原文普通网络已有 BN，退化不宜直接归因于梯度消失。ResNet → [Transformer](../notes/transformer.md) 的残差联系也需核对加法后激活与归一化顺序，不能直接沿用 D(I+J_F)。

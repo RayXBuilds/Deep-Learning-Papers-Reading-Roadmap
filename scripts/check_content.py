@@ -392,11 +392,26 @@ def main():
                          for t in (0.25, 0.5, 0.75)]
         if [(r.get('case'), r.get('t')) for r in report.get('rows', [])] != expected_rows:
             errors.append('potential-gaussian.json: missing covariance cases or times')
+    gate_path = ROOT / 'experiments/results/residual-gate.json'
+    if not gate_path.exists():
+        errors.append('Missing residual gate report')
+    else:
+        report = json.loads(gate_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/residual_gate.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('residual-gate.json: source hash mismatch')
+        expected = {'identity_preserved', 'relu_blocks_shortcut', 'branch_cancels_identity',
+                    'shortcut_can_explode', 'shortcut_can_contract', 'finite_differences_match'}
+        checks = report.get('checks', {})
+        if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('residual-gate.json: missing or failed checks')
+        if [r.get('name') for r in report.get('rows', [])] != ['identity', 'blocked', 'cancelled', 'exploding', 'contracting']:
+            errors.append('residual-gate.json: missing controls')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
-          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement + 1 restoration stability report + 1 Euler error report + 1 potential-flow supplement')
+          f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement + 1 restoration stability report + 1 Euler error report + 1 potential-flow supplement + 1 residual gate supplement')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
     return 0
 

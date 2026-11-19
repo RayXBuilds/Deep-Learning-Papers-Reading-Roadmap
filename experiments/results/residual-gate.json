@@ -1,0 +1,71 @@
+{
+  "config": {
+    "seed": null,
+    "input": 1,
+    "difference_step": 1e-06
+  },
+  "rows": [
+    {
+      "name": "identity",
+      "slope": 0,
+      "bias": 0,
+      "depth": 20,
+      "output": 1,
+      "gradient": 1.0,
+      "finite_difference": 0.9999999999732445,
+      "normalized_error": 2.6755486715046572e-11
+    },
+    {
+      "name": "blocked",
+      "slope": -2,
+      "bias": 0,
+      "depth": 1,
+      "output": 0.0,
+      "gradient": -0.0,
+      "finite_difference": 0.0,
+      "normalized_error": 0.0
+    },
+    {
+      "name": "cancelled",
+      "slope": -1,
+      "bias": 0.5,
+      "depth": 1,
+      "output": 0.5,
+      "gradient": 0.0,
+      "finite_difference": 0.0,
+      "normalized_error": 0.0
+    },
+    {
+      "name": "exploding",
+      "slope": 1,
+      "bias": 0,
+      "depth": 20,
+      "output": 1048576,
+      "gradient": 1048576.0,
+      "finite_difference": 1048575.9999719448,
+      "normalized_error": 2.6755486715046572e-11
+    },
+    {
+      "name": "contracting",
+      "slope": -0.5,
+      "bias": 0,
+      "depth": 20,
+      "output": 9.5367431640625e-07,
+      "gradient": 9.5367431640625e-07,
+      "finite_difference": 9.53674316380734e-07,
+      "normalized_error": 2.5516020503088543e-17
+    }
+  ],
+  "checks": {
+    "identity_preserved": true,
+    "relu_blocks_shortcut": true,
+    "branch_cancels_identity": true,
+    "shortcut_can_explode": true,
+    "shortcut_can_contract": true,
+    "finite_differences_match": true
+  },
+  "passed": true,
+  "source_sha256": "3513728f4e735a30fa7ee38ff11ae8e05c0bc443ff139361167faf12aaa6122b",
+  "python": "3.9.6",
+  "platform": "macOS-27.2.1-arm64-arm-64bit"
+}

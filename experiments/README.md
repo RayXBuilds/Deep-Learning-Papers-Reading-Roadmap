@@ -155,3 +155,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 第二十项机制实验：`python3 experiments/euler_error.py`。确定性 CPU 标量场，检查主系数、误差阶和传播项负对照。[精读](../notes/flow-straightness.md) · [实测](results/euler-error.md)。未构造匹配直线性的 FM 耦合。
 
 2026-11-18 补充同一 Flow 直线性专题：`python3 experiments/potential_gaussian.py` 比较二维高斯场的旋度、环流和对称化负对照。[实测](results/potential-gaussian.md)。专题总数仍为 20。
+
+## ResNet 激活与分支抵消补充
+
+`python3 experiments/residual_gate.py`：固定仿射分支、输入和深度，验证加法后 ReLU、分支抵消及深度累乘。[精读](../notes/resnet.md) · [实测](results/residual-gate.md)。属于已有 residual 专题，专题总数仍为 20，不是网络训练。
