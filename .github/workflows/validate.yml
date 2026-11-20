@@ -71,3 +71,5 @@ jobs:
         run: python experiments/potential_gaussian.py --output /tmp/potential-gaussian-ci.json
       - name: Run residual activation and cancellation controls
         run: python experiments/residual_gate.py --output /tmp/residual-gate-ci.json
+      - name: Run BatchNorm derivative and frozen-statistic controls
+        run: python experiments/bn_jacobian.py --output /tmp/bn-jacobian-ci.json

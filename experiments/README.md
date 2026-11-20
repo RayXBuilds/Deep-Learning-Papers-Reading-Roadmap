@@ -159,3 +159,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## ResNet 激活与分支抵消补充
 
 `python3 experiments/residual_gate.py`：固定仿射分支、输入和深度，验证加法后 ReLU、分支抵消及深度累乘。[精读](../notes/resnet.md) · [实测](results/residual-gate.md)。属于已有 residual 专题，专题总数仍为 20，不是网络训练。
+
+## BatchNorm 反向传播补充
+
+`python3 experiments/bn_jacobian.py`：单特征批的解析导数对照有限差分，检查公共平移、有限 ε 的径向导数和冻结统计量。[精读](../notes/batch-normalization.md) · [实测](results/bn-jacobian.md)。属于既有 normalization 专题，仍为 20 个机制专题；没有网络训练或滑动统计估计。

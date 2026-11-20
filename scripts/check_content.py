@@ -407,12 +407,32 @@ def main():
             errors.append('residual-gate.json: missing or failed checks')
         if [r.get('name') for r in report.get('rows', [])] != ['identity', 'blocked', 'cancelled', 'exploding', 'contracting']:
             errors.append('residual-gate.json: missing controls')
+    bn_path = ROOT / 'experiments/results/bn-jacobian.json'
+    if not bn_path.exists():
+        errors.append('Missing BatchNorm Jacobian report')
+    else:
+        report = json.loads(bn_path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments/bn_jacobian.py').read_bytes()).hexdigest()
+        if report.get('source_sha256') != digest:
+            errors.append('bn-jacobian.json: source hash mismatch')
+        expected = {'jacobian_matches_finite_difference', 'training_shift_invariant',
+                    'batch_entries_coupled', 'zero_epsilon_radial_null',
+                    'positive_epsilon_radial_leak', 'frozen_statistics_differ'}
+        checks = report.get('checks', {})
+        if set(checks) != expected or not all(v is True for v in checks.values()) or report.get('passed') is not True:
+            errors.append('bn-jacobian.json: missing or failed checks')
+        if [r.get('epsilon') for r in report.get('rows', [])] != [0, 0.25]:
+            errors.append('bn-jacobian.json: missing epsilon controls')
+        if report.get('config') != {'input': [-3, -1, 2, 6], 'gamma': 1.5, 'beta': 0.3,
+                                    'shift': 5, 'difference_step': 1e-5, 'seed': None}:
+            errors.append('bn-jacobian.json: unexpected experiment configuration')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1
     print(f'OK: {len(markdown)} Markdown files, {link_count} local links, '
           f'{len(notes)} structured notes, {len(reports)} baseline reports + 1 additive report + 1 VAE report + 1 AdamW report + 1 LoRA report + 1 ViT report + 1 MLM report + 1 CLIP report + 1 GAN report + 1 Wasserstein report + 1 EBGAN report + 1 dimension supplement + 1 DualCast report + 1 Flow Matching report + 1 mixture supplement + 1 Robust Flow report + 1 TRS supplement + 1 restoration stability report + 1 Euler error report + 1 potential-flow supplement + 1 residual gate supplement')
     print('Scope: file targets only; remote URLs and anchor fragments are not checked.')
+    print('Also verified: BatchNorm Jacobian supplement provenance and controls.')
     return 0
 
 
