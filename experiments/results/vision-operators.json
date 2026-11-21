@@ -1,0 +1,100 @@
+{
+  "source_sha256": "69fcbb96c994cee38b9e5b835ef5d8c808d4dec8456f0877e406762020a2cb46",
+  "convolution": [
+    {
+      "seed": 7,
+      "max_error": 1.3322676295501878e-15,
+      "minor": 0.0,
+      "dense_macs": 108,
+      "separated_macs": 39
+    },
+    {
+      "seed": 42,
+      "max_error": 8.881784197001252e-16,
+      "minor": 2.7755575615628914e-17,
+      "dense_macs": 108,
+      "separated_macs": 39
+    },
+    {
+      "seed": 2026,
+      "max_error": 8.881784197001252e-16,
+      "minor": 0.0,
+      "dense_macs": 108,
+      "separated_macs": 39
+    }
+  ],
+  "routing": [
+    {
+      "width": 28,
+      "height": 28,
+      "level": 2,
+      "fixed_p4_span": 1.75,
+      "routed_span": 7.0,
+      "short_side_cells": 7.0
+    },
+    {
+      "width": 56,
+      "height": 56,
+      "level": 2,
+      "fixed_p4_span": 3.5,
+      "routed_span": 14.0,
+      "short_side_cells": 14.0
+    },
+    {
+      "width": 112,
+      "height": 112,
+      "level": 3,
+      "fixed_p4_span": 7.0,
+      "routed_span": 14.0,
+      "short_side_cells": 14.0
+    },
+    {
+      "width": 223,
+      "height": 223,
+      "level": 3,
+      "fixed_p4_span": 13.9375,
+      "routed_span": 27.875,
+      "short_side_cells": 27.875
+    },
+    {
+      "width": 224,
+      "height": 224,
+      "level": 4,
+      "fixed_p4_span": 14.0,
+      "routed_span": 14.0,
+      "short_side_cells": 14.0
+    },
+    {
+      "width": 448,
+      "height": 448,
+      "level": 5,
+      "fixed_p4_span": 28.0,
+      "routed_span": 14.0,
+      "short_side_cells": 14.0
+    },
+    {
+      "width": 896,
+      "height": 896,
+      "level": 5,
+      "fixed_p4_span": 56.0,
+      "routed_span": 28.0,
+      "short_side_cells": 28.0
+    },
+    {
+      "width": 7,
+      "height": 7168,
+      "level": 4,
+      "fixed_p4_span": 14.0,
+      "routed_span": 14.0,
+      "short_side_cells": 0.4375
+    }
+  ],
+  "checks": {
+    "linear_equivalence": true,
+    "factor_minor_zero": true,
+    "routing_boundaries": true,
+    "octave_span": true,
+    "thin_box": true
+  },
+  "passed": true
+}

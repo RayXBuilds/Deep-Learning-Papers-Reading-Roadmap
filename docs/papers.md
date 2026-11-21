@@ -12,6 +12,12 @@
 | VGG / 2014，ICLR 2015 | 小核如何组合空间证据？ | [原文](https://arxiv.org/abs/1409.1556) | [精读初版](../notes/vgg.md)，脉冲响应已验证 |
 | GoogLeNet / 2014，CVPR 2015 | 通道投影怎样控制多尺度分支成本？ | [原文](https://arxiv.org/abs/1409.4842) | [精读初版](../notes/googlenet.md)，专项实验未运行 |
 | Seq2Seq / 2014，NIPS | 固定摘要与源句反转改变哪些依赖？ | [原文](https://arxiv.org/abs/1409.3215) | [精读初版](../notes/seq2seq.md)，专项实验未运行 |
+| U-Net / 2015，MICCAI 2015 | 跳接裁剪与相邻细胞边界 | [原文](https://arxiv.org/abs/1505.04597) | [精读初版](../notes/u-net.md)，分割实验未运行 |
+| Faster R-CNN / 2015，NIPS 2015 | 共享特征上的候选框生成 | [原文](https://arxiv.org/abs/1506.01497) | [精读初版](../notes/faster-rcnn.md)，RPN 未验证 |
+| SSD / 2015，ECCV 2016 | 直接分类、多层铺框与难负例 | [原文](https://arxiv.org/abs/1512.02325) | [精读初版](../notes/ssd.md)，检测实验未运行 |
+| DenseNet / 2016，CVPR 2017 | 块内拼接、增长率与特征复用 | [原文](https://arxiv.org/abs/1608.06993) | [精读初版](../notes/densenet.md)，通道消融未运行 |
+| FPN / 2016，CVPR 2017 | 金字塔融合与区域选层 | [原文](https://arxiv.org/abs/1612.03144) | [精读初版](../notes/fpn.md)，RoI 路由已验证 |
+| MobileNet v1 / 2017，arXiv 技术报告 | 空间滤波与逐点混合 | [原文](https://arxiv.org/abs/1704.04861) | [精读初版](../notes/mobilenet-v1.md)，线性卷积核分解已验证 |
 | ResNet / 2015，CVPR 2016 | 深度增加后的训练退化 | [原文](https://arxiv.org/abs/1512.03385) | [精读初版](../notes/resnet.md)；residual 与 residual_gate.py（加法后激活/抵消补充） |
 | BatchNorm / 2015 | 跨样本统计与训练/推理 | [原文](https://arxiv.org/abs/1502.03167) | [精读初版](../notes/batch-normalization.md)；normalization 与 bn_jacobian.py（统计量求导/冻结对照） |
 | LayerNorm / 2016 | 单样本内部统计 | [原文](https://arxiv.org/abs/1607.06450) | [精读初版](../notes/layer-normalization.md)；normalization；含统计轴/仿射输出手算对照 |

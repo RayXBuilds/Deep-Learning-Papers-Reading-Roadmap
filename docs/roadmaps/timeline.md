@@ -7,9 +7,9 @@
 | 2012 | [AlexNet](../../notes/alexnet.md) |
 | 2013 | [word2vec（CBOW / Skip-gram）](../../notes/word2vec.md)、[VAE](../../notes/vae.md) |
 | 2014 | [Dropout](../../notes/dropout.md)、[VGG](../../notes/vgg.md)、[GoogLeNet](../../notes/googlenet.md)、[Seq2Seq](../../notes/seq2seq.md)、[Adam](../../notes/adam.md)、[Bahdanau Attention](../../notes/bahdanau-attention.md)、[GAN](../../notes/gan.md) |
-| 2015 | [ResNet](../../notes/resnet.md)、[BatchNorm](../../notes/batch-normalization.md) |
-| 2016 | [LayerNorm](../../notes/layer-normalization.md)、[EBGAN](../../notes/ebgan.md) |
-| 2017 | [Transformer](../../notes/transformer.md)、[WGAN](../../notes/wgan.md)、[AdamW](../../notes/adamw.md) |
+| 2015 | [ResNet](../../notes/resnet.md)、[BatchNorm](../../notes/batch-normalization.md)、[U-Net](../../notes/u-net.md)、[Faster R-CNN](../../notes/faster-rcnn.md)、[SSD](../../notes/ssd.md) |
+| 2016 | [LayerNorm](../../notes/layer-normalization.md)、[EBGAN](../../notes/ebgan.md)、[DenseNet](../../notes/densenet.md)、[FPN](../../notes/fpn.md) |
+| 2017 | [Transformer](../../notes/transformer.md)、[WGAN](../../notes/wgan.md)、[AdamW](../../notes/adamw.md)、[MobileNet v1](../../notes/mobilenet-v1.md) |
 | 2018 | [BERT](../../notes/bert.md) |
 | 2020 | [DDPM](../../notes/ddpm.md)、[ViT](../../notes/vit.md) |
 | 2021 | [CLIP](../../notes/clip.md)、[LoRA](../../notes/lora.md) |

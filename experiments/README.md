@@ -167,3 +167,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## Dropout 与 VGG
 
 运行 `python3 experiments/early_mechanisms.py` 检查掩码期望和卷积脉冲响应。[协议、实测及边界](results/early-mechanisms.md)
+
+## MobileNet v1 与 FPN
+
+运行 `python3 experiments/vision_operators.py`，比较分解卷积的两条线性计算路径，再将不同尺度的框分到 P2–P5，与固定 P4 对照。[配置、阈值与实测结果](results/vision-operators.md)

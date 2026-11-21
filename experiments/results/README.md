@@ -87,3 +87,5 @@ CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 C
 ## Dropout 与 VGG
 
 运行 `python3 experiments/early_mechanisms.py` 检查掩码期望和卷积脉冲响应。[协议、实测及边界](early-mechanisms.md)
+
+[MobileNet v1 核分解与 FPN 选层](vision-operators.md) 包含三个种子的卷积误差、固定 P4 对照与等面积细长框。

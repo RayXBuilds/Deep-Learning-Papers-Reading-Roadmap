@@ -91,3 +91,13 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 [Flow Matching](../notes/flow-matching.md) 的条件均值 → [势流专题](../notes/flow-straightness.md) 是**公式与归纳偏置联系**：二维高斯使 Jacobian 的对称性可直接检查；各向异性并不必然有旋，必须看源与目标的协方差关系。
 
 [ResNet](../notes/resnet.md) ↔ [BatchNorm](../notes/batch-normalization.md) 是**组件与问题对照**：原文普通网络已有 BN，退化不宜直接归因于梯度消失。ResNet → [Transformer](../notes/transformer.md) 的残差联系也需核对加法后激活与归一化顺序，不能直接沿用 D(I+J_F)。
+
+## 骨干、候选框与多尺度特征
+
+| 对读 | 关系与可观察的区别 |
+|---|---|
+| [ResNet](../notes/resnet.md) 与 [DenseNet](../notes/densenet.md) | 块内传递方式的对照。残差相加保持同宽，稠密拼接让后层卷积按来源通道取值。 |
+| DenseNet 与 [MobileNet v1](../notes/mobilenet-v1.md) | 同为分类骨干。前者的瓶颈投影限制后续卷积宽度，后者的逐点卷积混合逐通道滤波的结果。 |
+| [Faster R-CNN](../notes/faster-rcnn.md) 与 [SSD](../notes/ssd.md) | 都用相对参考框的回归；RPN 的物体性分数用于选候选，SSD 的类别分数直接参与最终筛选。 |
+| ResNet、Faster R-CNN 与 [FPN](../notes/fpn.md) | 组件组合。骨干提供 C2–C5；FPN 融合跨层特征；RPN 和区域分类器消费不同尺度。 |
+| [U-Net](../notes/u-net.md) 与 FPN | 空间细节恢复的对照。前者跨尺度对齐后拼接，再预测像素；后者投影后相加，供多个尺度上的检测头读取。 |

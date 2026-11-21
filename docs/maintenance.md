@@ -44,3 +44,9 @@
 ## 历年补读 · 批次 01（2026-11-21）
 
 [年份入口](roadmaps/timeline.md)补入 AlexNet、word2vec 首篇、Dropout 期刊版、VGG、GoogLeNet 和 Seq2Seq。六篇已完成原文、推导、证据位置与关联核对。Dropout 的期望缩放与 VGG 的空间支持有可重跑的解析对照。另四篇尚无专项实验。本批六篇均未完成原论文训练，提升为完整复现须固定数据划分、训练预算、评估协议并报告多次运行的指标。
+
+## 视觉论文补录（批次 02）
+
+[训练与视觉路线](roadmaps/training-and-vision.md) 新增六篇精读。SSD 在 2018 年清单已有预印本入口，此次补上独立笔记。MobileNet v1 的线性分解与 FPN 的 RoI 选层已完成 CPU 验证，独立测试覆盖不可分解的核、临界尺度与层级截断。[机制报告](../experiments/results/vision-operators.md)
+
+后续可优先检验 U-Net 边界权重、RPN 小目标候选召回、SSD 负样本挖掘及 DenseNet 通道消融。交付时需固定划分和对照，分别记录边界合并错误、分尺度召回、分类梯度和遮蔽前后损失。六篇的数据集训练与整网基准仍待复现。

@@ -23,3 +23,11 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 当前标量导数实验不满足上述完整复现条件。
 
 2026-11-19 增加 [ResNet 激活与抵消补充](../../notes/resnet.md)：运行 `python3 experiments/residual_gate.py`，对照 D(I+J_F) 与仅有 I+J_F 的差别。[实测](../../experiments/results/residual-gate.md)。数据集训练计划仍未完成。
+
+## 从分类骨干走向空间预测
+
+| 任务 | 阅读顺序 | 自查问题 |
+|---|---|---|
+| 分类骨干 | [ResNet](../../notes/resnet.md) → [DenseNet](../../notes/densenet.md)，再读 [MobileNet v1](../../notes/mobilenet-v1.md) | 相加或拼接之后还能否单独读取旧通道？逐通道滤波之后哪一步交换通道信息？ |
+| 检测 | [Faster R-CNN](../../notes/faster-rcnn.md) → [SSD](../../notes/ssd.md)（检测头对照）→ [FPN](../../notes/fpn.md)（多尺度特征） | 分别指出候选框、类别预测和尺度分配发生的位置。 |
+| 像素分割 | [U-Net](../../notes/u-net.md)，再与 FPN 图 3 对读 | 编码特征为什么要裁剪？哪一级输出像素类别，哪几级提供区域特征？ |

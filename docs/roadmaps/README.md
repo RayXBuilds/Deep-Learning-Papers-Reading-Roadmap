@@ -30,7 +30,7 @@
 - [训练与视觉](training-and-vision.md)：训练机制、视觉架构。
 - [序列与注意力](sequence-and-attention.md)：语言和多模态的基础组件。
 - [生成模型](generative-models.md)：概率生成目标与加噪机制。
-- 强化学习、机器人、检测等先查 [历史资料](../archive/README.md)，尚未按新标准完成精读。
+- 强化学习、机器人等先查 [历史资料](../archive/README.md)，尚未按新标准完成精读。
 
 ## 怎样判断读懂了
 

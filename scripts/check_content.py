@@ -434,6 +434,18 @@ def main():
     early_script = ROOT / 'experiments/early_mechanisms.py'
     if early.get('source_sha256') != hashlib.sha256(early_script.read_bytes()).hexdigest():
         errors.append('early-mechanisms.json: source hash mismatch')
+    vision = json.loads((ROOT / 'experiments/results/vision-operators.json').read_text())
+    script = ROOT / 'experiments/vision_operators.py'
+    if vision.get('source_sha256') != hashlib.sha256(script.read_bytes()).hexdigest():
+        errors.append('vision-operators.json: source hash mismatch')
+    trials = vision.get('convolution', [])
+    if ([row['seed'] for row in trials] != [7, 42, 2026] or
+            not all(0 <= row['max_error'] < 1e-12 and abs(row['minor']) < 1e-12
+                    and (row['dense_macs'], row['separated_macs']) == (108, 39) for row in trials)):
+        errors.append('vision-operators.json: missing or inconsistent convolution controls')
+    if ([row['level'] for row in vision.get('routing', [])] != [2, 2, 3, 3, 4, 5, 5, 4]
+            or vision.get('passed') is not True):
+        errors.append('vision-operators.json: missing or failed scale controls')
     timeline = (ROOT / 'docs/roadmaps/timeline.md').read_text()
     entries = re.findall(r'\(\.\./\.\./notes/([\w-]+\.md)\)', timeline)
     if sorted(entries) != sorted(note.name for note in notes):

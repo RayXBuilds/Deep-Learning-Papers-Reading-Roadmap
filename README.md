@@ -18,7 +18,7 @@
 
 | 方向 | 围绕什么问题阅读 | 路线入口 |
 |---|---|---|
-| 训练与视觉 | 网络为什么能加深？归一化与优化器各自改变什么？ | [卷积网络 → 残差连接 → 训练方法 → ViT](docs/roadmaps/training-and-vision.md) |
+| 训练与视觉 | 网络怎样加深或轻量化？检测和分割怎样利用空间特征？ | [分类骨干、训练方法、目标检测与像素分割](docs/roadmaps/training-and-vision.md) |
 | 序列与注意力 | 模型如何读取上下文？注意力怎样组织序列计算？ | [Encoder–Decoder → Attention → Transformer](docs/roadmaps/sequence-and-attention.md) |
 | 生成模型 | 模型如何学习数据分布？不同生成目标怎样比较？ | [VAE / GAN → DDPM → Flow Matching](docs/roadmaps/generative-models.md) |
 
@@ -26,7 +26,7 @@
 
 ## 已有中文精读
 
-目前有 **28 篇精读初版、22 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
+目前有 **34 篇精读初版、24 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
 
 [按年份浏览全部精读](docs/roadmaps/timeline.md) · [逐篇查看原文和验证状态](docs/papers.md)
 

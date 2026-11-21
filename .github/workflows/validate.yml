@@ -78,3 +78,5 @@ jobs:
         run: |
           python experiments/early_mechanisms.py > /tmp/early-mechanisms-ci.json
           diff experiments/results/early-mechanisms.json /tmp/early-mechanisms-ci.json
+      - name: Check linear convolution and pyramid routing
+        run: python experiments/vision_operators.py
