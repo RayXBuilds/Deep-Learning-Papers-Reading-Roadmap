@@ -1,0 +1,855 @@
+{
+  "base_commit": "1ee27f77e3c221326a6a31e66aa219adc4d01c69",
+  "entries": [
+    {
+      "old": "1.0-Book/DeepLearningBook.pdf",
+      "new": "topics/01-foundations/papers/books/DeepLearningBook.pdf",
+      "git_blob": "c75995e4c81e30eb9fc05c450e6f9f1f27ba686d"
+    },
+    {
+      "old": "1.1-Survey/LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. Deep learning. Nature 521.7553 (2015).pdf",
+      "new": "topics/01-foundations/papers/surveys/LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. Deep learning. Nature 521.7553 (2015).pdf",
+      "git_blob": "2de4e1c2e8c3ec3bad683bbc52eb43e76df962e2"
+    },
+    {
+      "old": "1.2-Deep_Belief_Network/A Fast Learning Algorithm for Deep Belief Nets.pdf",
+      "new": "topics/01-foundations/papers/belief-networks/A Fast Learning Algorithm for Deep Belief Nets.pdf",
+      "git_blob": "1c444262df3fd8809cd6e2b513ad5651dc9eeb8e"
+    },
+    {
+      "old": "1.2-Deep_Belief_Network/Hinton, Geoffrey E., and Ruslan R. Salakhutdinov. Reducing the dimensionality of data with neural networks..pdf",
+      "new": "topics/01-foundations/papers/belief-networks/Hinton, Geoffrey E., and Ruslan R. Salakhutdinov. Reducing the dimensionality of data with neural networks..pdf",
+      "git_blob": "b414068914c127ccf6429196f8db9de800584ef5"
+    },
+    {
+      "old": "1.3-ImageNet_Evolution/Deep Residual Learning for Image Recognition.pdf",
+      "new": "topics/03-vision/papers/classification/Deep Residual Learning for Image Recognition.pdf",
+      "git_blob": "4b29933825685003bebd6ccf14d55869dca85806"
+    },
+    {
+      "old": "1.3-ImageNet_Evolution/Going deeper with convolutions.pdf",
+      "new": "topics/03-vision/papers/classification/Going deeper with convolutions.pdf",
+      "git_blob": "5626667637fb61064b0a6805173e39886317271d"
+    },
+    {
+      "old": "1.3-ImageNet_Evolution/ImageNet Classification with Deep Convolutional.pdf",
+      "new": "topics/03-vision/papers/classification/ImageNet Classification with Deep Convolutional.pdf",
+      "git_blob": "91508f2065f49d1fe55a5770e967e60eb18dd83e"
+    },
+    {
+      "old": "1.3-ImageNet_Evolution/Very deep convolutional networks for large-scale image recognition.pdf",
+      "new": "topics/03-vision/papers/classification/Very deep convolutional networks for large-scale image recognition.pdf",
+      "git_blob": "3258b74015da0214780360aa1bc60384af103dac"
+    },
+    {
+      "old": "1.4-Speech_Recognition_Evolution/Achieving Human Parity in Conversational Speech Recognition.pdf",
+      "new": "topics/04-language/papers/speech/Achieving Human Parity in Conversational Speech Recognition.pdf",
+      "git_blob": "0070945a129b1c83e9a446d079c06e5006dcada6"
+    },
+    {
+      "old": "1.4-Speech_Recognition_Evolution/Deep Speech 2_ End-to-End Speech Recognition in.pdf",
+      "new": "topics/04-language/papers/speech/Deep Speech 2_ End-to-End Speech Recognition in.pdf",
+      "git_blob": "2f23b2b5b903496e32910c57261b734ab052f709"
+    },
+    {
+      "old": "1.4-Speech_Recognition_Evolution/Deep neural networks for acoustic modeling in speech recognition_ The shared views of four research groups.pdf",
+      "new": "topics/04-language/papers/speech/Deep neural networks for acoustic modeling in speech recognition_ The shared views of four research groups.pdf",
+      "git_blob": "c51c5c0ae1fea450b0f7b036a0939fe676325f2c"
+    },
+    {
+      "old": "1.4-Speech_Recognition_Evolution/Fast and Accurate Recurrent Neural Network Acoustic Models for Speech.pdf",
+      "new": "topics/04-language/papers/speech/Fast and Accurate Recurrent Neural Network Acoustic Models for Speech.pdf",
+      "git_blob": "e9812689bf0f81c8e69919d23eff5f9f99538636"
+    },
+    {
+      "old": "1.4-Speech_Recognition_Evolution/Speech recognition with deep recurrent neural networks.pdf",
+      "new": "topics/04-language/papers/speech/Speech recognition with deep recurrent neural networks.pdf",
+      "git_blob": "7d4926fa9fe006ac58859a0873fa0efe1a19e4e7"
+    },
+    {
+      "old": "1.4-Speech_Recognition_Evolution/Towards End-To-End Speech Recognition with Recurrent Neural Networks.pdf",
+      "new": "topics/04-language/papers/speech/Towards End-To-End Speech Recognition with Recurrent Neural Networks.pdf",
+      "git_blob": "7684e7cefd273e8f686f31e6a8425d6cfb455458"
+    },
+    {
+      "old": "2.1-Model/Batch Normalization_ Accelerating Deep Network Training b.pdf",
+      "new": "topics/02-training/papers/model-components/Batch Normalization_ Accelerating Deep Network Training b.pdf",
+      "git_blob": "dd8cd67f2b8692dc8c24761e784980938697132d"
+    },
+    {
+      "old": "2.1-Model/Binarized Neural Networks_ Training Neural Networks with Weights and Activations Constrained to+ 1 or−1.pdf",
+      "new": "topics/02-training/papers/model-components/Binarized Neural Networks_ Training Neural Networks with Weights and Activations Constrained to+ 1 or−1.pdf",
+      "git_blob": "73b13eb19e7dda17c14f2c64855402458b9065ed"
+    },
+    {
+      "old": "2.1-Model/Decoupled Neural Interfaces using Synthetic Gradients.pdf",
+      "new": "topics/02-training/papers/model-components/Decoupled Neural Interfaces using Synthetic Gradients.pdf",
+      "git_blob": "0d4e105863ef951b2f4c0c11cb85a365a48d8d07"
+    },
+    {
+      "old": "2.1-Model/Dropout_ A Simple Way to Prevent Neural Networks from.pdf",
+      "new": "topics/02-training/papers/model-components/Dropout_ A Simple Way to Prevent Neural Networks from.pdf",
+      "git_blob": "2ba4f87b2fb062007fcc1b5f1ebc4fa0521bfd00"
+    },
+    {
+      "old": "2.1-Model/Improving neural networks by preventing.pdf",
+      "new": "topics/02-training/papers/model-components/Improving neural networks by preventing.pdf",
+      "git_blob": "847d518c7928169111ef65d74af11ed0b2e7681f"
+    },
+    {
+      "old": "2.1-Model/Layer Normalization.pdf",
+      "new": "topics/02-training/papers/model-components/Layer Normalization.pdf",
+      "git_blob": "afb5e0d49c9b62cb50ae2182d8686ab9d233889d"
+    },
+    {
+      "old": "2.1-Model/Net2net_ Accelerating learning via knowledge transfer.pdf",
+      "new": "topics/02-training/papers/model-components/Net2net_ Accelerating learning via knowledge transfer.pdf",
+      "git_blob": "a1c1a69f2fb403c0d09187c11bb18fdf27a22f62"
+    },
+    {
+      "old": "2.1-Model/Network Morphism.pdf",
+      "new": "topics/02-training/papers/model-components/Network Morphism.pdf",
+      "git_blob": "9465263e0250356a787787bb13e41d00aa5a66fb"
+    },
+    {
+      "old": "2.2-Optimization/Adam_ A method for stochastic optimization.pdf",
+      "new": "topics/02-training/papers/optimization/Adam_ A method for stochastic optimization.pdf",
+      "git_blob": "ebf3aff96246fd563f4c11ebe7eeb49053b159c9"
+    },
+    {
+      "old": "2.2-Optimization/Deep compression_ Compressing deep neural network with pruning, trained quantization and huffman coding.pdf",
+      "new": "topics/02-training/papers/optimization/Deep compression_ Compressing deep neural network with pruning, trained quantization and huffman coding.pdf",
+      "git_blob": "68c70f7738fc663c5ccf604e5f548f730aa1134d"
+    },
+    {
+      "old": "2.2-Optimization/Learning to learn by gradient descent by gradient descent.pdf",
+      "new": "topics/02-training/papers/optimization/Learning to learn by gradient descent by gradient descent.pdf",
+      "git_blob": "fc23847863cf834ad7664ef394c9bcd137a1ff7b"
+    },
+    {
+      "old": "2.2-Optimization/On the importance of initialization and momentum in deep learning.pdf",
+      "new": "topics/02-training/papers/optimization/On the importance of initialization and momentum in deep learning.pdf",
+      "git_blob": "df3135cce6717c0c7aa277de18a8140b6c5445e6"
+    },
+    {
+      "old": "2.2-Optimization/SqueezeNet_ AlexNet-level accuracy with 50x fewer parameters and_ 1MB model size.pdf",
+      "new": "topics/02-training/papers/optimization/SqueezeNet_ AlexNet-level accuracy with 50x fewer parameters and_ 1MB model size.pdf",
+      "git_blob": "da7da42147f6082a278677349d050899cd0ff1ea"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/Auto-Encoding Variational Bayes.pdf",
+      "new": "topics/05-generative/papers/generative-models/Auto-Encoding Variational Bayes.pdf",
+      "git_blob": "d3a2b95c2a4f51befada66e1b97f5a555f44ff05"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/Building High-level Features.pdf",
+      "new": "topics/05-generative/papers/generative-models/Building High-level Features.pdf",
+      "git_blob": "ac48d1a142c9da8e0783088fa7f79e02ebf4e943"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/Conditional Image Generation with.pdf",
+      "new": "topics/05-generative/papers/generative-models/Conditional Image Generation with.pdf",
+      "git_blob": "7edfccbc75206dced012184b978123919676665c"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/DRAW_ A Recurrent Neural Network For Image Generation.pdf",
+      "new": "topics/05-generative/papers/generative-models/DRAW_ A Recurrent Neural Network For Image Generation.pdf",
+      "git_blob": "0b911949c58c58429103f4fc1da5eefb29c992f8"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/Generative Adversarial Nets.pdf",
+      "new": "topics/05-generative/papers/generative-models/Generative Adversarial Nets.pdf",
+      "git_blob": "fecb0ce1292eab1607faac932bc7e33553d41daf"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/Pixel Recurrent Neural Networks.pdf",
+      "new": "topics/05-generative/papers/generative-models/Pixel Recurrent Neural Networks.pdf",
+      "git_blob": "62ef7bd98e45af6989c1494c1397093b04967942"
+    },
+    {
+      "old": "2.3-Unsupervised_Learning_Deep_Generative_Model/Unsupervised representation learning with deep convolutional generative adversarial networks.pdf",
+      "new": "topics/05-generative/papers/generative-models/Unsupervised representation learning with deep convolutional generative adversarial networks.pdf",
+      "git_blob": "62e7c6d19610d015ef1859f15ed25a6c1c13883c"
+    },
+    {
+      "old": "2.4-RNN_Sequence-to-Sequence_Model/A Neural Conversational Model.pdf",
+      "new": "topics/04-language/papers/recurrent-models/A Neural Conversational Model.pdf",
+      "git_blob": "4069c0cb377c0e7ac57e5b2d87f6df906c951b5d"
+    },
+    {
+      "old": "2.4-RNN_Sequence-to-Sequence_Model/Generating Sequences With.pdf",
+      "new": "topics/04-language/papers/recurrent-models/Generating Sequences With.pdf",
+      "git_blob": "0168422a2dd40e985885b78e427cb0470f5d01a5"
+    },
+    {
+      "old": "2.4-RNN_Sequence-to-Sequence_Model/Learning Phrase Representations using RNN Encoder–Decoder.pdf",
+      "new": "topics/04-language/papers/recurrent-models/Learning Phrase Representations using RNN Encoder–Decoder.pdf",
+      "git_blob": "64695d7481abeab2453857a878967d4d4f5daae8"
+    },
+    {
+      "old": "2.4-RNN_Sequence-to-Sequence_Model/NEURAL MACHINE TRANSLATION.pdf",
+      "new": "topics/04-language/papers/recurrent-models/NEURAL MACHINE TRANSLATION.pdf",
+      "git_blob": "18beaa162adcbc45397991cdb646735e4bdc55aa"
+    },
+    {
+      "old": "2.5-Neural_Turing_Machine/End-To-End Memory Networks.pdf",
+      "new": "topics/08-memory/papers/memory/End-To-End Memory Networks.pdf",
+      "git_blob": "df47942ab5bd306c4554dafff6f25d2f19e53c87"
+    },
+    {
+      "old": "2.5-Neural_Turing_Machine/MEMORY NETWORKS.pdf",
+      "new": "topics/08-memory/papers/memory/MEMORY NETWORKS.pdf",
+      "git_blob": "cc5c35a74c668f920e804504bede85994934912f"
+    },
+    {
+      "old": "2.5-Neural_Turing_Machine/Neural Turing Machines.pdf",
+      "new": "topics/08-memory/papers/memory/Neural Turing Machines.pdf",
+      "git_blob": "f567b8cde5f3354e5c6edad0bdadbc28e17754a9"
+    },
+    {
+      "old": "2.5-Neural_Turing_Machine/Pointer Networks.pdf",
+      "new": "topics/08-memory/papers/memory/Pointer Networks.pdf",
+      "git_blob": "9503fff66f00b73e996b0702896ee2b58bbedafd"
+    },
+    {
+      "old": "2.5-Neural_Turing_Machine/Reinforcement Learning Neural Turing Machines.pdf",
+      "new": "topics/08-memory/papers/memory/Reinforcement Learning Neural Turing Machines.pdf",
+      "git_blob": "7abcf496eb5483a9bf35e3f4ba7164c98d7133aa"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/Asynchronous Methods for Deep Reinforcement Learning.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/Asynchronous Methods for Deep Reinforcement Learning.pdf",
+      "git_blob": "6653c744b84cbf8b747d5861cfd9a02cda8ac926"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/CONTINUOUS CONTROL WITH DEEP REINFORCEMENT.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/CONTINUOUS CONTROL WITH DEEP REINFORCEMENT.pdf",
+      "git_blob": "f61761ab4182c65e122ed2aedc2aa24ae8c6eac0"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/Continuous Deep Q-Learning with Model-based Acceleration.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/Continuous Deep Q-Learning with Model-based Acceleration.pdf",
+      "git_blob": "bf30dd800322855a915a562a5135413010065ec0"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/DeepMindNature14236Paper.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/DeepMindNature14236Paper.pdf",
+      "git_blob": "2fd3b2543bec136eca1d233f1e06d74ebe864123"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/Dueling Network Architectures for Deep Reinforcement Learning.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/Dueling Network Architectures for Deep Reinforcement Learning.pdf",
+      "git_blob": "6547af65c9bb545d55c2829d7133930e8ee15399"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/Mastering the game of Go with deep.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/Mastering the game of Go with deep.pdf",
+      "git_blob": "cac717539214e2518369824cbd4adca9dda869b1"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/Playing Atari with Deep Reinforcement Learning.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/Playing Atari with Deep Reinforcement Learning.pdf",
+      "git_blob": "d4f28a28eee7c93c7012ce6032b04037e3f57723"
+    },
+    {
+      "old": "2.6-Deep_Reinforcement_Learning/Trust Region Policy Optimization.pdf",
+      "new": "topics/09-rl-robotics/papers/reinforcement-learning/Trust Region Policy Optimization.pdf",
+      "git_blob": "8f70a23bb3a7d7dfb67dcc115451bc6268b833ab"
+    },
+    {
+      "old": "2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/ACTOR-MIMIC DEEP MULTITASK AND TRANSFER REINFORCEMENT LEARNING.pdf",
+      "new": "topics/10-transfer/papers/transfer/ACTOR-MIMIC DEEP MULTITASK AND TRANSFER REINFORCEMENT LEARNING.pdf",
+      "git_blob": "3233179bde400947da00c5c03b69bb5d112710db"
+    },
+    {
+      "old": "2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/Deep Learning of Representations for Unsupervised and.pdf",
+      "new": "topics/10-transfer/papers/transfer/Deep Learning of Representations for Unsupervised and.pdf",
+      "git_blob": "dd7818c43eae3dd5f1f07390d8f9dcd1738e738c"
+    },
+    {
+      "old": "2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/Distilling the Knowledge in a Neural Network.pdf",
+      "new": "topics/10-transfer/papers/transfer/Distilling the Knowledge in a Neural Network.pdf",
+      "git_blob": "bdf5920c4e45bf90d2b53b94568425be76d8f623"
+    },
+    {
+      "old": "2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/Lifelong Machine Learning Systems Beyond Learning Algorithms.pdf",
+      "new": "topics/10-transfer/papers/transfer/Lifelong Machine Learning Systems Beyond Learning Algorithms.pdf",
+      "git_blob": "9a65ad061788574d7ff736de7a7eb25635fdd177"
+    },
+    {
+      "old": "2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/POLICY DISTILLATION.pdf",
+      "new": "topics/10-transfer/papers/transfer/POLICY DISTILLATION.pdf",
+      "git_blob": "deb09593055d893c7fb807431f6ddd27aeba85f1"
+    },
+    {
+      "old": "2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/Progressive Neural Networks.pdf",
+      "new": "topics/10-transfer/papers/transfer/Progressive Neural Networks.pdf",
+      "git_blob": "ae76f208f6a1f9fbc1423385845b1db7ee331a23"
+    },
+    {
+      "old": "2.8-One_Shot_Deep_Learning/Human-level concept learning through probabilistic program induction.pdf",
+      "new": "topics/10-transfer/papers/few-shot/Human-level concept learning through probabilistic program induction.pdf",
+      "git_blob": "e107176481726a73db9fd2e9ccbea837aa015cc6"
+    },
+    {
+      "old": "2.8-One_Shot_Deep_Learning/Matching Networks for One Shot Learning.pdf",
+      "new": "topics/10-transfer/papers/few-shot/Matching Networks for One Shot Learning.pdf",
+      "git_blob": "6379b793c2e1809d2a4df19bc6f68b7f4073ce0c"
+    },
+    {
+      "old": "3.1-NLP/Ask Me Anything Dynamic Memory Networks for Natural Language Processing.pdf",
+      "new": "topics/04-language/papers/nlp/Ask Me Anything Dynamic Memory Networks for Natural Language Processing.pdf",
+      "git_blob": "f528cad8240f99ca3c3eef99115da584919818de"
+    },
+    {
+      "old": "3.1-NLP/Bag of Tricks for Efficient Text Classification.pdf",
+      "new": "topics/04-language/papers/nlp/Bag of Tricks for Efficient Text Classification.pdf",
+      "git_blob": "0daeb7590ceee7845ce61027abccb2979d82a08d"
+    },
+    {
+      "old": "3.1-NLP/Character-Aware Neural Language Models.pdf",
+      "new": "topics/04-language/papers/nlp/Character-Aware Neural Language Models.pdf",
+      "git_blob": "ebf9d42b09e0b1a90ed57336c661ed11955c38e2"
+    },
+    {
+      "old": "3.1-NLP/Distributed Representations ofWords and Phrases and their Compositionality.pdf",
+      "new": "topics/04-language/papers/nlp/Distributed Representations ofWords and Phrases and their Compositionality.pdf",
+      "git_blob": "8094d15c5a05a11b6111db2dac35003dcfa0f9c4"
+    },
+    {
+      "old": "3.1-NLP/Joint Learning of Words and Meaning Representations.pdf",
+      "new": "topics/04-language/papers/nlp/Joint Learning of Words and Meaning Representations.pdf",
+      "git_blob": "6b080f46d24f8dfaafcd78ef298c85b04e56a1f7"
+    },
+    {
+      "old": "3.1-NLP/Sequence to Sequence Learning with Neural Networks.pdf",
+      "new": "topics/04-language/papers/nlp/Sequence to Sequence Learning with Neural Networks.pdf",
+      "git_blob": "0aba633f8ecdccf6003066c78652ebf34f01a22c"
+    },
+    {
+      "old": "3.1-NLP/TOWARDS AI-COMPLETE QUESTION ANSWERING.pdf",
+      "new": "topics/04-language/papers/nlp/TOWARDS AI-COMPLETE QUESTION ANSWERING.pdf",
+      "git_blob": "545381c9a4dd999e4bfbc019633a5132529af22e"
+    },
+    {
+      "old": "3.1-NLP/Teaching Machines to Read and Comprehend.pdf",
+      "new": "topics/04-language/papers/nlp/Teaching Machines to Read and Comprehend.pdf",
+      "git_blob": "b8c83eaf7e70df8c738bebcb5f539feea966205d"
+    },
+    {
+      "old": "3.1-NLP/Very Deep Convolutional Networks.pdf",
+      "new": "topics/04-language/papers/nlp/Very Deep Convolutional Networks.pdf",
+      "git_blob": "8e692cba4fee0dc5b540c0177d08611485bb161e"
+    },
+    {
+      "old": "3.2-Object_Detection/Deep neural networks for object detection.pdf",
+      "new": "topics/06-detection-segmentation/papers/detection/Deep neural networks for object detection.pdf",
+      "git_blob": "e1eb0860acf0c36a7777309c8cec52109d9a10f1"
+    },
+    {
+      "old": "3.2-Object_Detection/Proceedings of the IEEE International Conference on Computer Vision.pdf",
+      "new": "topics/06-detection-segmentation/papers/detection/Proceedings of the IEEE International Conference on Computer Vision.pdf",
+      "git_blob": "5c45900b06c8f84c387ddf7cd81246802b49e05b"
+    },
+    {
+      "old": "3.2-Object_Detection/Rich feature hierarchies for accurate object detection and semantic segmentation.pdf",
+      "new": "topics/06-detection-segmentation/papers/detection/Rich feature hierarchies for accurate object detection and semantic segmentation.pdf",
+      "git_blob": "f3764611a0a6f365b5b5ac23df347c605e19ad89"
+    },
+    {
+      "old": "3.2-Object_Detection/Unified, real-time object detection.pdf",
+      "new": "topics/06-detection-segmentation/papers/detection/Unified, real-time object detection.pdf",
+      "git_blob": "180158c76dc43fcc30e3fa7365fb4dedeae5649b"
+    },
+    {
+      "old": "3.3-Visual_Tracking/Beyond Correlation Filters Learning Continuous Convolution Operators for Visual Tracking.pdf",
+      "new": "topics/11-tracking/papers/tracking/Beyond Correlation Filters Learning Continuous Convolution Operators for Visual Tracking.pdf",
+      "git_blob": "0f61f2152c6abf83e733e70b876f7bb26eb1c1b6"
+    },
+    {
+      "old": "3.3-Visual_Tracking/Learning a deep compact image representation for visual tracking.pdf",
+      "new": "topics/11-tracking/papers/tracking/Learning a deep compact image representation for visual tracking.pdf",
+      "git_blob": "1efe83adb0de6e004641597c6d5bc03d323eea76"
+    },
+    {
+      "old": "3.3-Visual_Tracking/Visual tracking with fully convolutional networks.pdf",
+      "new": "topics/11-tracking/papers/tracking/Visual tracking with fully convolutional networks.pdf",
+      "git_blob": "645b9c4d9d1d616d339e3681f6ccc8ef56989cdf"
+    },
+    {
+      "old": "3.4-Image_Caption/Deep Visual-Semantic Alignments for Generating Image Descriptions.pdf",
+      "new": "topics/07-multimodal/papers/captioning/Deep Visual-Semantic Alignments for Generating Image Descriptions.pdf",
+      "git_blob": "a1d0e676d62f4ab5e885060da773f90a232a9e01"
+    },
+    {
+      "old": "3.4-Image_Caption/Generating sentences from images.pdf",
+      "new": "topics/07-multimodal/papers/captioning/Generating sentences from images.pdf",
+      "git_blob": "7049d2eb65ce4ccaeddd5c78920795f179d1c918"
+    },
+    {
+      "old": "3.4-Image_Caption/Understanding and generating image descriptions.pdf",
+      "new": "topics/07-multimodal/papers/captioning/Understanding and generating image descriptions.pdf",
+      "git_blob": "210d1fc0e0b3e3f4e5f4d8aec13e0390a0ef279e"
+    },
+    {
+      "old": "3.5-Machine_Translation/A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation.pdf",
+      "new": "topics/04-language/papers/translation/A Character-Level Decoder without Explicit Segmentation for Neural Machine Translation.pdf",
+      "git_blob": "15c6cfb10c622491c868cf7f237350803a3a9241"
+    },
+    {
+      "old": "3.5-Machine_Translation/Addressing the Rare Word Problem in Neural Machine Translation.pdf",
+      "new": "topics/04-language/papers/translation/Addressing the Rare Word Problem in Neural Machine Translation.pdf",
+      "git_blob": "5b6369f2cff4b284ab6faf6d693081a8d98015bf"
+    },
+    {
+      "old": "3.5-Machine_Translation/Effective Approaches to Attention-based Neural Machine Translation.pdf",
+      "new": "topics/04-language/papers/translation/Effective Approaches to Attention-based Neural Machine Translation.pdf",
+      "git_blob": "1274b8aefe2c4d5e0bac2b6bbd1d535c8d47e205"
+    },
+    {
+      "old": "3.5-Machine_Translation/Fully Character-Level Neural Machine Translation without Explicit Segmentation.pdf",
+      "new": "topics/04-language/papers/translation/Fully Character-Level Neural Machine Translation without Explicit Segmentation.pdf",
+      "git_blob": "4fb62d2e9c133caf3458572e60e33308d83766df"
+    },
+    {
+      "old": "3.5-Machine_Translation/Google’s Neural Machine Translation System Bridging the Gap.pdf",
+      "new": "topics/04-language/papers/translation/Google’s Neural Machine Translation System Bridging the Gap.pdf",
+      "git_blob": "77421bb0fbb6c157c41941d61aa329b707804b29"
+    },
+    {
+      "old": "3.5-Machine_Translation/Neural Machine Translation of Rare Words with Subword Units.pdf",
+      "new": "topics/04-language/papers/translation/Neural Machine Translation of Rare Words with Subword Units.pdf",
+      "git_blob": "5729ea68023f3b1aba539257eb69f315f1a2851e"
+    },
+    {
+      "old": "3.6-Robotics/Collective Robot Reinforcement Learning with Distributed Asynchronous Guided Policy Search.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Collective Robot Reinforcement Learning with Distributed Asynchronous Guided Policy Search.pdf",
+      "git_blob": "da03f6afe82772de5b74ee286d40e6f647a24c40"
+    },
+    {
+      "old": "3.6-Robotics/Deep Reinforcement Learning for Robotic Manipulation with Asynchronous Off-Policy Updates.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Deep Reinforcement Learning for Robotic Manipulation with Asynchronous Off-Policy Updates.pdf",
+      "git_blob": "258f7920f87de34260ddbc41248d53fac9d62fe3"
+    },
+    {
+      "old": "3.6-Robotics/End-to-End Training of Deep Visuomotor Policies.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/End-to-End Training of Deep Visuomotor Policies.pdf",
+      "git_blob": "502da29b87b08b29b165c80b5bb575d21ad18dda"
+    },
+    {
+      "old": "3.6-Robotics/Evolving Large-Scale Neural Networks for Vision-Based Reinforcement Learning.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Evolving Large-Scale Neural Networks for Vision-Based Reinforcement Learning.pdf",
+      "git_blob": "c6f71a363f8bc3ca65c99e107a0a48db81af3f96"
+    },
+    {
+      "old": "3.6-Robotics/LEARNING TO NAVIGATE IN COMPLEX ENVIRONMENTS.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/LEARNING TO NAVIGATE IN COMPLEX ENVIRONMENTS.pdf",
+      "git_blob": "b7cb6484e7f125628b7381f13c31b8b8994a20ec"
+    },
+    {
+      "old": "3.6-Robotics/Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection.pdf",
+      "git_blob": "973755729cb16fea5e69e5b1634c539bf609a802"
+    },
+    {
+      "old": "3.6-Robotics/Sim-to-Real Robot Learning from Pixels with Progressive Nets.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Sim-to-Real Robot Learning from Pixels with Progressive Nets.pdf",
+      "git_blob": "9af9a5e7bf2b99cf8215a5b891bb70f10f48b27c"
+    },
+    {
+      "old": "3.6-Robotics/Supersizing Self-supervision Learning to Grasp from 50K Tries and 700 Robot Hours.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Supersizing Self-supervision Learning to Grasp from 50K Tries and 700 Robot Hours.pdf",
+      "git_blob": "29074e98ab9c8479767ca05a586f8482343bad52"
+    },
+    {
+      "old": "3.6-Robotics/Target-driven Visual Navigation in Indoor Scenes using Deep Reinforcement Learning.pdf",
+      "new": "topics/09-rl-robotics/papers/robotics/Target-driven Visual Navigation in Indoor Scenes using Deep Reinforcement Learning.pdf",
+      "git_blob": "004d887046b6bcf65db489e7ee336d67bce9373a"
+    },
+    {
+      "old": "3.7-Art/A LEARNED REPRESENTATION FOR ARTISTIC STYLE.pdf",
+      "new": "topics/05-generative/papers/art/A LEARNED REPRESENTATION FOR ARTISTIC STYLE.pdf",
+      "git_blob": "151605985724265cc38a922f97caa8820fd9665a"
+    },
+    {
+      "old": "3.7-Art/A Neural Algorithm of Artistic Style.pdf",
+      "new": "topics/05-generative/papers/art/A Neural Algorithm of Artistic Style.pdf",
+      "git_blob": "0f49f3544935bbc99b28abfa176ba3d56da3de6f"
+    },
+    {
+      "old": "3.7-Art/Colorful Image Colorization.pdf",
+      "new": "topics/05-generative/papers/art/Colorful Image Colorization.pdf",
+      "git_blob": "d22c1ef690398094f8a73a7c155e2e287c774726"
+    },
+    {
+      "old": "3.7-Art/Controlling Perceptual Factors in Neural Style Transfer.pdf",
+      "new": "topics/05-generative/papers/art/Controlling Perceptual Factors in Neural Style Transfer.pdf",
+      "git_blob": "3d34f41df149faaf5b9594cff7aba3ee3ff4e193"
+    },
+    {
+      "old": "3.7-Art/Generative Visual Manipulation on the Natural Image Manifold.pdf",
+      "new": "topics/05-generative/papers/art/Generative Visual Manipulation on the Natural Image Manifold.pdf",
+      "git_blob": "dc39e27e361470bb4f647dbe27691bd89b995f25"
+    },
+    {
+      "old": "3.7-Art/Perceptual Losses for Real-Time Style Transfer and Super-Resolution.pdf",
+      "new": "topics/05-generative/papers/art/Perceptual Losses for Real-Time Style Transfer and Super-Resolution.pdf",
+      "git_blob": "29ca0d1bdaeb9db1d53e38e2b9751316f320b492"
+    },
+    {
+      "old": "3.7-Art/Research Blog Inceptionism Going Deeper into Neural Networks.pdf",
+      "new": "topics/05-generative/papers/art/Research Blog Inceptionism Going Deeper into Neural Networks.pdf",
+      "git_blob": "207a331d057b391b340f87894a732cf474868f88"
+    },
+    {
+      "old": "3.7-Art/Semantic Style Transfer and Turning Two-Bit Doodles into Fine Artwork.pdf",
+      "new": "topics/05-generative/papers/art/Semantic Style Transfer and Turning Two-Bit Doodles into Fine Artwork.pdf",
+      "git_blob": "5c0dd4109a3e7848ec132ca00e5e66d8b83ffefd"
+    },
+    {
+      "old": "3.7-Art/Texture Networks Feed-forward Synthesis of Textures and Stylized Images.pdf",
+      "new": "topics/05-generative/papers/art/Texture Networks Feed-forward Synthesis of Textures and Stylized Images.pdf",
+      "git_blob": "038fa5a3122930666b47e75260c0f192307b2e1a"
+    },
+    {
+      "old": "3.8-Object_Segmentation/DeepLab Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution,and Fully Connected CRFs.pdf",
+      "new": "topics/06-detection-segmentation/papers/segmentation/DeepLab Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution,and Fully Connected CRFs.pdf",
+      "git_blob": "3eb1e47c0c31715a7df3b69df26a7934ee393511"
+    },
+    {
+      "old": "3.8-Object_Segmentation/Fully Convolutional Networks for Semantic Segmentation.pdf",
+      "new": "topics/06-detection-segmentation/papers/segmentation/Fully Convolutional Networks for Semantic Segmentation.pdf",
+      "git_blob": "5f0067eb8ac34c3105a05d312cf28e02fd85db1c"
+    },
+    {
+      "old": "3.8-Object_Segmentation/Instance-aware Semantic Segmentation via Multi-task Network Cascades.pdf",
+      "new": "topics/06-detection-segmentation/papers/segmentation/Instance-aware Semantic Segmentation via Multi-task Network Cascades.pdf",
+      "git_blob": "7e976381ad8bd617641c4a49e5145592d4db3b8d"
+    },
+    {
+      "old": "3.8-Object_Segmentation/Instance-sensitive Fully Convolutional Networks.pdf",
+      "new": "topics/06-detection-segmentation/papers/segmentation/Instance-sensitive Fully Convolutional Networks.pdf",
+      "git_blob": "56760e97d414b24a4a90de0fc06fd3d9e5dc647d"
+    },
+    {
+      "old": "3.8-Object_Segmentation/Learning to Segment Object Candidates.pdf",
+      "new": "topics/06-detection-segmentation/papers/segmentation/Learning to Segment Object Candidates.pdf",
+      "git_blob": "68dfdf9411bd902a78e8a20d3902e6c1237b0a8e"
+    },
+    {
+      "old": "4.0-Other/(PPT) Big Data Mining.Deep Learning with Tensorflow.pdf",
+      "new": "topics/12-practice/papers/tutorials/(PPT) Big Data Mining.Deep Learning with Tensorflow.pdf",
+      "git_blob": "fbc375648d7d809e2a1f4090dfe33cfd9247a052"
+    },
+    {
+      "old": "4.0-Other/(PPT) Introduction to tensorflow.pdf",
+      "new": "topics/12-practice/papers/tutorials/(PPT) Introduction to tensorflow.pdf",
+      "git_blob": "91345679512949360c6160e393f3f7ab8dcbf4ae"
+    },
+    {
+      "old": "4.0-Other/Apress.Pro.Deep.Learning.with.TensorFlow (2017).pdf",
+      "new": "topics/12-practice/papers/tutorials/Apress.Pro.Deep.Learning.with.TensorFlow (2017).pdf",
+      "git_blob": "5bd75d0a841d4423ad2b06841b42bb766507f6c9"
+    },
+    {
+      "old": "4.0-Other/Manning.Deep.Learning.with.Python (2018).pdf",
+      "new": "topics/12-practice/papers/tutorials/Manning.Deep.Learning.with.Python (2018).pdf",
+      "git_blob": "434e9b7992620b620512394f4c6c376391be95ca"
+    },
+    {
+      "old": "4.0-Other/Packt.Deep Learning with TensorFlow (2017).pdf",
+      "new": "topics/12-practice/papers/tutorials/Packt.Deep Learning with TensorFlow (2017).pdf",
+      "git_blob": "175b812c80ed753a4b52a76104b106ec6ec8001e"
+    },
+    {
+      "old": "notes/dropout.md",
+      "new": "topics/02-training/notes/dropout.md",
+      "git_blob": "2a2c556ffccbb5ca13af18295b09ed4b853f3bd3"
+    },
+    {
+      "old": "notes/batch-normalization.md",
+      "new": "topics/02-training/notes/batch-normalization.md",
+      "git_blob": "7ef0ed81a1fd407434230a53ff95769d62fc5375"
+    },
+    {
+      "old": "notes/layer-normalization.md",
+      "new": "topics/02-training/notes/layer-normalization.md",
+      "git_blob": "a2dee85a23e80a76db1225e46727b4cf7e8511ba"
+    },
+    {
+      "old": "notes/adam.md",
+      "new": "topics/02-training/notes/adam.md",
+      "git_blob": "b06adfc40cb2eb7f2d5b6119730f27e85adf114d"
+    },
+    {
+      "old": "notes/adamw.md",
+      "new": "topics/02-training/notes/adamw.md",
+      "git_blob": "d26fc547a77f5c90194f9a85b49b40aaec19e93d"
+    },
+    {
+      "old": "notes/flashattention.md",
+      "new": "topics/02-training/notes/flashattention.md",
+      "git_blob": "0abb29ca95ba45d84ac4a08e8728cff1d5656a8b"
+    },
+    {
+      "old": "notes/alexnet.md",
+      "new": "topics/03-vision/notes/alexnet.md",
+      "git_blob": "7713f8609d11196e29c3f0cd9718ab700abaa614"
+    },
+    {
+      "old": "notes/vgg.md",
+      "new": "topics/03-vision/notes/vgg.md",
+      "git_blob": "3d7c517dcf1e744d407866623098262c9b16cf68"
+    },
+    {
+      "old": "notes/googlenet.md",
+      "new": "topics/03-vision/notes/googlenet.md",
+      "git_blob": "a73be766b484b09e393a1f4e22235992b929009a"
+    },
+    {
+      "old": "notes/resnet.md",
+      "new": "topics/03-vision/notes/resnet.md",
+      "git_blob": "965a5f89584fdc8adeb026e41240fbae32d6ec3f"
+    },
+    {
+      "old": "notes/densenet.md",
+      "new": "topics/03-vision/notes/densenet.md",
+      "git_blob": "06cf17118b260cd17aaaefe1597c357a878bd74a"
+    },
+    {
+      "old": "notes/mobilenet-v1.md",
+      "new": "topics/03-vision/notes/mobilenet-v1.md",
+      "git_blob": "ce2396cf57942419fde3b9af3f71a16219ac4092"
+    },
+    {
+      "old": "notes/vit.md",
+      "new": "topics/03-vision/notes/vit.md",
+      "git_blob": "3d4549827d4579c75077d4953947858daf02a303"
+    },
+    {
+      "old": "notes/swin.md",
+      "new": "topics/03-vision/notes/swin.md",
+      "git_blob": "1a8ae8473a012d43cf74e8ee21802aa0a2ad9acd"
+    },
+    {
+      "old": "notes/moco.md",
+      "new": "topics/03-vision/notes/moco.md",
+      "git_blob": "4974e2e09dc864b7b4467d8bc423b0029f7d710e"
+    },
+    {
+      "old": "notes/simclr.md",
+      "new": "topics/03-vision/notes/simclr.md",
+      "git_blob": "5b8693c1b872980e717d1a9ec94ceef5490f91fb"
+    },
+    {
+      "old": "notes/byol.md",
+      "new": "topics/03-vision/notes/byol.md",
+      "git_blob": "64ef76974f67aea2dc9a78a185b5407f0049e5bf"
+    },
+    {
+      "old": "notes/mae.md",
+      "new": "topics/03-vision/notes/mae.md",
+      "git_blob": "517fb02c4ad76d53e4bfe4d9e94c679ea976296e"
+    },
+    {
+      "old": "notes/word2vec.md",
+      "new": "topics/04-language/notes/word2vec.md",
+      "git_blob": "a4ba6616fa3effdacaea698ea0b7ec805a150c89"
+    },
+    {
+      "old": "notes/seq2seq.md",
+      "new": "topics/04-language/notes/seq2seq.md",
+      "git_blob": "d58f2eed08d0f9b2a526cd5c5aed98b067daf7de"
+    },
+    {
+      "old": "notes/bahdanau-attention.md",
+      "new": "topics/04-language/notes/bahdanau-attention.md",
+      "git_blob": "dda00b3c8b31fe3f3cb266ac08cb8d4bad9a9d86"
+    },
+    {
+      "old": "notes/transformer.md",
+      "new": "topics/04-language/notes/transformer.md",
+      "git_blob": "928f3360a7c1ab527a303a22978e22507c706625"
+    },
+    {
+      "old": "notes/elmo.md",
+      "new": "topics/04-language/notes/elmo.md",
+      "git_blob": "192d249dc69ec83c64299f034bdb589b512315de"
+    },
+    {
+      "old": "notes/gpt-1.md",
+      "new": "topics/04-language/notes/gpt-1.md",
+      "git_blob": "628ec78c3841e2094d96c8f9bfc6292d20eb7515"
+    },
+    {
+      "old": "notes/bert.md",
+      "new": "topics/04-language/notes/bert.md",
+      "git_blob": "c84148f4a9bd7be660e91a4d8765b75c8a7de7d1"
+    },
+    {
+      "old": "notes/transformer-xl.md",
+      "new": "topics/04-language/notes/transformer-xl.md",
+      "git_blob": "6b7d0301272dbeea071262e166f43466e5d54000"
+    },
+    {
+      "old": "notes/xlnet.md",
+      "new": "topics/04-language/notes/xlnet.md",
+      "git_blob": "a3bd26a17f7225b8affc12f31d4f20b20440ff24"
+    },
+    {
+      "old": "notes/t5.md",
+      "new": "topics/04-language/notes/t5.md",
+      "git_blob": "f570428f4c3582bb857930a3add5ed74018ef961"
+    },
+    {
+      "old": "notes/gpt-3.md",
+      "new": "topics/04-language/notes/gpt-3.md",
+      "git_blob": "428f6a3cabcd3279795eaf7880be9d07633a09fc"
+    },
+    {
+      "old": "notes/chinchilla.md",
+      "new": "topics/04-language/notes/chinchilla.md",
+      "git_blob": "d0050e8f3f63b4e730c6f1641033b3b31adcb48d"
+    },
+    {
+      "old": "notes/instructgpt.md",
+      "new": "topics/04-language/notes/instructgpt.md",
+      "git_blob": "5efba12c300811c866168afa08dfdb5a0d0d7cea"
+    },
+    {
+      "old": "notes/dpo.md",
+      "new": "topics/04-language/notes/dpo.md",
+      "git_blob": "56cb4364ec1773cb8c9fc304c28147e1429112c5"
+    },
+    {
+      "old": "notes/mamba-2.md",
+      "new": "topics/04-language/notes/mamba-2.md",
+      "git_blob": "5ff044d68730466bb4da2792ca39dff54307f49c"
+    },
+    {
+      "old": "notes/deepseek-v3.md",
+      "new": "topics/04-language/notes/deepseek-v3.md",
+      "git_blob": "e3a5d0b20693d272ae9cd6af1c25647a65ac32e6"
+    },
+    {
+      "old": "notes/deepseek-r1.md",
+      "new": "topics/04-language/notes/deepseek-r1.md",
+      "git_blob": "3fd93d36129e07a5e28c6555731a798d5c10ae73"
+    },
+    {
+      "old": "notes/qwen3.md",
+      "new": "topics/04-language/notes/qwen3.md",
+      "git_blob": "40282d07e7e31e1755b2ba931cf82dc8ff795396"
+    },
+    {
+      "old": "notes/vae.md",
+      "new": "topics/05-generative/notes/vae.md",
+      "git_blob": "1212979abfef09246deda006a06cc9ce2ec79464"
+    },
+    {
+      "old": "notes/vae-input-skip.md",
+      "new": "topics/05-generative/notes/vae-input-skip.md",
+      "git_blob": "f76f0555c04af218d2db364b0fb26ce543f030ef"
+    },
+    {
+      "old": "notes/gan.md",
+      "new": "topics/05-generative/notes/gan.md",
+      "git_blob": "de99777db5fef43cce9e5a9d6cb6140c1b53393d"
+    },
+    {
+      "old": "notes/wgan.md",
+      "new": "topics/05-generative/notes/wgan.md",
+      "git_blob": "f0c059a08f7271aeb84966d0682fcfe4ba863159"
+    },
+    {
+      "old": "notes/ebgan.md",
+      "new": "topics/05-generative/notes/ebgan.md",
+      "git_blob": "e96d8e5a9da6629ba1e92ce38d1a5ebb1eb18db3"
+    },
+    {
+      "old": "notes/stylegan.md",
+      "new": "topics/05-generative/notes/stylegan.md",
+      "git_blob": "36ecf46116e426d3a21120e5a51d775ccd0d7775"
+    },
+    {
+      "old": "notes/ddpm.md",
+      "new": "topics/05-generative/notes/ddpm.md",
+      "git_blob": "0cb806c71496661c352cc7c8439dc6b355da58a9"
+    },
+    {
+      "old": "notes/latent-diffusion.md",
+      "new": "topics/05-generative/notes/latent-diffusion.md",
+      "git_blob": "5388b0507ec0ff03cecf04ce336236b23b22c403"
+    },
+    {
+      "old": "notes/flow-matching.md",
+      "new": "topics/05-generative/notes/flow-matching.md",
+      "git_blob": "375867750e2d41dbc41c979dbd2f74bbbcbc43c0"
+    },
+    {
+      "old": "notes/robust-flow-matching.md",
+      "new": "topics/05-generative/notes/robust-flow-matching.md",
+      "git_blob": "f58040bd5885854622fa02d4dd9480e71929fd3a"
+    },
+    {
+      "old": "notes/lipsflower.md",
+      "new": "topics/05-generative/notes/lipsflower.md",
+      "git_blob": "d9f88085d0ff9dc95c8d30e06a052e2a19f3111e"
+    },
+    {
+      "old": "notes/flow-straightness.md",
+      "new": "topics/05-generative/notes/flow-straightness.md",
+      "git_blob": "5296c3df9254ca1ba9f940c6cacf40f0a06dfeda"
+    },
+    {
+      "old": "notes/dualcast.md",
+      "new": "topics/05-generative/notes/dualcast.md",
+      "git_blob": "ec925204c6bcb29210e00a8e842fdc7848d88e1f"
+    },
+    {
+      "old": "notes/llada.md",
+      "new": "topics/05-generative/notes/llada.md",
+      "git_blob": "651f7684e73944f2dc202072436a52ad564b3f70"
+    },
+    {
+      "old": "notes/faster-rcnn.md",
+      "new": "topics/06-detection-segmentation/notes/faster-rcnn.md",
+      "git_blob": "fdf22f3d7a70fa0319c7f1de5682eab7d7decd4d"
+    },
+    {
+      "old": "notes/ssd.md",
+      "new": "topics/06-detection-segmentation/notes/ssd.md",
+      "git_blob": "5c1f6b31c01aeeb1d72e18a7ceea9ed3795e8fe7"
+    },
+    {
+      "old": "notes/fpn.md",
+      "new": "topics/06-detection-segmentation/notes/fpn.md",
+      "git_blob": "dd75d6388cf77e01d0e203a9e86a90efbb454b4b"
+    },
+    {
+      "old": "notes/u-net.md",
+      "new": "topics/06-detection-segmentation/notes/u-net.md",
+      "git_blob": "37bf3c3d3eab231ef568c07b20a8fd3d242e38a8"
+    },
+    {
+      "old": "notes/clip.md",
+      "new": "topics/07-multimodal/notes/clip.md",
+      "git_blob": "13cc02b976aacd4c5bcb27570785eb5f5b68cc07"
+    },
+    {
+      "old": "notes/janus-pro.md",
+      "new": "topics/07-multimodal/notes/janus-pro.md",
+      "git_blob": "abb721b61511d1ed354ffaf6807a7f977469db2e"
+    },
+    {
+      "old": "notes/lora.md",
+      "new": "topics/10-transfer/notes/lora.md",
+      "git_blob": "9f0e108f82a6baea8fd0ee42e7965e37a608978c"
+    },
+    {
+      "old": "notes/qlora.md",
+      "new": "topics/10-transfer/notes/qlora.md",
+      "git_blob": "82424ebd63c33469b2218fc06d49f001dc199c17"
+    }
+  ]
+}

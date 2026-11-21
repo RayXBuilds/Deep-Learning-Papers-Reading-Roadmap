@@ -1,6 +1,6 @@
 # BERT MLM 的监督位置与权重 · 2026-11-03
 
-[精读](../../notes/bert.md) · [原始 JSON](bert-mlm.json) · [脚本](../bert_mlm.py)
+[精读](../../topics/04-language/notes/bert.md) · [原始 JSON](bert-mlm.json) · [脚本](../bert_mlm.py)
 
 ## 假设和边界
 

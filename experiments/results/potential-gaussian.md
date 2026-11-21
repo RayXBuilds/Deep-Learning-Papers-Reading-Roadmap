@@ -1,6 +1,6 @@
 # 二维高斯势流与旋度补充实验
 
-2026-11-18。[精读与推导](../../notes/flow-straightness.md) · [脚本](../potential_gaussian.py) · [JSON](potential-gaussian.json)
+2026-11-18。[精读与推导](../../topics/05-generative/notes/flow-straightness.md) · [脚本](../potential_gaussian.py) · [JSON](potential-gaussian.json)
 
 ## 假设和边界
 

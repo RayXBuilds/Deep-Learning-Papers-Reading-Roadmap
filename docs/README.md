@@ -15,18 +15,21 @@
 | [实验指南](../experiments/README.md) | 环境、命令、对照、验收和失败诊断 |
 | [实测记录](../experiments/results/README.md) | 数值结果、环境与机器可读输出 |
 | [每日维护记录](daily/README.md) | 当日新增和实质修订的内容与验证记录 |
-| [历史资料](archive/README.md) | 原分类目录、旧清单和稀疏下载方法 |
+| [专题总览](../topics/README.md) | 统一阅读顺序、精读与原始资料 |
+| [迁移与历史说明](archive/README.md) | 新旧路径对照、旧清单与稀疏下载 |
 
 ## 仓库结构
 
 ```text
-docs/roadmaps/          学习路线与验收目标
-notes/                  中文论文精读
+topics/                 统一专题入口
+  <topic>/README.md     阅读顺序、覆盖状态与资料清单
+  <topic>/notes/        中文论文精读
+  <topic>/papers/       原始资料，按子方向归档
+docs/roadmaps/          跨专题路线与年份索引
 experiments/            机制实验、测试与结果
-scripts/                本地内容检查
+scripts/                内容、链接与迁移完整性检查
 templates/              精读与实验报告模板
-docs/archive/           历史清单和原目录索引
-1.0-Book/ … 4.0-Other/   原有 PDF 资料，保持路径稳定
+docs/archive/           旧清单、迁移对照与历史说明
 ```
 
 ## 维护内容

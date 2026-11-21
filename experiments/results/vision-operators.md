@@ -1,6 +1,6 @@
 # MobileNet v1 的核分解与 FPN 的区域选层
 
-2026-11-21，在 macOS arm64 CPU、Python 3.9.6 标准库上运行。两项验证分别对应 [MobileNet v1 第 3.1 节](../../notes/mobilenet-v1.md) 和 [FPN 式 (1)](../../notes/fpn.md)。均使用合成输入，无训练、外部数据或 GPU。
+2026-11-21，在 macOS arm64 CPU、Python 3.9.6 标准库上运行。两项验证分别对应 [MobileNet v1 第 3.1 节](../../topics/03-vision/notes/mobilenet-v1.md) 和 [FPN 式 (1)](../../topics/06-detection-segmentation/notes/fpn.md)。均使用合成输入，无训练、外部数据或 GPU。
 
 ```sh
 python3 experiments/vision_operators.py

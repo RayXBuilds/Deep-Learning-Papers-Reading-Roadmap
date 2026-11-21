@@ -6,26 +6,26 @@
 
 | 方法 | 阅读问题 | 状态 |
 |---|---|---|
-| VAE | 为什么用近似后验和变分下界？重参数化把随机性放在哪里？ | [精读](../../notes/vae.md) 与高斯目标机制实验 |
-| VAE 输入跳跃（评价专题） | 重构误差为什么不等于生成质量？ | [精读](../../notes/vae-input-skip.md) 与共享密度对照实验 |
-| GAN | 判别器提供什么信号？如何评价训练平衡和样本覆盖？ | [精读](../../notes/gan.md) 与有限概率表、生成器梯度实验 |
-| StyleGAN | 风格、噪声与各尺度的合成层怎样连接？ | [精读](../../notes/stylegan.md)，FFHQ 结果见原文，未本地训练 |
-| WGAN | 分布靠近时距离如何变化？critic 容量与尺度怎样影响估计？ | [精读](../../notes/wgan.md) 与一维运输机制实验 |
-| EBGAN | 能量、间隔和表示方向分别提供什么约束？ | [精读](../../notes/ebgan.md) 与有限分布、PT 机制实验 |
-| DDPM | 固定加噪如何产生监督？预测噪声如何用于逆向生成？ | [精读](../../notes/ddpm.md) 与一维机制实验 |
-| Flow Matching | 条件速度标签为什么能训练边缘场？时间反转时怎样改符号？ | [精读](../../notes/flow-matching.md) 与高斯回归、ODE 机制实验 |
+| VAE | 为什么用近似后验和变分下界？重参数化把随机性放在哪里？ | [精读](../../topics/05-generative/notes/vae.md) 与高斯目标机制实验 |
+| VAE 输入跳跃（评价专题） | 重构误差为什么不等于生成质量？ | [精读](../../topics/05-generative/notes/vae-input-skip.md) 与共享密度对照实验 |
+| GAN | 判别器提供什么信号？如何评价训练平衡和样本覆盖？ | [精读](../../topics/05-generative/notes/gan.md) 与有限概率表、生成器梯度实验 |
+| StyleGAN | 风格、噪声与各尺度的合成层怎样连接？ | [精读](../../topics/05-generative/notes/stylegan.md)，FFHQ 结果见原文，未本地训练 |
+| WGAN | 分布靠近时距离如何变化？critic 容量与尺度怎样影响估计？ | [精读](../../topics/05-generative/notes/wgan.md) 与一维运输机制实验 |
+| EBGAN | 能量、间隔和表示方向分别提供什么约束？ | [精读](../../topics/05-generative/notes/ebgan.md) 与有限分布、PT 机制实验 |
+| DDPM | 固定加噪如何产生监督？预测噪声如何用于逆向生成？ | [精读](../../topics/05-generative/notes/ddpm.md) 与一维机制实验 |
+| Flow Matching | 条件速度标签为什么能训练边缘场？时间反转时怎样改符号？ | [精读](../../topics/05-generative/notes/flow-matching.md) 与高斯回归、ODE 机制实验 |
 
-先读 [VAE 的潜变量与目标](../../notes/vae.md)，再用[输入跳跃专题](../../notes/vae-input-skip.md)检查评价指标；用 GAN 的对抗训练作对照，再读 DDPM 第 2、3 节。无需先完整复现 VAE 和 GAN 才开始 DDPM。
+先读 [VAE 的潜变量与目标](../../topics/05-generative/notes/vae.md)，再用[输入跳跃专题](../../topics/05-generative/notes/vae-input-skip.md)检查评价指标；用 GAN 的对抗训练作对照，再读 DDPM 第 2、3 节。无需先完整复现 VAE 和 GAN 才开始 DDPM。
 
-DDPM 之后先读 [Flow Matching](../../notes/flow-matching.md)，比较噪声目标与条件速度，再读近期应用专题 [DualCast](../../notes/dualcast.md)，结合 VAE 和 CLIP 检查角色条件与区域监督。两篇的时间轴方向相反，需要同步变换速度符号。
+DDPM 之后先读 [Flow Matching](../../topics/05-generative/notes/flow-matching.md)，比较噪声目标与条件速度，再读近期应用专题 [DualCast](../../topics/05-generative/notes/dualcast.md)，结合 VAE 和 CLIP 检查角色条件与区域监督。两篇的时间轴方向相反，需要同步变换速度符号。
 
-Flow Matching 后可读 [Robust Flow Matching](../../notes/robust-flow-matching.md)，逐项检查位置、速度标签与条件。先运行固定残差实验，再考虑评分缓冲区和真实训练。
+Flow Matching 后可读 [Robust Flow Matching](../../topics/05-generative/notes/robust-flow-matching.md)，逐项检查位置、速度标签与条件。先运行固定残差实验，再考虑评分缓冲区和真实训练。
 
 ## 实验验收
 
 运行 `python3 experiments/flow_matching.py`，比较三个种子的高斯回归与解析边缘场，检查 Euler 收敛及时间反转负对照。[实测](../../experiments/results/flow-matching.md)；神经网络训练未实现。
 
-EBGAN 的 PT 专题继续检查批大小与表示维数的关系，并手算重复表示达到下界的构造。[推导与实验](../../notes/ebgan.md)
+EBGAN 的 PT 专题继续检查批大小与表示维数的关系，并手算重复表示达到下界的构造。[推导与实验](../../topics/05-generative/notes/ebgan.md)
 
 GAN 之后也可读 EBGAN，运行 `python3 experiments/ebgan_energy.py`，检查单方最优与联合均衡的条件，以及间隔和表示方向的几何对照。[实测](../../experiments/results/ebgan-energy.md)
 
@@ -45,14 +45,14 @@ Flow Matching 双峰补充：运行 `python3 experiments/flow_mixture.py`，比�
 
 Robust Flow Matching 的评分实现补充：运行 `python3 experiments/trs_buffer.py`，追踪样本身份、未访问项和分位数变化。[实测](../../experiments/results/trs-buffer.md)；不含优化器训练。
 
-输入敏感性分支：[LipsFlower](../../notes/lipsflower.md) 比较观测进入初值或持续进入速度场的区别。它与 Robust Flow Matching 的训练污染处理是问题对照。运行 `python3 experiments/restoration_stability.py` 检查闭式界、条件注入和离散积分反例；[实测](../../experiments/results/restoration-stability.md)。
+输入敏感性分支：[LipsFlower](../../topics/05-generative/notes/lipsflower.md) 比较观测进入初值或持续进入速度场的区别。它与 Robust Flow Matching 的训练污染处理是问题对照。运行 `python3 experiments/restoration_stability.py` 检查闭式界、条件注入和离散积分反例；[实测](../../experiments/results/restoration-stability.md)。
 
-数值求解分支：[Flow 直线性与 Euler 误差](../../notes/flow-straightness.md) 区分回归损失、耦合统计量和同场积分误差。运行 `python3 experiments/euler_error.py`，检查主项及二阶余量；[实测](../../experiments/results/euler-error.md)。匹配耦合实验未复现。
+数值求解分支：[Flow 直线性与 Euler 误差](../../topics/05-generative/notes/flow-straightness.md) 区分回归损失、耦合统计量和同场积分误差。运行 `python3 experiments/euler_error.py`，检查主项及二阶余量；[实测](../../experiments/results/euler-error.md)。匹配耦合实验未复现。
 
-势流补充：阅读[二维高斯反例](../../notes/flow-straightness.md)，先区分独立耦合、各向同性和协方差可交换条件，再运行 `python3 experiments/potential_gaussian.py`。[实测](../../experiments/results/potential-gaussian.md)。
+势流补充：阅读[二维高斯反例](../../topics/05-generative/notes/flow-straightness.md)，先区分独立耦合、各向同性和协方差可交换条件，再运行 `python3 experiments/potential_gaussian.py`。[实测](../../experiments/results/potential-gaussian.md)。
 
-读完 DDPM 后，用 [Latent Diffusion](../../notes/latent-diffusion.md) 对照像素与潜变量上的同一加噪方程，再看压缩倍率为何同时影响训练时间与细节保真。
+读完 DDPM 后，用 [Latent Diffusion](../../topics/05-generative/notes/latent-diffusion.md) 对照像素与潜变量上的同一加噪方程，再看压缩倍率为何同时影响训练时间与细节保真。
 
 ## 离散序列的两种生成顺序
 
-读 [LLaDA](../../notes/llada.md) 时固定三个词位，手算从全掩码到两个已知词的条件变化。再读 [Janus-Pro](../../notes/janus-pro.md)，把图像网格展平为离散码，画出从前缀到下一个码的预测路径。比较两者在哪些步骤能同时更新多个未知位置。
+读 [LLaDA](../../topics/05-generative/notes/llada.md) 时固定三个词位，手算从全掩码到两个已知词的条件变化。再读 [Janus-Pro](../../topics/07-multimodal/notes/janus-pro.md)，把图像网格展平为离散码，画出从前缀到下一个码的预测路径。比较两者在哪些步骤能同时更新多个未知位置。

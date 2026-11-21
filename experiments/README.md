@@ -38,7 +38,7 @@ JSON 含配置、数值、逐项检查、总状态、种子、Python/平台及�
 
 ## 加性注意力专题
 
-[中文精读](../notes/bahdanau-attention.md) · [协议与实测](results/additive-attention.md)
+[中文精读](../topics/04-language/notes/bahdanau-attention.md) · [协议与实测](results/additive-attention.md)
 
 ```bash
 python3 experiments/additive_attention.py --output /tmp/additive-attention.json
@@ -48,7 +48,7 @@ python3 experiments/additive_attention.py --output /tmp/additive-attention.json
 
 ## VAE 目标与生成评价专题
 
-[经典精读](../notes/vae.md) · [输入跳跃精读](../notes/vae-input-skip.md) · [协议与实测](results/vae-objectives.md)
+[经典精读](../topics/05-generative/notes/vae.md) · [输入跳跃精读](../topics/05-generative/notes/vae-input-skip.md) · [协议与实测](results/vae-objectives.md)
 
 ```bash
 python3 experiments/vae_objectives.py --output /tmp/vae-objectives.json
@@ -58,7 +58,7 @@ python3 experiments/vae_objectives.py --output /tmp/vae-objectives.json
 
 ## AdamW 权重衰减专题
 
-[中文精读](../notes/adamw.md) · [协议与实测](results/adamw-decay.md)
+[中文精读](../topics/02-training/notes/adamw.md) · [协议与实测](results/adamw-decay.md)
 
 ```bash
 python3 experiments/adamw_decay.py --output /tmp/adamw-decay.json
@@ -68,7 +68,7 @@ python3 experiments/adamw_decay.py --output /tmp/adamw-decay.json
 
 ## LoRA 初始化与合并专题
 
-[中文精读](../notes/lora.md) · [协议与实测](results/lora-mechanics.md)
+[中文精读](../topics/10-transfer/notes/lora.md) · [协议与实测](results/lora-mechanics.md)
 
 ```bash
 python3 experiments/lora_mechanics.py --output /tmp/lora-mechanics.json
@@ -78,7 +78,7 @@ python3 experiments/lora_mechanics.py --output /tmp/lora-mechanics.json
 
 ## ViT 图像块与位置专题
 
-[中文精读](../notes/vit.md) · [协议与实测](results/vit-patches.md)
+[中文精读](../topics/03-vision/notes/vit.md) · [协议与实测](results/vit-patches.md)
 
 ```bash
 python3 experiments/vit_patches.py --output /tmp/vit-patches.json
@@ -88,7 +88,7 @@ python3 experiments/vit_patches.py --output /tmp/vit-patches.json
 
 ## BERT MLM 损失专题
 
-[精读](../notes/bert.md) · [协议与实测](results/bert-mlm.md)
+[精读](../topics/04-language/notes/bert.md) · [协议与实测](results/bert-mlm.md)
 
 ```bash
 python3 experiments/bert_mlm.py --output /tmp/bert-mlm.json
@@ -98,7 +98,7 @@ python3 experiments/bert_mlm.py --output /tmp/bert-mlm.json
 
 ## CLIP 配对目标专题
 
-[精读](../notes/clip.md) · [协议与实测](results/clip-objective.md)
+[精读](../topics/07-multimodal/notes/clip.md) · [协议与实测](results/clip-objective.md)
 
 ```bash
 python3 experiments/clip_objective.py --output /tmp/clip-objective.json
@@ -108,15 +108,15 @@ python3 experiments/clip_objective.py --output /tmp/clip-objective.json
 
 ## GAN 目标专题
 
-运行 `python3 experiments/gan_objective.py --output /tmp/gan-objective.json`，检查有限概率表上的最优判别器、JS 等式与两种生成器损失的梯度。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../notes/gan.md) · [协议与实测](results/gan-objective.md)
+运行 `python3 experiments/gan_objective.py --output /tmp/gan-objective.json`，检查有限概率表上的最优判别器、JS 等式与两种生成器损失的梯度。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../topics/05-generative/notes/gan.md) · [协议与实测](results/gan-objective.md)
 
 ## WGAN 距离专题
 
-运行 `python3 experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry.json`，检查一维等权经验分布的运输代价、JS 和 critic 约束。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../notes/wgan.md) · [实测](results/wasserstein-geometry.md)
+运行 `python3 experiments/wasserstein_geometry.py --output /tmp/wasserstein-geometry.json`，检查一维等权经验分布的运输代价、JS 和 critic 约束。CPU 标准库，输入确定，seed=null。该专题单独运行，神经网络训练待实现。[精读](../topics/05-generative/notes/wgan.md) · [实测](results/wasserstein-geometry.md)
 
 ## EBGAN 能量专题
 
-[精读](../notes/ebgan.md) · [实测](results/ebgan-energy.md)
+[精读](../topics/05-generative/notes/ebgan.md) · [实测](results/ebgan-energy.md)
 
 ```bash
 python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
@@ -128,13 +128,13 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 
 ## DualCast 区域监督专题
 
-[精读](../notes/dualcast.md) · [实测](results/dualcast-regions.md)
+[精读](../topics/05-generative/notes/dualcast.md) · [实测](results/dualcast-regions.md)
 
 运行 `python3 experiments/dualcast_regions.py`。第十六项机制实验，CPU 标准库，固定掩码和残差，检查重叠权重、条件丢弃与损失归一化。
 
 ## Flow Matching 速度场专题
 
-[精读](../notes/flow-matching.md) · [实测](results/flow-matching.md)
+[精读](../topics/05-generative/notes/flow-matching.md) · [实测](results/flow-matching.md)
 
 运行 `python3 experiments/flow_matching.py`。第十七项机制实验，独立于核心五项。CPU 标准库，三个种子的高斯端点回归与确定性解析流对照，检查总体损失常数差、积分误差和时间反转符号。没有神经网络训练或图像基准。
 
@@ -142,27 +142,27 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 
 ## Robust Flow Matching 监督可靠性专题
 
-运行 `python3 experiments/robust_flow.py`。第十八项机制实验，固定仿射场与三类损失表，CPU 标准库，无随机数。检查残差分解、抵消反例、CCS 运算顺序及时间采样；未训练鲁棒生成器。[精读](../notes/robust-flow-matching.md) · [实测](results/robust-flow.md)
+运行 `python3 experiments/robust_flow.py`。第十八项机制实验，固定仿射场与三类损失表，CPU 标准库，无随机数。检查残差分解、抵消反例、CCS 运算顺序及时间采样；未训练鲁棒生成器。[精读](../topics/05-generative/notes/robust-flow-matching.md) · [实测](results/robust-flow.md)
 
 2026-11-15 补充同一 Robust Flow Matching 专题：`python3 experiments/trs_buffer.py` 验证样本索引、EMA、暖启动与已访问分数的分位数。[实测](results/trs-buffer.md)。专题数量不变。
 
 ## LipsFlower 输入敏感性专题
 
-运行 `python3 experiments/restoration_stability.py`。第十九项机制实验，CPU 标准库、确定性标量 ODE、seed=null；验证初值与条件增益、配对随机性及积分误差，不含神经网络训练。[精读](../notes/lipsflower.md) · [协议与实测](results/restoration-stability.md)
+运行 `python3 experiments/restoration_stability.py`。第十九项机制实验，CPU 标准库、确定性标量 ODE、seed=null；验证初值与条件增益、配对随机性及积分误差，不含神经网络训练。[精读](../topics/05-generative/notes/lipsflower.md) · [协议与实测](results/restoration-stability.md)
 
 ## Euler 主误差专题
 
-第二十项机制实验：`python3 experiments/euler_error.py`。确定性 CPU 标量场，检查主系数、误差阶和传播项负对照。[精读](../notes/flow-straightness.md) · [实测](results/euler-error.md)。未构造匹配直线性的 FM 耦合。
+第二十项机制实验：`python3 experiments/euler_error.py`。确定性 CPU 标量场，检查主系数、误差阶和传播项负对照。[精读](../topics/05-generative/notes/flow-straightness.md) · [实测](results/euler-error.md)。未构造匹配直线性的 FM 耦合。
 
 2026-11-18 补充同一 Flow 直线性专题：`python3 experiments/potential_gaussian.py` 比较二维高斯场的旋度、环流和对称化负对照。[实测](results/potential-gaussian.md)。专题总数仍为 20。
 
 ## ResNet 激活与分支抵消补充
 
-`python3 experiments/residual_gate.py`：固定仿射分支、输入和深度，验证加法后 ReLU、分支抵消及深度累乘。[精读](../notes/resnet.md) · [实测](results/residual-gate.md)。属于已有 residual 专题，专题总数仍为 20，不是网络训练。
+`python3 experiments/residual_gate.py`：固定仿射分支、输入和深度，验证加法后 ReLU、分支抵消及深度累乘。[精读](../topics/03-vision/notes/resnet.md) · [实测](results/residual-gate.md)。属于已有 residual 专题，专题总数仍为 20，不是网络训练。
 
 ## BatchNorm 反向传播补充
 
-`python3 experiments/bn_jacobian.py`：单特征批的解析导数对照有限差分，检查公共平移、有限 ε 的径向导数和冻结统计量。[精读](../notes/batch-normalization.md) · [实测](results/bn-jacobian.md)。属于既有 normalization 专题，仍为 20 个机制专题；没有网络训练或滑动统计估计。
+`python3 experiments/bn_jacobian.py`：单特征批的解析导数对照有限差分，检查公共平移、有限 ε 的径向导数和冻结统计量。[精读](../topics/02-training/notes/batch-normalization.md) · [实测](results/bn-jacobian.md)。属于既有 normalization 专题，仍为 20 个机制专题；没有网络训练或滑动统计估计。
 
 ## Dropout 与 VGG
 

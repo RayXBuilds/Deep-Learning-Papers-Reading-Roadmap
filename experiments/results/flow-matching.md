@@ -1,6 +1,6 @@
 # Flow Matching 条件速度与边缘速度实验
 
-2026-11-12 实测。[精读](../../notes/flow-matching.md) · [脚本](../flow_matching.py) · [原始 JSON](flow-matching.json)
+2026-11-12 实测。[精读](../../topics/05-generative/notes/flow-matching.md) · [脚本](../flow_matching.py) · [原始 JSON](flow-matching.json)
 
 ## 假设和边界
 

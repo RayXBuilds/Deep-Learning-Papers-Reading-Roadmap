@@ -1,6 +1,6 @@
 # Robust Flow Matching 残差与比较评分机制
 
-2026-11-14 实测。[精读](../../notes/robust-flow-matching.md) · [脚本](../robust_flow.py) · [JSON](robust-flow.json)
+2026-11-14 实测。[精读](../../topics/05-generative/notes/robust-flow-matching.md) · [脚本](../robust_flow.py) · [JSON](robust-flow.json)
 
 ## 假设和边界
 

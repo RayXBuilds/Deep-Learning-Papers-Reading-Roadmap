@@ -1,6 +1,6 @@
 # AdamW 与 L2 正则的更新差异 · 2026-10-30
 
-[实验指南](../README.md) · [中文精读](../../notes/adamw.md)
+[实验指南](../README.md) · [中文精读](../../topics/02-training/notes/adamw.md)
 
 ## 假设和边界
 

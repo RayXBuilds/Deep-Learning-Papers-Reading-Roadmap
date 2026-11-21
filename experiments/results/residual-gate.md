@@ -1,6 +1,6 @@
 # ResNet 加法后激活与抵消实验
 
-2026-11-19。[精读](../../notes/resnet.md) · [脚本](../residual_gate.py) · [JSON](residual-gate.json)
+2026-11-19。[精读](../../topics/03-vision/notes/resnet.md) · [脚本](../residual_gate.py) · [JSON](residual-gate.json)
 
 ## 假设和边界
 

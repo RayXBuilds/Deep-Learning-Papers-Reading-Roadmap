@@ -1,6 +1,6 @@
 # MAE 的重建误差落在哪些位置？
 
-在仓库根目录运行 `python3 experiments/masked_patches.py`。Python 3.10+，CPU，随机种子 7、42、2026。[记录的布局、指标及脚本 SHA-256](masked-patches.json) · [独立测试](../test_masked_patches.py) · [论文精读](../../notes/mae.md)
+在仓库根目录运行 `python3 experiments/masked_patches.py`。Python 3.10+，CPU，随机种子 7、42、2026。[记录的布局、指标及脚本 SHA-256](masked-patches.json) · [独立测试](../test_masked_patches.py) · [论文精读](../../topics/03-vision/notes/mae.md)
 
 输入是 16 个标量块，真值分别为 0 到 15。每次打乱位置、保留前 4 块，再恢复到解码器的原图顺序。逐位置校验可见值与占位符，要求三次全部一致。让每个可见位置的预测偏差为 10、被遮位置为 1。基线全图 MSE 应为 (4×100+12×1)/16=25.75；只对遮挡区求平均应为 1。两项数值均可精确表示。
 

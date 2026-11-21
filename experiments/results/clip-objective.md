@@ -1,6 +1,6 @@
 # CLIP 配对目标：固定向量机制实验
 
-[精读](../../notes/clip.md) · [实验指南](../README.md) · [脚本](../clip_objective.py) · [原始输出](clip-objective.json)
+[精读](../../topics/07-multimodal/notes/clip.md) · [实验指南](../README.md) · [脚本](../clip_objective.py) · [原始输出](clip-objective.json)
 
 记录日期：2026-11-04（Asia/Shanghai）。这是本仓库实际运行的目标函数检查，不是 CLIP 预训练或零样本准确率复现。
 

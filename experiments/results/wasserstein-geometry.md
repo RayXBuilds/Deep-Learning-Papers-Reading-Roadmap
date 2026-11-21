@@ -1,6 +1,6 @@
 # WGAN 一维运输机制实测
 
-[精读](../../notes/wgan.md) · [脚本](../wasserstein_geometry.py) · [原始输出](wasserstein-geometry.json)
+[精读](../../topics/05-generative/notes/wgan.md) · [脚本](../wasserstein_geometry.py) · [原始输出](wasserstein-geometry.json)
 
 ## 假设和边界
 

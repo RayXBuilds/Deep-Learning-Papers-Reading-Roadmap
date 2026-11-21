@@ -1,6 +1,6 @@
 # VAE 下界、重参数化与生成评价 · 2026-10-29
 
-[实验指南](../README.md) · [VAE 精读](../../notes/vae.md) · [输入跳跃精读](../../notes/vae-input-skip.md)
+[实验指南](../README.md) · [VAE 精读](../../topics/05-generative/notes/vae.md) · [输入跳跃精读](../../topics/05-generative/notes/vae-input-skip.md)
 
 ## 假设和边界
 

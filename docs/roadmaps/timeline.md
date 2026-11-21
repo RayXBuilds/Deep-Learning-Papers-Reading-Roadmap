@@ -4,18 +4,18 @@
 
 | 年份 | 已有精读 |
 |---|---|
-| 2012 | [AlexNet](../../notes/alexnet.md) |
-| 2013 | [word2vec（CBOW / Skip-gram）](../../notes/word2vec.md)、[VAE](../../notes/vae.md) |
-| 2014 | [Dropout](../../notes/dropout.md)、[VGG](../../notes/vgg.md)、[GoogLeNet](../../notes/googlenet.md)、[Seq2Seq](../../notes/seq2seq.md)、[Adam](../../notes/adam.md)、[Bahdanau Attention](../../notes/bahdanau-attention.md)、[GAN](../../notes/gan.md) |
-| 2015 | [ResNet](../../notes/resnet.md)、[BatchNorm](../../notes/batch-normalization.md)、[U-Net](../../notes/u-net.md)、[Faster R-CNN](../../notes/faster-rcnn.md)、[SSD](../../notes/ssd.md) |
-| 2016 | [LayerNorm](../../notes/layer-normalization.md)、[EBGAN](../../notes/ebgan.md)、[DenseNet](../../notes/densenet.md)、[FPN](../../notes/fpn.md) |
-| 2017 | [Transformer](../../notes/transformer.md)、[WGAN](../../notes/wgan.md)、[AdamW](../../notes/adamw.md)、[MobileNet v1](../../notes/mobilenet-v1.md) |
-| 2018 | [ELMo](../../notes/elmo.md)、[GPT-1](../../notes/gpt-1.md)、[BERT](../../notes/bert.md)、[StyleGAN](../../notes/stylegan.md) |
-| 2019 | [Transformer-XL](../../notes/transformer-xl.md)、[XLNet](../../notes/xlnet.md)、[T5](../../notes/t5.md)、[MoCo](../../notes/moco.md) |
-| 2020 | [DDPM](../../notes/ddpm.md)、[ViT](../../notes/vit.md)、[SimCLR](../../notes/simclr.md)、[BYOL](../../notes/byol.md)、[GPT-3](../../notes/gpt-3.md) |
-| 2021 | [CLIP](../../notes/clip.md)、[LoRA](../../notes/lora.md)、[Swin Transformer](../../notes/swin.md)、[Masked Autoencoders（MAE）](../../notes/mae.md)、[Latent Diffusion](../../notes/latent-diffusion.md) |
-| 2022 | [Flow Matching](../../notes/flow-matching.md)、[Chinchilla](../../notes/chinchilla.md)、[FlashAttention](../../notes/flashattention.md)、[InstructGPT](../../notes/instructgpt.md) |
-| 2023 | [DPO](../../notes/dpo.md)、[QLoRA](../../notes/qlora.md) |
-| 2024 | [Mamba-2](../../notes/mamba-2.md)、[DeepSeek-V3](../../notes/deepseek-v3.md) |
-| 2025 | [DeepSeek-R1](../../notes/deepseek-r1.md)、[Qwen3](../../notes/qwen3.md)、[LLaDA](../../notes/llada.md)、[Janus-Pro](../../notes/janus-pro.md) |
-| 2026 | [VAE 输入跳跃](../../notes/vae-input-skip.md)、[Robust Flow Matching](../../notes/robust-flow-matching.md)、[LipsFlower](../../notes/lipsflower.md)、[Flow 直线性与 Euler 误差](../../notes/flow-straightness.md)、[DualCast](../../notes/dualcast.md) |
+| 2012 | [AlexNet](../../topics/03-vision/notes/alexnet.md) |
+| 2013 | [word2vec（CBOW / Skip-gram）](../../topics/04-language/notes/word2vec.md)、[VAE](../../topics/05-generative/notes/vae.md) |
+| 2014 | [Dropout](../../topics/02-training/notes/dropout.md)、[VGG](../../topics/03-vision/notes/vgg.md)、[GoogLeNet](../../topics/03-vision/notes/googlenet.md)、[Seq2Seq](../../topics/04-language/notes/seq2seq.md)、[Adam](../../topics/02-training/notes/adam.md)、[Bahdanau Attention](../../topics/04-language/notes/bahdanau-attention.md)、[GAN](../../topics/05-generative/notes/gan.md) |
+| 2015 | [ResNet](../../topics/03-vision/notes/resnet.md)、[BatchNorm](../../topics/02-training/notes/batch-normalization.md)、[U-Net](../../topics/06-detection-segmentation/notes/u-net.md)、[Faster R-CNN](../../topics/06-detection-segmentation/notes/faster-rcnn.md)、[SSD](../../topics/06-detection-segmentation/notes/ssd.md) |
+| 2016 | [LayerNorm](../../topics/02-training/notes/layer-normalization.md)、[EBGAN](../../topics/05-generative/notes/ebgan.md)、[DenseNet](../../topics/03-vision/notes/densenet.md)、[FPN](../../topics/06-detection-segmentation/notes/fpn.md) |
+| 2017 | [Transformer](../../topics/04-language/notes/transformer.md)、[WGAN](../../topics/05-generative/notes/wgan.md)、[AdamW](../../topics/02-training/notes/adamw.md)、[MobileNet v1](../../topics/03-vision/notes/mobilenet-v1.md) |
+| 2018 | [ELMo](../../topics/04-language/notes/elmo.md)、[GPT-1](../../topics/04-language/notes/gpt-1.md)、[BERT](../../topics/04-language/notes/bert.md)、[StyleGAN](../../topics/05-generative/notes/stylegan.md) |
+| 2019 | [Transformer-XL](../../topics/04-language/notes/transformer-xl.md)、[XLNet](../../topics/04-language/notes/xlnet.md)、[T5](../../topics/04-language/notes/t5.md)、[MoCo](../../topics/03-vision/notes/moco.md) |
+| 2020 | [DDPM](../../topics/05-generative/notes/ddpm.md)、[ViT](../../topics/03-vision/notes/vit.md)、[SimCLR](../../topics/03-vision/notes/simclr.md)、[BYOL](../../topics/03-vision/notes/byol.md)、[GPT-3](../../topics/04-language/notes/gpt-3.md) |
+| 2021 | [CLIP](../../topics/07-multimodal/notes/clip.md)、[LoRA](../../topics/10-transfer/notes/lora.md)、[Swin Transformer](../../topics/03-vision/notes/swin.md)、[Masked Autoencoders（MAE）](../../topics/03-vision/notes/mae.md)、[Latent Diffusion](../../topics/05-generative/notes/latent-diffusion.md) |
+| 2022 | [Flow Matching](../../topics/05-generative/notes/flow-matching.md)、[Chinchilla](../../topics/04-language/notes/chinchilla.md)、[FlashAttention](../../topics/02-training/notes/flashattention.md)、[InstructGPT](../../topics/04-language/notes/instructgpt.md) |
+| 2023 | [DPO](../../topics/04-language/notes/dpo.md)、[QLoRA](../../topics/10-transfer/notes/qlora.md) |
+| 2024 | [Mamba-2](../../topics/04-language/notes/mamba-2.md)、[DeepSeek-V3](../../topics/04-language/notes/deepseek-v3.md) |
+| 2025 | [DeepSeek-R1](../../topics/04-language/notes/deepseek-r1.md)、[Qwen3](../../topics/04-language/notes/qwen3.md)、[LLaDA](../../topics/05-generative/notes/llada.md)、[Janus-Pro](../../topics/07-multimodal/notes/janus-pro.md) |
+| 2026 | [VAE 输入跳跃](../../topics/05-generative/notes/vae-input-skip.md)、[Robust Flow Matching](../../topics/05-generative/notes/robust-flow-matching.md)、[LipsFlower](../../topics/05-generative/notes/lipsflower.md)、[Flow 直线性与 Euler 误差](../../topics/05-generative/notes/flow-straightness.md)、[DualCast](../../topics/05-generative/notes/dualcast.md) |

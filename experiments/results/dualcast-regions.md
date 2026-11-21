@@ -1,6 +1,6 @@
 # DualCast 区域损失机制实验
 
-2026-11-11 实测。[精读](../../notes/dualcast.md) · [脚本](../dualcast_regions.py) · [JSON](dualcast-regions.json)
+2026-11-11 实测。[精读](../../topics/05-generative/notes/dualcast.md) · [脚本](../dualcast_regions.py) · [JSON](dualcast-regions.json)
 
 ## 假设和边界
 

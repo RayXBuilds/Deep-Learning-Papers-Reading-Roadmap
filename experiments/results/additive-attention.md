@@ -1,6 +1,6 @@
 # 加性注意力机制实验 · 2026-10-28
 
-[精读](../../notes/bahdanau-attention.md) · [实验目录](../README.md) · [机器可读结果](additive-attention.json)
+[精读](../../topics/04-language/notes/bahdanau-attention.md) · [实验目录](../README.md) · [机器可读结果](additive-attention.json)
 
 ## 假设与配置
 

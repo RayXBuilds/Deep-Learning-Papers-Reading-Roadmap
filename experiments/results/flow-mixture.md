@@ -1,6 +1,6 @@
 # Flow Matching 双峰表达能力补充
 
-2026-11-13 实测。[精读与推导](../../notes/flow-matching.md) · [脚本](../flow_mixture.py) · [JSON](flow-mixture.json)
+2026-11-13 实测。[精读与推导](../../topics/05-generative/notes/flow-matching.md) · [脚本](../flow_mixture.py) · [JSON](flow-mixture.json)
 
 ## 假设和边界
 

@@ -16,25 +16,25 @@
 
 | 优先级 | 主题 | 需要新增的内容 | 验收条件 |
 |---|---|---|---|
-| 已完成初版 | [Bahdanau Attention](../notes/bahdanau-attention.md) | 2026-10-28 补齐精读、加性打分与 padding 实验 | 9 项新增测试通过；未训练翻译模型 |
-| 2（部分完成） | [VAE](../notes/vae.md) | 2026-10-29 已补精读、闭式 ELBO 与重参数化实验；二维潜空间训练仍待实现 | 机制实验 3 个种子通过；后续训练需独立划分、重构与 KL 分项 |
-| 已完成初版 | [VAE 输入跳跃](../notes/vae-input-skip.md) | 2026-10-29 新增近期论文精读，与 VAE 共用密度/坐标实验 | 等价变换与负对照通过；DART / 神经网络训练未复现 |
+| 已完成初版 | [Bahdanau Attention](../topics/04-language/notes/bahdanau-attention.md) | 2026-10-28 补齐精读、加性打分与 padding 实验 | 9 项新增测试通过；未训练翻译模型 |
+| 2（部分完成） | [VAE](../topics/05-generative/notes/vae.md) | 2026-10-29 已补精读、闭式 ELBO 与重参数化实验；二维潜空间训练仍待实现 | 机制实验 3 个种子通过；后续训练需独立划分、重构与 KL 分项 |
+| 已完成初版 | [VAE 输入跳跃](../topics/05-generative/notes/vae-input-skip.md) | 2026-10-29 新增近期论文精读，与 VAE 共用密度/坐标实验 | 等价变换与负对照通过；DART / 神经网络训练未复现 |
 | 3 | ResNet 数据集实验 | 普通/残差网络训练对照；11-19 仅补全激活/抵消机制与证据，数据集实验仍未完成 | 固定预算、参数量、训练/验证曲线及至少三个种子 |
-| 已完成初版 | [AdamW](../notes/adamw.md) | 2026-10-30 补齐精读、L2/解耦衰减机制和同目标同预算轨迹 | 8 项新增测试通过；无数据集泛化实验 |
-| 部分完成 | [BERT](../notes/bert.md) | 2026-11-03 补充 MLM 监督位置、损失权重与 padding 实验；MLM/NSP 训练待实现 | 6 项新增标签/权重测试通过；输入扰动、小语料划分、多种子与等 token 预算训练仍待完成 |
-| 已完成初版 | [LoRA](../notes/lora.md) | 2026-11-01 补齐精读与初始化、梯度、合并机制实验 | 3 个种子、10 项机制检查、9 项新增测试通过；真实任务微调未复现 |
-| 已完成初版 | [ViT](../notes/vit.md) | 2026-11-02 补齐精读、块投影与位置排列实验 | 7 项机制检查、7 项新增测试通过；分类训练/位置插值未复现 |
-| 已完成初版 | [CLIP](../notes/clip.md) | 2026-11-04 补齐精读、双向目标与候选集合实验 | 7 项机制检查、6 项新增测试通过；预训练及零样本分类未复现 |
-| 已完成初版 | [GAN](../notes/gan.md) | 2026-11-05 补齐对抗目标精读与概率表、梯度实验 | 6 项机制检查通过，神经网络训练待实现 |
-| 已完成初版 | [WGAN](../notes/wgan.md) | 2026-11-06 新增距离、critic 约束精读和一维运输实验 | 7 项机制检查通过，神经网络训练待实现 |
-| 已完成初版 | [EBGAN](../notes/ebgan.md) | 2026-11-07 新增精读和实验，11-08 补充 PT 维数下界 | 主实验 6 项及维数补充 5 项机制检查通过，专题累计 10 项测试，神经网络训练待实现 |
-| 已完成初版 | [DualCast](../notes/dualcast.md) | 2026-11-11 收录近期预印本，补充区域监督实验 | 5 项机制检查及 5 项新增测试通过，官方代码未核实，视频训练未复现 |
-| 已完成初版 | [Flow Matching](../notes/flow-matching.md) | 2026-11-12 补齐 DualCast 前置：条件速度、边缘场与时间方向 | 主实验 7 项检查通过；11-13 补充双峰解析场、独立测试和积分对照，5 项新增检查/测试通过；图像训练未复现 |
-| 已完成初版 | [Robust Flow Matching](../notes/robust-flow-matching.md) | 2026-11-14 收录近期论文并核对作者代码入口 | 主实验 6 项检查通过；11-15 补充 TRS 缓冲区 6 项检查与 6 项测试，记录论文/二维代码调度差异；训练未运行 |
-| 已完成初版 | [LipsFlower](../notes/lipsflower.md) | 2026-11-16 收录近期输入敏感性论文，区分两类扰动入口 | 7 项机制检查及 6 项新增测试通过；代码未核实、图像训练未复现 |
-| 已完成初版 | [Flow 直线性与 Euler 误差](../notes/flow-straightness.md) | 2026-11-17 收录近期理论与数值分析论文 | Euler 主实验 5 项检查通过；11-18 补充势流的 5 项检查及 5 项测试，匹配耦合与训练未复现 |
-| 已补全机制 | [BatchNorm](../notes/batch-normalization.md) | 2026-11-20 补齐元数据、统计量求导与冻结对照 | 6 项机制检查与 6 项语义测试通过；训练加速及统计估计仍未复现 |
-| 已补全精读 | [LayerNorm](../notes/layer-normalization.md) | 2026-11-21 补齐作者代码入口、证据与统计轴/仿射边界 | 笔记内 5 项前向检查通过；反向推导未数值验证，RNN 训练未复现 |
+| 已完成初版 | [AdamW](../topics/02-training/notes/adamw.md) | 2026-10-30 补齐精读、L2/解耦衰减机制和同目标同预算轨迹 | 8 项新增测试通过；无数据集泛化实验 |
+| 部分完成 | [BERT](../topics/04-language/notes/bert.md) | 2026-11-03 补充 MLM 监督位置、损失权重与 padding 实验；MLM/NSP 训练待实现 | 6 项新增标签/权重测试通过；输入扰动、小语料划分、多种子与等 token 预算训练仍待完成 |
+| 已完成初版 | [LoRA](../topics/10-transfer/notes/lora.md) | 2026-11-01 补齐精读与初始化、梯度、合并机制实验 | 3 个种子、10 项机制检查、9 项新增测试通过；真实任务微调未复现 |
+| 已完成初版 | [ViT](../topics/03-vision/notes/vit.md) | 2026-11-02 补齐精读、块投影与位置排列实验 | 7 项机制检查、7 项新增测试通过；分类训练/位置插值未复现 |
+| 已完成初版 | [CLIP](../topics/07-multimodal/notes/clip.md) | 2026-11-04 补齐精读、双向目标与候选集合实验 | 7 项机制检查、6 项新增测试通过；预训练及零样本分类未复现 |
+| 已完成初版 | [GAN](../topics/05-generative/notes/gan.md) | 2026-11-05 补齐对抗目标精读与概率表、梯度实验 | 6 项机制检查通过，神经网络训练待实现 |
+| 已完成初版 | [WGAN](../topics/05-generative/notes/wgan.md) | 2026-11-06 新增距离、critic 约束精读和一维运输实验 | 7 项机制检查通过，神经网络训练待实现 |
+| 已完成初版 | [EBGAN](../topics/05-generative/notes/ebgan.md) | 2026-11-07 新增精读和实验，11-08 补充 PT 维数下界 | 主实验 6 项及维数补充 5 项机制检查通过，专题累计 10 项测试，神经网络训练待实现 |
+| 已完成初版 | [DualCast](../topics/05-generative/notes/dualcast.md) | 2026-11-11 收录近期预印本，补充区域监督实验 | 5 项机制检查及 5 项新增测试通过，官方代码未核实，视频训练未复现 |
+| 已完成初版 | [Flow Matching](../topics/05-generative/notes/flow-matching.md) | 2026-11-12 补齐 DualCast 前置：条件速度、边缘场与时间方向 | 主实验 7 项检查通过；11-13 补充双峰解析场、独立测试和积分对照，5 项新增检查/测试通过；图像训练未复现 |
+| 已完成初版 | [Robust Flow Matching](../topics/05-generative/notes/robust-flow-matching.md) | 2026-11-14 收录近期论文并核对作者代码入口 | 主实验 6 项检查通过；11-15 补充 TRS 缓冲区 6 项检查与 6 项测试，记录论文/二维代码调度差异；训练未运行 |
+| 已完成初版 | [LipsFlower](../topics/05-generative/notes/lipsflower.md) | 2026-11-16 收录近期输入敏感性论文，区分两类扰动入口 | 7 项机制检查及 6 项新增测试通过；代码未核实、图像训练未复现 |
+| 已完成初版 | [Flow 直线性与 Euler 误差](../topics/05-generative/notes/flow-straightness.md) | 2026-11-17 收录近期理论与数值分析论文 | Euler 主实验 5 项检查通过；11-18 补充势流的 5 项检查及 5 项测试，匹配耦合与训练未复现 |
+| 已补全机制 | [BatchNorm](../topics/02-training/notes/batch-normalization.md) | 2026-11-20 补齐元数据、统计量求导与冻结对照 | 6 项机制检查与 6 项语义测试通过；训练加速及统计估计仍未复现 |
+| 已补全精读 | [LayerNorm](../topics/02-training/notes/layer-normalization.md) | 2026-11-21 补齐作者代码入口、证据与统计轴/仿射边界 | 笔记内 5 项前向检查通过；反向推导未数值验证，RNN 训练未复现 |
 | 6 | 历史专题整理 | 检测、分割、强化学习等 | 核对书目、分类与来源，逐步生成精读而非批量摘录 |
 
 ## 每次维护的检查清单
@@ -57,7 +57,7 @@
 
 ## 历年补读 04 · 2019–2021
 
-[MoCo](../notes/moco.md)、[SimCLR](../notes/simclr.md)、[BYOL](../notes/byol.md)、[GPT-3](../notes/gpt-3.md)、[Swin Transformer](../notes/swin.md)、[Masked Autoencoders（MAE）](../notes/mae.md) 已完成六栏精读。候选集损失、遮挡位置恢复与损失归约通过 CPU 验证。后续若升级实验等级，MoCo 需测队列年龄与特征漂移，BYOL 需同时测对齐与表示方差，Swin 需核对边界掩码与可达性，GPT-3 需固定模型和示例协议比较提示。本批六篇均未复现数据集基准。
+[MoCo](../topics/03-vision/notes/moco.md)、[SimCLR](../topics/03-vision/notes/simclr.md)、[BYOL](../topics/03-vision/notes/byol.md)、[GPT-3](../topics/04-language/notes/gpt-3.md)、[Swin Transformer](../topics/03-vision/notes/swin.md)、[Masked Autoencoders（MAE）](../topics/03-vision/notes/mae.md) 已完成六栏精读。候选集损失、遮挡位置恢复与损失归约通过 CPU 验证。后续若升级实验等级，MoCo 需测队列年龄与特征漂移，BYOL 需同时测对齐与表示方差，Swin 需核对边界掩码与可达性，GPT-3 需固定模型和示例协议比较提示。本批六篇均未复现数据集基准。
 
 ## 批次 05 · 2021–2023
 
@@ -66,3 +66,9 @@
 ## 2024–2025 年序列与生成专题（批次 06）
 
 六篇精读的版本与作者入口已核对。[SSD 与掩码实验](../experiments/results/ssd-and-mask.md)分别覆盖代数等价和监督权重。后续若检验 V3 路由、R1 奖励或 Qwen3 思考预算，需要分别记录专家负载、组内奖励分布、分任务正确率与 token 成本。Janus-Pro 的数据/规模归因仍需固定另一变量的消融。六篇均无完整基准复现。
+
+## 统一编排交付（2026-11-21）
+
+已将 22 个旧分类目录和 58 篇中文精读归入 [12 个专题](../topics/README.md)，为每个专题编排阅读顺序、全部原始文件及缺口。112 个 PDF 原字节保持不变，位置迁移见 [对照表](archive/path-migration.md)。这取代之前“只保留旧目录”的组织方式。
+
+后续维护优先补专题页明确标出的旧文缺口，新增精读需回链原始资料所在专题；不再新建根目录 notes/ 或另一套并行分类。资料目录清单已完成，不等于每个文件的题名、版本和论证都完成核查。

@@ -1,6 +1,6 @@
 # LoRA 的初始化、梯度与合并 · 2026-11-01
 
-[中文精读](../../notes/lora.md) · [实验导航](../README.md) · [原始 JSON](lora-mechanics.json)
+[中文精读](../../topics/10-transfer/notes/lora.md) · [实验导航](../README.md) · [原始 JSON](lora-mechanics.json)
 
 ## 假设和边界
 

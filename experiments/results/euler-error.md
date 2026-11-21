@@ -1,6 +1,6 @@
 # Euler 主误差与传播项实验
 
-2026-11-17。[精读](../../notes/flow-straightness.md) · [脚本](../euler_error.py) · [JSON](euler-error.json)
+2026-11-17。[精读](../../topics/05-generative/notes/flow-straightness.md) · [脚本](../euler_error.py) · [JSON](euler-error.json)
 
 ## 假设和边界
 

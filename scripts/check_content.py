@@ -40,7 +40,9 @@ def main():
                 errors.append(f'{path.relative_to(ROOT)}: missing link target: {target}')
     required = ['## 问题', '## 方法与关键推导', '## 原论文证据',
                 '## 与其他论文的关系', '## 可验证实验', '## 局限与思考']
-    notes = list((ROOT / 'notes').glob('*.md'))
+    notes = list((ROOT / 'topics').glob('*/notes/*.md'))
+    if not notes:
+        errors.append('No reading notes found in topics/*/notes/')
     published_sources = {
         'gpt-1.md': 'https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf',
         'alexnet.md': 'https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf',
@@ -449,7 +451,7 @@ def main():
             or vision.get('passed') is not True):
         errors.append('vision-operators.json: missing or failed scale controls')
     timeline = (ROOT / 'docs/roadmaps/timeline.md').read_text()
-    entries = re.findall(r'\(\.\./\.\./notes/([\w-]+\.md)\)', timeline)
+    entries = re.findall(r'\(\.\./\.\./topics/[\w-]+/notes/([\w-]+\.md)\)', timeline)
     if sorted(entries) != sorted(note.name for note in notes):
         errors.append('Timeline must link each reading note exactly once')
     layout_path = ROOT / 'experiments/results/pretraining-layouts.json'
@@ -526,6 +528,25 @@ def main():
                 for r in rows)
         if not valid:
             errors.append(f'{filename}.json: missing cases or out-of-tolerance results')
+    # Historical PDFs are moved by object identity, never silently replaced.
+    migration = json.loads((ROOT / 'docs/archive/path-migration.json').read_text())
+    pdf_entries = [e for e in migration['entries'] if e['old'].endswith('.pdf')]
+    index = {}
+    for row in subprocess.check_output(['git', 'ls-files', '--stage', '-z'], cwd=ROOT).decode().split('\0'):
+        if row:
+            meta, name = row.split('\t')
+            index[name] = meta.split()[1]
+    if len(pdf_entries) != 112 or len({e['new'] for e in pdf_entries}) != 112:
+        errors.append('Migration must retain 112 distinct historical PDFs')
+    for entry in pdf_entries:
+        if index.get(entry['new']) != entry['git_blob'] or entry['old'] in index:
+            errors.append('PDF migration mismatch: ' + entry['old'])
+    for topic in (ROOT / 'topics').iterdir():
+        if topic.is_dir() and not (topic / 'README.md').exists():
+            errors.append('Missing topic reading guide: ' + topic.name)
+    for note in notes:
+        if '[所属专题与原始资料](../README.md)' not in note.read_text():
+            errors.append('Missing topic backlink: ' + note.name)
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1

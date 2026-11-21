@@ -1,6 +1,6 @@
 # EBGAN PT 的维数下界补充实验
 
-记录日期为 2026-11-08。[精读](../../notes/ebgan.md) · [脚本](../ebgan_dimension.py) · [JSON](ebgan-dimension.json)
+记录日期为 2026-11-08。[精读](../../topics/05-generative/notes/ebgan.md) · [脚本](../ebgan_dimension.py) · [JSON](ebgan-dimension.json)
 
 ## 假设和边界
 

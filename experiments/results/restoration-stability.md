@@ -1,6 +1,6 @@
 # 图像恢复流的标量输入敏感性实验
 
-2026-11-16 实测。[精读](../../notes/lipsflower.md) · [脚本](../restoration_stability.py) · [JSON](restoration-stability.json)
+2026-11-16 实测。[精读](../../topics/05-generative/notes/lipsflower.md) · [脚本](../restoration_stability.py) · [JSON](restoration-stability.json)
 
 ## 假设和边界
 

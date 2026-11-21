@@ -1,6 +1,6 @@
 # EBGAN 能量目标机制实测
 
-记录日期为 2026-11-07。[精读](../../notes/ebgan.md) · [代码](../ebgan_energy.py) · [JSON](ebgan-energy.json)
+记录日期为 2026-11-07。[精读](../../topics/05-generative/notes/ebgan.md) · [代码](../ebgan_energy.py) · [JSON](ebgan-energy.json)
 
 ## 假设和边界
 

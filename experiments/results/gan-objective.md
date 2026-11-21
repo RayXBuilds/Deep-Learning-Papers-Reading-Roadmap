@@ -1,6 +1,6 @@
 # GAN 概率表与梯度实测
 
-记录日期为 2026-11-05，运行范围为 CPU 机制验证。[精读](../../notes/gan.md) · [脚本](../gan_objective.py) · [JSON](gan-objective.json)
+记录日期为 2026-11-05，运行范围为 CPU 机制验证。[精读](../../topics/05-generative/notes/gan.md) · [脚本](../gan_objective.py) · [JSON](gan-objective.json)
 
 ## 假设和边界
 

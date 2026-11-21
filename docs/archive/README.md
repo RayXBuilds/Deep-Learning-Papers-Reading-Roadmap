@@ -1,42 +1,20 @@
-# 历史资料入口
+# 历史资料与目录迁移
 
-[首页](../../README.md) · [历史论文清单](reading-list-2018.md) · [勘误](../errata.md)
+[首页](../../README.md) · [统一专题](../../topics/README.md) · [历史论文清单](reading-list-2018.md) · [勘误](../errata.md)
 
-原资料区主体整理于 2018 年。旧 PDF 路径保持不变，新精读请从首页进入。以下计数来自本轮开始前的 Git 文件树，PDF 包含书籍、课件和论文，不能等同论文数量。
+2026-11-21 按用户要求重编排：原有 22 个分类目录及 notes/ 统一迁入 12 个专题。原始资料与新精读不再使用两套顶层分类；请从专题页查看阅读顺序、全部文件和未完成环节。
 
-| 原目录 | PDF 文件数 |
-|---|---:|
-| [1.0-Book](../../1.0-Book/) | 1 |
-| [1.1-Survey](../../1.1-Survey/) | 1 |
-| [1.2-Deep_Belief_Network](../../1.2-Deep_Belief_Network/) | 2 |
-| [1.3-ImageNet_Evolution](../../1.3-ImageNet_Evolution/) | 4 |
-| [1.4-Speech_Recognition_Evolution](../../1.4-Speech_Recognition_Evolution/) | 6 |
-| [2.1-Model](../../2.1-Model/) | 8 |
-| [2.2-Optimization](../../2.2-Optimization/) | 5 |
-| [2.3-Unsupervised_Learning_Deep_Generative_Model](../../2.3-Unsupervised_Learning_Deep_Generative_Model/) | 7 |
-| [2.4-RNN_Sequence-to-Sequence_Model](../../2.4-RNN_Sequence-to-Sequence_Model/) | 4 |
-| [2.5-Neural_Turing_Machine](../../2.5-Neural_Turing_Machine/) | 5 |
-| [2.6-Deep_Reinforcement_Learning](../../2.6-Deep_Reinforcement_Learning/) | 8 |
-| [2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL](../../2.7-Deep_Transfer_Learning_Lifelong_Learning_especially_for_RL/) | 6 |
-| [2.8-One_Shot_Deep_Learning](../../2.8-One_Shot_Deep_Learning/) | 2 |
-| [3.1-NLP](../../3.1-NLP/) | 9 |
-| [3.2-Object_Detection](../../3.2-Object_Detection/) | 4 |
-| [3.3-Visual_Tracking](../../3.3-Visual_Tracking/) | 3 |
-| [3.4-Image_Caption](../../3.4-Image_Caption/) | 3 |
-| [3.5-Machine_Translation](../../3.5-Machine_Translation/) | 6 |
-| [3.6-Robotics](../../3.6-Robotics/) | 9 |
-| [3.7-Art](../../3.7-Art/) | 9 |
-| [3.8-Object_Segmentation](../../3.8-Object_Segmentation/) | 5 |
-| [4.0-Other](../../4.0-Other/) | 5 |
+- [旧路径 → 新位置](path-migration.md)：覆盖 112 个 PDF 与 58 篇已迁移精读；旧地址另提供迁移前固定版本入口。
+- [迁移清单及 Git blob 标识](path-migration.json)：内容检查逐个验证 PDF 字节标识，防止丢失或替换。
+- 旧 PDF 包含书籍、课件和论文，不能把文件数当作已完成精读数；文件名中的截断和年份仍需逐篇校订。
+- 2018 年旧清单的“暂无”是当时的收录状态，不表示今天无法获取。其本地链接已指向新位置，叙述保留历史语境。
 
-共 112 个 PDF。历史 README 列出 130 条资料，其中 18 处标注“暂无”；这些是旧收录状态，不代表外部原文不可用。
-
-新内容只优先维护原文入口、中文解释、关联和实验。完整仓库仍含较大历史资料，若只维护新内容可使用 sparse checkout：
+## 只下载文本与实验
 
 ```bash
 git clone --filter=blob:none --sparse https://github.com/RayXBuilds/Deep-Learning-Papers-Reading-Roadmap.git
 cd Deep-Learning-Papers-Reading-Roadmap
-git sparse-checkout set docs notes experiments scripts templates .github
+git sparse-checkout set --no-cone '/*' '!/**/*.pdf'
 ```
 
-稀疏检出时，历史 PDF 在 Git 中仍保留，但本地未下载；点击本地目录链接可能没有文件，可在 GitHub 查看，或将相应旧目录加入 sparse checkout。
+这样保留专题 README 和精读，PDF 仍存在于 Git 文件树。若需要全部原始资料，可运行 `git sparse-checkout disable`，这将下载全部文件。历史版权仍归各自权利人。

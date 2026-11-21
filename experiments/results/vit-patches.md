@@ -1,6 +1,6 @@
 # ViT 图像块与位置排列 · 2026-11-02
 
-[精读](../../notes/vit.md) · [实验导航](../README.md) · [原始 JSON](vit-patches.json)
+[精读](../../topics/03-vision/notes/vit.md) · [实验导航](../README.md) · [原始 JSON](vit-patches.json)
 
 ## 假设和边界
 

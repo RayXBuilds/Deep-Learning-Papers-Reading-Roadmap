@@ -1,6 +1,6 @@
 # TRS 样本评分缓冲区实验
 
-2026-11-15 实测。[精读及固定版本来源](../../notes/robust-flow-matching.md) · [脚本](../trs_buffer.py) · [JSON](trs-buffer.json)
+2026-11-15 实测。[精读及固定版本来源](../../topics/05-generative/notes/robust-flow-matching.md) · [脚本](../trs_buffer.py) · [JSON](trs-buffer.json)
 
 ## 假设和边界
 
