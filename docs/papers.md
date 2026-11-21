@@ -52,5 +52,11 @@
 | XLNet / 2019，NeurIPS | 打乱预测顺序，怎样保留词序又防止偷看答案？ | [原文](https://papers.neurips.cc/paper/8812-xlnet-generalized-autoregressive-pretraining-for-language-understanding.pdf) | [精读初版](../notes/xlnet.md)，已验证排列可见性 |
 | T5 / 2019，JMLR 2020 | 一段缺失文本如何变成可生成的标签？ | [原文](https://www.jmlr.org/papers/volume21/20-074/20-074.pdf) | [精读初版](../notes/t5.md)，已验证片段去噪序列 |
 | StyleGAN / 2018，CVPR 2019 | 姿态与发丝为何能从不同入口控制？ | [原文](https://arxiv.org/html/1812.04948) | [精读初版](../notes/stylegan.md)，未运行生成器 |
+| Latent Diffusion / 2021，CVPR 2022 | 压缩倍率与潜空间去噪 | [原文](https://arxiv.org/abs/2112.10752) | [精读](../notes/latent-diffusion.md)，模型未运行 |
+| Chinchilla / 2022 | 等 FLOPs 预算中的参数与 token | [原文](https://arxiv.org/abs/2203.15556) | [精读](../notes/chinchilla.md)，预训练未运行 |
+| FlashAttention / 2022 | 跨块 softmax 与精确注意力 | [原文](https://arxiv.org/abs/2205.14135) | [精读](../notes/flashattention.md)，行归约已验证 |
+| InstructGPT / 2022 | 示范、成对奖励与 KL 正则 | [原文](https://arxiv.org/abs/2203.02155) | [精读](../notes/instructgpt.md)，PPO 未运行 |
+| DPO / 2023 | 由策略相对参考分布的赔率还原偏好 | [原文](https://arxiv.org/abs/2305.18290) | [精读](../notes/dpo.md)，概率恒等式已验证 |
+| QLoRA / 2023 | 块量化基座与低秩适配梯度 | [原文](https://arxiv.org/abs/2305.14314) | [精读](../notes/qlora.md)，量化微调未运行 |
 
 本表最近维护：2026-11-21；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。

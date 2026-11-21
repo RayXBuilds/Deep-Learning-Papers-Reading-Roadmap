@@ -180,3 +180,10 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 
 - `python3 experiments/view_candidates.py` 比较 SimCLR 正确分母、误含自身和重复方向负例。[协议与结果](results/view-candidates.md)
 - `python3 experiments/masked_patches.py` 比较 MAE 遮挡误差和全图误差，核对解码器的块顺序。[协议与结果](results/masked-patches.md)
+
+## 分块注意力与偏好概率
+
+| 运行命令（标准库，CPU） | 输入与基线 | 验收与解释范围 |
+|---|---|---|
+| `python3 experiments/attention_tiles.py` | 17 个带 +1000 偏移的分数及标量值，种子 7、42、2026，块宽 1、4、8、17，对照整行稳定 softmax | 最大绝对误差 < 1e-12；在两块质量悬殊的反例上，等权平均局部输出误差 > 0.49。只验证逐行前向，不测 GPU。[记录](results/attention-tiles.json) |
+| `python3 experiments/preference_odds.py` | 三回答、非均匀参考分布，枚举 β=0.25、1、4 及三对候选。确定性，无随机种子 | 由策略还原的偏好概率与奖励差基线的最大误差 < 1e-12；遗漏参考项的最大误差 > 0.5。未训练语言模型。[记录](results/preference-odds.json) |

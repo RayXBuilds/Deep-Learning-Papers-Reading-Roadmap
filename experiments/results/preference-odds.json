@@ -1,0 +1,23 @@
+{
+  "seed": null,
+  "reference": [
+    0.8,
+    0.15,
+    0.05
+  ],
+  "rewards": [
+    -0.5,
+    0,
+    1
+  ],
+  "betas": [
+    0.25,
+    1,
+    4
+  ],
+  "max_abs_error": 1.6653345369377348e-16,
+  "omitted_reference_max_error": 0.8175060957216844,
+  "passed": true,
+  "python": "3.11.15",
+  "source_sha256": "11ce976d84a5870ce3d4d30ac24e460348a1f59709043cb9819b2ed51d0fc2bb"
+}

@@ -119,3 +119,10 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 | MoCo → [BYOL](../notes/byol.md)（组件对照） | 慢目标从编码字典键变成同图另一视图的回归目标 | 对齐损失怎样响应所有图像取同一向量？ |
 | [ViT](../notes/vit.md) ↔ [Swin](../notes/swin.md) / [MAE](../notes/mae.md) | 移窗改变层间可达性，遮挡改变送入编码器的位置 | 同样缩小注意力矩阵，哪个方法仍保留全图位置？ |
 | [Transformer](../notes/transformer.md) → [GPT-3](../notes/gpt-3.md) | 因果解码器扩展到多个模型规模，以前缀示例传入任务 | 同一权重增加示例与同一提示扩大模型分别控制了什么？ |
+
+## 从基础组件到训练与适配
+
+- **预算与实现**。[Chinchilla](../notes/chinchilla.md) 固定总 FLOPs 比较模型规模；[FlashAttention](../notes/flashattention.md) 固定 Transformer 的注意力输出，改变中间张量读写。同一训练预算映射到耗时还取决于算子和硬件。
+- **表示与条件**。[LDM](../notes/latent-diffusion.md) 将 [DDPM](../notes/ddpm.md) 的加噪目标移至压缩网格，并用交叉注意力从文本读取条件。
+- **偏好目标**。[InstructGPT](../notes/instructgpt.md) 的比较奖励与参考策略，在 [DPO](../notes/dpo.md) 中被写成两个序列的相对对数概率差。
+- **存储与更新**。[QLoRA](../notes/qlora.md) 沿用 [LoRA](../notes/lora.md) 的可训练低秩分支，将冻结基座改为块量化存储。

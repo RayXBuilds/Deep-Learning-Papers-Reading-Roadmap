@@ -58,3 +58,7 @@
 ## 历年补读 04 · 2019–2021
 
 [MoCo](../notes/moco.md)、[SimCLR](../notes/simclr.md)、[BYOL](../notes/byol.md)、[GPT-3](../notes/gpt-3.md)、[Swin Transformer](../notes/swin.md)、[Masked Autoencoders（MAE）](../notes/mae.md) 已完成六栏精读。候选集损失、遮挡位置恢复与损失归约通过 CPU 验证。后续若升级实验等级，MoCo 需测队列年龄与特征漂移，BYOL 需同时测对齐与表示方差，Swin 需核对边界掩码与可达性，GPT-3 需固定模型和示例协议比较提示。本批六篇均未复现数据集基准。
+
+## 批次 05 · 2021–2023
+
+六篇精读及作者资源已列入[年份入口](roadmaps/timeline.md)。已验证 FlashAttention 的在线归一化、DPO 的参考策略校正。仍缺 GPU 访存测量、独立评审的偏好训练、受控预算的预训练、潜空间图像生成及 NF4 微调对照。报告这些结果需记录硬件、数据划分、预算和对应基线。

@@ -489,6 +489,18 @@ def main():
                     r.get('restored') is True and r.get('masked_mse') == 1
                     and r.get('all_patch_mse') == 25.75 for r in runs):
                 errors.append(f'{record.name}: missing positions, seeds or MSE controls')
+    for stem, control, minimum in [('attention_tiles', 'local_mean_error', 0.49),
+                                   ('preference_odds', 'omitted_reference_max_error', 0.5)]:
+        path = ROOT / 'experiments/results' / (stem.replace('_', '-') + '.json')
+        if not path.exists():
+            errors.append(f'Missing {path.name}')
+            continue
+        record = json.loads(path.read_text(encoding='utf-8'))
+        digest = hashlib.sha256((ROOT / 'experiments' / (stem + '.py')).read_bytes()).hexdigest()
+        if (record.get('source_sha256') != digest or record.get('passed') is not True
+                or not 0 <= record.get('max_abs_error', 1) < 1e-12
+                or record.get(control, 0) <= minimum):
+            errors.append(f'{path.name}: provenance or numerical control failed')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1

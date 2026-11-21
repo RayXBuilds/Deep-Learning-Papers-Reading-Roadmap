@@ -13,6 +13,7 @@
 | 2018 | [ELMo](../../notes/elmo.md)、[GPT-1](../../notes/gpt-1.md)、[BERT](../../notes/bert.md)、[StyleGAN](../../notes/stylegan.md) |
 | 2019 | [Transformer-XL](../../notes/transformer-xl.md)、[XLNet](../../notes/xlnet.md)、[T5](../../notes/t5.md)、[MoCo](../../notes/moco.md) |
 | 2020 | [DDPM](../../notes/ddpm.md)、[ViT](../../notes/vit.md)、[SimCLR](../../notes/simclr.md)、[BYOL](../../notes/byol.md)、[GPT-3](../../notes/gpt-3.md) |
-| 2021 | [CLIP](../../notes/clip.md)、[LoRA](../../notes/lora.md)、[Swin Transformer](../../notes/swin.md)、[Masked Autoencoders（MAE）](../../notes/mae.md) |
-| 2022 | [Flow Matching](../../notes/flow-matching.md) |
+| 2021 | [CLIP](../../notes/clip.md)、[LoRA](../../notes/lora.md)、[Swin Transformer](../../notes/swin.md)、[Masked Autoencoders（MAE）](../../notes/mae.md)、[Latent Diffusion](../../notes/latent-diffusion.md) |
+| 2022 | [Flow Matching](../../notes/flow-matching.md)、[Chinchilla](../../notes/chinchilla.md)、[FlashAttention](../../notes/flashattention.md)、[InstructGPT](../../notes/instructgpt.md) |
+| 2023 | [DPO](../../notes/dpo.md)、[QLoRA](../../notes/qlora.md) |
 | 2026 | [VAE 输入跳跃](../../notes/vae-input-skip.md)、[Robust Flow Matching](../../notes/robust-flow-matching.md)、[LipsFlower](../../notes/lipsflower.md)、[Flow 直线性与 Euler 误差](../../notes/flow-straightness.md)、[DualCast](../../notes/dualcast.md) |

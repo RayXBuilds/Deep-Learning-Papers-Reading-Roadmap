@@ -29,3 +29,7 @@
 ## 参数固定时怎样指定任务
 
 读 [GPT-3](../../notes/gpt-3.md) 表 3.2–3.3，固定模型对比示例数，再固定提示协议比较模型规模。与 [LoRA](../../notes/lora.md) 对照，标出任务信息分别进入上下文还是参数更新。
+
+## 从预训练到偏好学习
+
+读完 Transformer，可用 [Chinchilla](../../notes/chinchilla.md) 为固定 FLOPs 分配参数和 token，再用 [FlashAttention](../../notes/flashattention.md) 追踪单层中间结果的读写。训练目标转向用户指令时，沿 [InstructGPT](../../notes/instructgpt.md) → [DPO](../../notes/dpo.md) 比较奖励从何而来、策略接收什么梯度。沿 LoRA → [QLoRA](../../notes/qlora.md) 则追踪冻结权重的表示及反向传播。

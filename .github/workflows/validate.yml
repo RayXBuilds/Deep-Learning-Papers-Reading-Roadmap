@@ -88,3 +88,7 @@ jobs:
         run: |
           python experiments/view_candidates.py > /tmp/view-candidates.json
           python experiments/masked_patches.py > /tmp/masked-patches.json
+      - name: Check tiled attention and preference odds
+        run: |
+          python experiments/attention_tiles.py
+          python experiments/preference_odds.py
