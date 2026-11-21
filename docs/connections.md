@@ -6,9 +6,12 @@
 
 | 起点 → 终点 | 关系类型 | 如何理解 | 不应推断 |
 |---|---|---|---|
-| VGG → ResNet | 问题延续 | 网络更深之后，训练难度成为关键问题之一 | ResNet 只是增加层数 |
+| [AlexNet](../notes/alexnet.md) ↔ [Dropout](../notes/dropout.md) | 组件与实例 | 在全连接隐藏层追踪训练掩码与推理缩放 | 所有子网的最终预测都能由缩放精确平均 |
+| [VGG](../notes/vgg.md) ↔ [GoogLeNet](../notes/googlenet.md) | 架构对照 | 串联小核与多尺度分支拼接形成不同计算路径 | 相同输出尺寸意味着相同计算量 |
+| [word2vec](../notes/word2vec.md) → [Seq2Seq](../notes/seq2seq.md) | 输入表示 | 对照邻词监督与译文监督如何更新查表向量 | 原翻译模型使用了预训练词向量 |
+| [VGG](../notes/vgg.md) → ResNet | 问题延续 | 网络更深之后，训练难度成为关键问题之一 | ResNet 只是增加层数 |
 | BN ↔ LN | 方法对照 | 归一化统计范围从批次对照到单样本特征；BN 同批样本间 Jacobian 耦合对照 LN 样本内特征耦合 | LN 在每个任务都优于 BN |
-| Encoder–Decoder → [Bahdanau Attention](../notes/bahdanau-attention.md) | 信息读取方式 | 每个解码步骤动态聚合源端表示 | 有注意力就不再需要序列编码器 |
+| [Seq2Seq](../notes/seq2seq.md) → [Bahdanau Attention](../notes/bahdanau-attention.md) | 信息读取方式 | 每个解码步骤动态聚合源端表示 | 有注意力就不再需要序列编码器 |
 | [Bahdanau Attention](../notes/bahdanau-attention.md) → Transformer | 计算组织变化 | 从递归模型中的注意力走向主要依靠注意力的序列架构 | 两者注意力打分函数完全一样 |
 | ResNet / LN → Transformer | 组件联系 | 残差连接与层归一化用于子层组织；按 token 归一化不撤销注意力引入的上下文依赖 | 相同组件就保证相同训练性质 |
 | [Transformer](../notes/transformer.md) → [BERT](../notes/bert.md) | 预训练任务 | 双向可见性、输入扰动和监督位置是三个不同选择；固定 logits 的标签/padding 干预已有验证 | 去掉因果掩码就复现了 BERT，或 MLM 等于下一词预测 |

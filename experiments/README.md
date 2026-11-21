@@ -163,3 +163,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## BatchNorm 反向传播补充
 
 `python3 experiments/bn_jacobian.py`：单特征批的解析导数对照有限差分，检查公共平移、有限 ε 的径向导数和冻结统计量。[精读](../notes/batch-normalization.md) · [实测](results/bn-jacobian.md)。属于既有 normalization 专题，仍为 20 个机制专题；没有网络训练或滑动统计估计。
+
+## Dropout 与 VGG
+
+运行 `python3 experiments/early_mechanisms.py` 检查掩码期望和卷积脉冲响应。[协议、实测及边界](results/early-mechanisms.md)

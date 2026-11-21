@@ -6,6 +6,12 @@
 
 | 论文 / 年份 | 学习问题 | 一手来源 | 本仓库状态 |
 |---|---|---|---|
+| AlexNet / 2012 | 局部共享与整图分类 | [原文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) | [精读初版](../notes/alexnet.md)，专项实验未运行 |
+| word2vec（CBOW / Skip-gram） / 2013，ICLR Workshop | 上下文与中心词互换后，监督如何改变？ | [原文](https://arxiv.org/abs/1301.3781) | [精读初版](../notes/word2vec.md)，专项实验未运行 |
+| Dropout / 2014，JMLR | 哪些输出可以用期望缩放？ | [原文](https://jmlr.org/papers/v15/srivastava14a.html) | [精读初版](../notes/dropout.md)，掩码枚举已验证 |
+| VGG / 2014，ICLR 2015 | 小核如何组合空间证据？ | [原文](https://arxiv.org/abs/1409.1556) | [精读初版](../notes/vgg.md)，脉冲响应已验证 |
+| GoogLeNet / 2014，CVPR 2015 | 通道投影怎样控制多尺度分支成本？ | [原文](https://arxiv.org/abs/1409.4842) | [精读初版](../notes/googlenet.md)，专项实验未运行 |
+| Seq2Seq / 2014，NIPS | 固定摘要与源句反转改变哪些依赖？ | [原文](https://arxiv.org/abs/1409.3215) | [精读初版](../notes/seq2seq.md)，专项实验未运行 |
 | ResNet / 2015，CVPR 2016 | 深度增加后的训练退化 | [原文](https://arxiv.org/abs/1512.03385) | [精读初版](../notes/resnet.md)；residual 与 residual_gate.py（加法后激活/抵消补充） |
 | BatchNorm / 2015 | 跨样本统计与训练/推理 | [原文](https://arxiv.org/abs/1502.03167) | [精读初版](../notes/batch-normalization.md)；normalization 与 bn_jacobian.py（统计量求导/冻结对照） |
 | LayerNorm / 2016 | 单样本内部统计 | [原文](https://arxiv.org/abs/1607.06450) | [精读初版](../notes/layer-normalization.md)；normalization；含统计轴/仿射输出手算对照 |
@@ -29,4 +35,4 @@
 | CLIP / 2021，ICML 2021 | 图文配对监督与对比学习 | [原文](https://arxiv.org/abs/2103.00020) | [精读初版](../notes/clip.md)；clip_objective.py；预训练及零样本分类未复现 |
 | LoRA / 2021，ICLR 2022 | 冻结权重与低秩适配 | [原文](https://arxiv.org/abs/2106.09685) | [精读初版](../notes/lora.md)；lora_mechanics.py；任务微调未复现 |
 
-本表最近维护：2026-11-21；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。AlexNet、VGG、GoogLeNet 等历史条目见历史目录；其新格式精读尚未完成。
+本表最近维护：2026-11-21；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。

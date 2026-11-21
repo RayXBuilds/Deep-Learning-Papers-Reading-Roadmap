@@ -40,12 +40,16 @@ def main():
     required = ['## 问题', '## 方法与关键推导', '## 原论文证据',
                 '## 与其他论文的关系', '## 可验证实验', '## 局限与思考']
     notes = list((ROOT / 'notes').glob('*.md'))
+    published_sources = {
+        'alexnet.md': 'https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf',
+        'dropout.md': 'https://jmlr.org/papers/v15/srivastava14a.html',
+    }
     for note in notes:
         text = note.read_text(encoding='utf-8')
         for section in required:
             if section not in text:
                 errors.append(f'{note.name}: missing section {section}')
-        if 'https://arxiv.org/' not in text:
+        if published_sources.get(note.name, 'https://arxiv.org/') not in text:
             errors.append(f'{note.name}: missing primary paper source')
     source_hash = hashlib.sha256((ROOT / 'experiments/run.py').read_bytes()).hexdigest()
     reports = sorted((ROOT / 'experiments/results').glob('baseline-seed-*.json'))
@@ -426,6 +430,14 @@ def main():
         if report.get('config') != {'input': [-3, -1, 2, 6], 'gamma': 1.5, 'beta': 0.3,
                                     'shift': 5, 'difference_step': 1e-5, 'seed': None}:
             errors.append('bn-jacobian.json: unexpected experiment configuration')
+    early = json.loads((ROOT / 'experiments/results/early-mechanisms.json').read_text())
+    early_script = ROOT / 'experiments/early_mechanisms.py'
+    if early.get('source_sha256') != hashlib.sha256(early_script.read_bytes()).hexdigest():
+        errors.append('early-mechanisms.json: source hash mismatch')
+    timeline = (ROOT / 'docs/roadmaps/timeline.md').read_text()
+    entries = re.findall(r'\(\.\./\.\./notes/([\w-]+\.md)\)', timeline)
+    if sorted(entries) != sorted(note.name for note in notes):
+        errors.append('Timeline must link each reading note exactly once')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1

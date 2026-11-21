@@ -1,0 +1,28 @@
+{
+  "source_sha256": "0897d516411403e2db6c82d12ecd9da9b4618439b01f6484d3df95e3ef3eccde",
+  "seed": null,
+  "dropout": {
+    "linear_mean": 0.0,
+    "relu_mean": 1.0,
+    "scaled": 0.0,
+    "positive_means": [
+      4.0,
+      4.0
+    ]
+  },
+  "convolution": {
+    "support": 49,
+    "center": 49,
+    "corner": 1,
+    "stack_mass": 729,
+    "direct_mass": 49
+  },
+  "checks": {
+    "affine_mean": true,
+    "nonlinear_gap": true,
+    "positive_control": true,
+    "support": true,
+    "path_counts": true,
+    "total_mass": true
+  }
+}

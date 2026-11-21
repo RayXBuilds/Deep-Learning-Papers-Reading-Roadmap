@@ -83,3 +83,7 @@ python3 -m unittest discover -s experiments -p 'test_*.py' -v
 没有运行 ImageNet、机器翻译或图像扩散训练；没有 GPU 性能测量。归一化、注意力与残差只做前向/导数机制检查。Adam 的对照学习率并非搜索后的最佳配置，不能排名算法。diffusion 仅单时刻线性回归；没有完整逆向采样。
 
 CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 CI 已通过。
+
+## Dropout 与 VGG
+
+运行 `python3 experiments/early_mechanisms.py` 检查掩码期望和卷积脉冲响应。[协议、实测及边界](early-mechanisms.md)

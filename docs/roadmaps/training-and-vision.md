@@ -6,8 +6,8 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 
 | 阶段 | 核心问题 | 状态与验收 |
 |---|---|---|
-| AlexNet | 卷积、非线性、正则化和计算资源怎样组成系统？ | 历史资料；画出输入输出，区分结构与训练技巧 |
-| VGG / GoogLeNet | 小卷积堆叠与多分支分别权衡什么？ | 历史资料；比较感受野、参数量和计算量 |
+| AlexNet | 卷积、非线性、正则化和计算资源怎样组成系统？ | [AlexNet](../../notes/alexnet.md) 与 [Dropout](../../notes/dropout.md)；画出输入输出，区分结构与训练技巧 |
+| VGG / GoogLeNet | 小卷积堆叠与多分支分别权衡什么？ | [VGG](../../notes/vgg.md) 与 [GoogLeNet](../../notes/googlenet.md)；比较感受野、参数量和计算量 |
 | ResNet | 加深后训练误差恶化，能否改变参数化？ | [精读](../../notes/resnet.md)；解释输入导数不是准确率 |
 | BN / LN | 统计对象和推理方式怎样不同？ | [BN](../../notes/batch-normalization.md)、[LN](../../notes/layer-normalization.md)；改变同批其他样本；用 bn_jacobian.py 检查统计量求导与冻结对照 |
 | Adam | 梯度历史怎样影响步长？ | [精读](../../notes/adam.md)；记录不同学习率与停止条件 |

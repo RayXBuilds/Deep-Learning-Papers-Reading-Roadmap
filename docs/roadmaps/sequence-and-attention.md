@@ -2,7 +2,7 @@
 
 [路线入口](README.md) · [论文索引与原文](../papers.md)
 
-1. Encoder–Decoder：画出输入表示与逐步解码。原始序列模型资料在历史目录。
+1. 从 [word2vec](../../notes/word2vec.md) 的词表查找开始，再读 [Seq2Seq](../../notes/seq2seq.md)。画出一个词向量经过递归状态影响首个译词的路径，再比较反转源句前后的距离。
 2. [Bahdanau Attention](../../notes/bahdanau-attention.md)：比较固定上下文与动态读取，运行加性打分、非线性消融和变长 padding 实验。
 3. Transformer：完成 [精读](../../notes/transformer.md) 和 attention 实验，区分 self-attention、cross-attention、因果掩码。
 4. [BERT 精读](../../notes/bert.md)：区分双向可见性、输入扰动与损失位置；已有 attention 和 MLM 损失权重实验。输入扰动与 MLM/NSP 训练未验证，不等同自回归聊天模型。

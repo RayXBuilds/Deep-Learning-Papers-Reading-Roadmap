@@ -2,7 +2,7 @@
 
 **深度学习经典论文精读与技术演进路线**
 
-从经典论文出发，理解深度学习中的关键问题、方法选择与技术演进。每篇中文精读围绕“为什么提出、怎样实现、证据是什么、局限在哪里”展开，并配套可在 CPU 上运行的小实验。
+从经典论文出发，理解深度学习中的关键问题、方法选择与技术演进。每篇中文精读围绕“为什么提出、怎样实现、证据是什么、局限在哪里”展开，部分论文配有可在 CPU 上运行的小实验。
 
 **[开始阅读](docs/roadmaps/README.md) · [论文索引](docs/papers.md) · [技术关联](docs/connections.md) · [实验指南](experiments/README.md) · [历史资料](docs/archive/README.md)**
 
@@ -26,32 +26,9 @@
 
 ## 已有中文精读
 
-| 论文 | 这篇精读回答什么 | 配套实验 |
-|---|---|---|
-| [ResNet](notes/resnet.md) | 为什么增加恒等捷径会改变深层网络的梯度传播？ | 普通路径与残差路径的导数对照 |
-| [Batch Normalization](notes/batch-normalization.md) | 归一化统计量来自哪里，为什么会受同批样本影响？ | 改变同批样本，观察输出变化 |
-| [Layer Normalization](notes/layer-normalization.md) | 改变统计轴后，哪些批次依赖消失了？ | 与 BatchNorm 使用相同输入对照 |
-| [Adam](notes/adam.md) | 梯度历史如何影响参数更新，为什么需要偏差校正？ | 二次函数优化与手算第一步更新 |
-| [AdamW](notes/adamw.md) | 为什么 L2 正则不等于自适应优化中的权重衰减？ | 首步手算、矩状态与累计衰减对照 |
-| [Bahdanau Attention](notes/bahdanau-attention.md) | 每一步解码如何重新读取源端信息，padding 怎样排除？ | 加性打分、非线性消融与变长掩码 |
-| [Transformer](notes/transformer.md) | Q、K、V 怎样协作，因果掩码如何限制信息可见性？ | 修改未来位置，检查前缀输出 |
-| [BERT](notes/bert.md) | 输入遮盖、双向可见性与监督位置怎样配合？ | 可见性与 MLM 损失权重；预训练未复现 |
-| [ViT](notes/vit.md) | 图像块如何投影，位置标签怎样改变排列关系？ | 块投影/卷积等价与位置排列干预 |
-| [CLIP](notes/clip.md) | 图文配对怎样变成双向对比目标，候选集怎样影响概率？ | 配对置换、重复向量与温度尺度；预训练未复现 |
-| [LoRA](notes/lora.md) | 冻结权重后梯度怎样流动，低秩增量何时可合并？ | 初始化、有限差分与合并负对照 |
-| [VAE](notes/vae.md) | 近似后验、下界和重参数化怎样配合？ | 高斯闭式参照与采样梯度 |
-| [VAE 输入跳跃](notes/vae-input-skip.md) | 重构误差下降为何不保证生成分布更好？ | 与 VAE 共用实验：密度、坐标缩放与负对照 |
-| [GAN](notes/gan.md) | 最优判别器怎样关联 JS 散度，两种生成器损失怎样影响梯度？ | 有限概率表与 logit 梯度对照 |
-| [WGAN](notes/wgan.md) | 分布靠近时距离如何变化，critic 约束起什么作用？ | 一维运输、JS 与 critic 容量对照 |
-| [EBGAN](notes/ebgan.md) | 能量间隔怎样影响两方目标，表示分散怎样衡量？ | 有限能量表、间隔导数与 PT 几何 |
-| [DDPM](notes/ddpm.md) | 加噪过程怎样产生监督信号，预测噪声意味着什么？ | 高斯加噪与独立测试集上的线性去噪 |
-| [Flow Matching](notes/flow-matching.md) | 条件速度怎样变成边缘速度，时间方向如何对齐？ | 高斯与双峰回归、解析流及积分对照 |
-| [Robust Flow Matching](notes/robust-flow-matching.md) | 数据污染和错标签怎样改变监督？ | 残差、类间评分与 TRS 缓冲区；训练未复现 |
-| [LipsFlower](notes/lipsflower.md) | 初值与条件扰动怎样影响恢复流？ | 标量 ODE 敏感性与积分反例；图像训练未复现 |
-| [Flow 直线性与 Euler 误差](notes/flow-straightness.md) | 回归指标怎样关联数值误差？ | 主误差传播；匹配耦合实验未复现 |
-| [DualCast](notes/dualcast.md) | 双参考角色与区域权重如何组织？ | 区域损失机制，预印本，视频训练未复现 |
+目前有 **28 篇精读初版、22 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
 
-目前有 **22 篇精读初版、20 个机制实验**。笔记中提供原文链接、关键公式、证据位置与延伸问题；实验用于理解局部机制，完整论文基准复现尚未完成。
+[按年份浏览全部精读](docs/roadmaps/timeline.md) · [逐篇查看原文和验证状态](docs/papers.md)
 
 ## 动手验证
 
@@ -61,7 +38,7 @@
 python3 experiments/run.py --experiment all --seed 7
 ```
 
-上面的命令运行核心五项实验。加性注意力、VAE 目标与评价、AdamW 衰减、LoRA、ViT、BERT MLM、CLIP、GAN、WGAN、EBGAN、DualCast、Flow Matching、Robust Flow Matching、LipsFlower、Euler 误差十五个专题的独立命令见[实验指南](experiments/README.md)。
+上面的命令运行核心五项实验。其余专题的命令和验收条件见[实验指南](experiments/README.md)。
 
 也可以把 `all` 替换为 `residual`、`normalization`、`adam`、`attention` 或 `diffusion`，单独运行感兴趣的实验。
 
