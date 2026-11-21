@@ -52,3 +52,7 @@ Robust Flow Matching 的评分实现补充：运行 `python3 experiments/trs_buf
 势流补充：阅读[二维高斯反例](../../notes/flow-straightness.md)，先区分独立耦合、各向同性和协方差可交换条件，再运行 `python3 experiments/potential_gaussian.py`。[实测](../../experiments/results/potential-gaussian.md)。
 
 读完 DDPM 后，用 [Latent Diffusion](../../notes/latent-diffusion.md) 对照像素与潜变量上的同一加噪方程，再看压缩倍率为何同时影响训练时间与细节保真。
+
+## 离散序列的两种生成顺序
+
+读 [LLaDA](../../notes/llada.md) 时固定三个词位，手算从全掩码到两个已知词的条件变化。再读 [Janus-Pro](../../notes/janus-pro.md)，把图像网格展平为离散码，画出从前缀到下一个码的预测路径。比较两者在哪些步骤能同时更新多个未知位置。

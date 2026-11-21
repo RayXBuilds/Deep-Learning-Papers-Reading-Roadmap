@@ -501,6 +501,31 @@ def main():
                 or not 0 <= record.get('max_abs_error', 1) < 1e-12
                 or record.get(control, 0) <= minimum):
             errors.append(f'{path.name}: provenance or numerical control failed')
+    # Check provenance and seed/time coverage; CI reruns the numerical controls.
+    for script, filename in [('ssd_duality', 'ssd-duality'), ('llada_weight', 'llada-weight')]:
+        script_path = ROOT / 'experiments' / (script + '.py')
+        result_path = ROOT / 'experiments/results' / (filename + '.json')
+        if not result_path.exists():
+            errors.append(f'{filename}.json: missing report')
+            continue
+        record = json.loads(result_path.read_text())
+        digest = hashlib.sha256(script_path.read_bytes()).hexdigest()
+        if record.get('source_sha256') != digest or record.get('passed') is not True:
+            errors.append(f'{filename}.json: invalid provenance or failed checks')
+        rows = record.get('rows', [])
+        if script == 'ssd_duality':
+            valid = [r.get('seed') for r in rows] == [7, 19, 41] and all(
+                0 <= r['max_kernel_error'] < 1e-12 and r['post_reset_error'] == 0
+                and r['pre_reset_effect'] > 1e-6 for r in rows)
+        else:
+            reference = math.log(10)
+            valid = [r.get('t') for r in rows] == [0.125, 0.5, 1] and all(
+                abs(r['weighted'] - reference) < 1e-12
+                and abs(r['unweighted'] - r['t'] * reference) < 1e-12
+                and abs(r['context_dependent'] - reference - r['t'] * math.log(2)) < 1e-12
+                for r in rows)
+        if not valid:
+            errors.append(f'{filename}.json: missing cases or out-of-tolerance results')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1

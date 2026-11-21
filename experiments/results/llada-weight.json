@@ -1,0 +1,25 @@
+{
+  "reference": 2.3025850929940455,
+  "rows": [
+    {
+      "t": 0.125,
+      "weighted": 2.3025850929940455,
+      "context_dependent": 2.3892284905640384,
+      "unweighted": 0.2878231366242557
+    },
+    {
+      "t": 0.5,
+      "weighted": 2.3025850929940455,
+      "context_dependent": 2.649158683274018,
+      "unweighted": 1.1512925464970227
+    },
+    {
+      "t": 1,
+      "weighted": 2.3025850929940455,
+      "context_dependent": 2.995732273553991,
+      "unweighted": 2.3025850929940455
+    }
+  ],
+  "passed": true,
+  "source_sha256": "ab1b71a9d7b58cedc0d1c5fe3c0178a36980f20243bff1a8bcdf96c78a5f99cc"
+}

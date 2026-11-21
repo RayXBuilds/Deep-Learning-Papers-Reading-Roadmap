@@ -126,3 +126,13 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 - **表示与条件**。[LDM](../notes/latent-diffusion.md) 将 [DDPM](../notes/ddpm.md) 的加噪目标移至压缩网格，并用交叉注意力从文本读取条件。
 - **偏好目标**。[InstructGPT](../notes/instructgpt.md) 的比较奖励与参考策略，在 [DPO](../notes/dpo.md) 中被写成两个序列的相对对数概率差。
 - **存储与更新**。[QLoRA](../notes/qlora.md) 沿用 [LoRA](../notes/lora.md) 的可训练低秩分支，将冻结基座改为块量化存储。
+
+## 基础模型、后训练与离散生成
+
+| 论文 | 关系 | 可以核对的区别 |
+|---|---|---|
+| [Transformer](../notes/transformer.md) 与 [Mamba-2](../notes/mamba-2.md) | 算子对照 | SSD 的历史混合系数可分为内容内积和跨步衰减积，跨块由有限维状态传递。 |
+| [DeepSeek-V3](../notes/deepseek-v3.md) → [R1](../notes/deepseek-r1.md) | 实际使用的基础模型 | 从 V3-Base 出发，组内相对奖励改变策略更新；专家路由仍属前向计算。 |
+| [R1](../notes/deepseek-r1.md) 与 [Qwen3](../notes/qwen3.md) | 蒸馏配方对照 | 静态教师轨迹与学生采样前缀上的教师分布覆盖不同的上下文。 |
+| [BERT](../notes/bert.md) 与 [LLaDA](../notes/llada.md) | 监督位置对照 | LLaDA 用多噪声水平的掩码损失配合反向采样，自全掩码生成。 |
+| [LLaDA](../notes/llada.md) 与 [Janus-Pro](../notes/janus-pro.md) | 离散生成对照 | 多轮揭晓词位与逐个生成图像码的条件集合不同；Janus-Pro 的理解路径另用语义编码器。 |

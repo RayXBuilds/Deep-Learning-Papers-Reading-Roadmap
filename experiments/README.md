@@ -187,3 +187,5 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 |---|---|---|
 | `python3 experiments/attention_tiles.py` | 17 个带 +1000 偏移的分数及标量值，种子 7、42、2026，块宽 1、4、8、17，对照整行稳定 softmax | 最大绝对误差 < 1e-12；在两块质量悬殊的反例上，等权平均局部输出误差 > 0.49。只验证逐行前向，不测 GPU。[记录](results/attention-tiles.json) |
 | `python3 experiments/preference_odds.py` | 三回答、非均匀参考分布，枚举 β=0.25、1、4 及三对候选。确定性，无随机种子 | 由策略还原的偏好概率与奖励差基线的最大误差 < 1e-12；遗漏参考项的最大误差 > 0.5。未训练语言模型。[记录](results/preference-odds.json) |
+
+[SSD 递推与 LLaDA 掩码权重](results/ssd-and-mask.md) 给出两项 CPU 实验的输入、独立参照、命令及验收阈值。

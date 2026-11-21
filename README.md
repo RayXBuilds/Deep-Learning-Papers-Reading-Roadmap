@@ -26,9 +26,11 @@
 
 ## 已有中文精读
 
-目前有 **52 篇精读初版、30 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
+目前有 **58 篇精读初版、32 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
 
 沿[视觉路线](docs/roadmaps/training-and-vision.md)可从批内对比、动量字典读到无负样本回归和掩码重建。沿[序列路线](docs/roadmaps/sequence-and-attention.md)可比较上下文特征、因果预测、排列预测与片段去噪，再读指令微调与偏好优化；沿[生成路线](docs/roadmaps/generative-models.md)可从 GAN 读到 StyleGAN 的分层风格控制，也可从 DDPM 读到潜空间扩散。
+
+近年的两个读点是 [Mamba-2 的状态递推](notes/mamba-2.md)与 [LLaDA 的离散去噪](notes/llada.md)，均可运行 CPU 对照。
 
 [按年份浏览全部精读](docs/roadmaps/timeline.md) · [逐篇查看原文和验证状态](docs/papers.md)
 

@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "seed": 7,
+      "max_kernel_error": 1.1102230246251565e-16,
+      "post_reset_error": 0.0,
+      "pre_reset_effect": 0.6664950499055294
+    },
+    {
+      "seed": 19,
+      "max_kernel_error": 1.1102230246251565e-16,
+      "post_reset_error": 0.0,
+      "pre_reset_effect": 0.9000444431498579
+    },
+    {
+      "seed": 41,
+      "max_kernel_error": 1.1102230246251565e-16,
+      "post_reset_error": 0.0,
+      "pre_reset_effect": 0.8864736591853951
+    }
+  ],
+  "passed": true,
+  "source_sha256": "a2c1c91c74d1bbadd44a55e6133a51e87c44913c10142011211c4c052826b071"
+}

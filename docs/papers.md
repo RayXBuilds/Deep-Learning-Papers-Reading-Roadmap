@@ -58,5 +58,11 @@
 | InstructGPT / 2022 | 示范、成对奖励与 KL 正则 | [原文](https://arxiv.org/abs/2203.02155) | [精读](../notes/instructgpt.md)，PPO 未运行 |
 | DPO / 2023 | 由策略相对参考分布的赔率还原偏好 | [原文](https://arxiv.org/abs/2305.18290) | [精读](../notes/dpo.md)，概率恒等式已验证 |
 | QLoRA / 2023 | 块量化基座与低秩适配梯度 | [原文](https://arxiv.org/abs/2305.14314) | [精读](../notes/qlora.md)，量化微调未运行 |
+| Mamba-2 / 2024 | 如何用两种运算读取同一段历史？ | [原文](https://arxiv.org/abs/2405.21060v1) | [Mamba-2](../notes/mamba-2.md) 精读初版，SSD 递推与显式核已验 |
+| DeepSeek-V3 / 2024 | 路由器怎样兼顾专家分工和设备负载？ | [原文](https://arxiv.org/abs/2412.19437v2) | [DeepSeek-V3](../notes/deepseek-v3.md) 精读初版，未运行模型实验 |
+| DeepSeek-R1 / 2025 | 只评价最终答案，哪些采样轨迹会受到鼓励？ | [原文](https://arxiv.org/abs/2501.12948v2) | [DeepSeek-R1](../notes/deepseek-r1.md) 精读初版，未运行模型实验 |
+| Qwen3 / 2025 | 同一组权重怎样学会长思考与直接回答？ | [原文](https://arxiv.org/abs/2505.09388v1) | [Qwen3](../notes/qwen3.md) 精读初版，未运行模型实验 |
+| LLaDA / 2025 | 从整段空白怎样得到一条有依赖的文本序列？ | [原文](https://arxiv.org/abs/2502.09992v3) | [LLaDA](../notes/llada.md) 精读初版，掩码逆概率已验 |
+| Janus-Pro / 2025 | 为什么看图答题和按文字画图需要不同的图像表示？ | [原文](https://arxiv.org/abs/2501.17811v1) | [Janus-Pro](../notes/janus-pro.md) 精读初版，未运行模型实验 |
 
 本表最近维护：2026-11-21；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。

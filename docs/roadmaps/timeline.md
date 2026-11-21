@@ -16,4 +16,6 @@
 | 2021 | [CLIP](../../notes/clip.md)、[LoRA](../../notes/lora.md)、[Swin Transformer](../../notes/swin.md)、[Masked Autoencoders（MAE）](../../notes/mae.md)、[Latent Diffusion](../../notes/latent-diffusion.md) |
 | 2022 | [Flow Matching](../../notes/flow-matching.md)、[Chinchilla](../../notes/chinchilla.md)、[FlashAttention](../../notes/flashattention.md)、[InstructGPT](../../notes/instructgpt.md) |
 | 2023 | [DPO](../../notes/dpo.md)、[QLoRA](../../notes/qlora.md) |
+| 2024 | [Mamba-2](../../notes/mamba-2.md)、[DeepSeek-V3](../../notes/deepseek-v3.md) |
+| 2025 | [DeepSeek-R1](../../notes/deepseek-r1.md)、[Qwen3](../../notes/qwen3.md)、[LLaDA](../../notes/llada.md)、[Janus-Pro](../../notes/janus-pro.md) |
 | 2026 | [VAE 输入跳跃](../../notes/vae-input-skip.md)、[Robust Flow Matching](../../notes/robust-flow-matching.md)、[LipsFlower](../../notes/lipsflower.md)、[Flow 直线性与 Euler 误差](../../notes/flow-straightness.md)、[DualCast](../../notes/dualcast.md) |

@@ -33,3 +33,7 @@
 ## 从预训练到偏好学习
 
 读完 Transformer，可用 [Chinchilla](../../notes/chinchilla.md) 为固定 FLOPs 分配参数和 token，再用 [FlashAttention](../../notes/flashattention.md) 追踪单层中间结果的读写。训练目标转向用户指令时，沿 [InstructGPT](../../notes/instructgpt.md) → [DPO](../../notes/dpo.md) 比较奖励从何而来、策略接收什么梯度。沿 LoRA → [QLoRA](../../notes/qlora.md) 则追踪冻结权重的表示及反向传播。
+
+## 状态、专家与推理策略
+
+先展开 [Mamba-2](../../notes/mamba-2.md) 的两步递推，找出前一项的衰减系数。再沿 [DeepSeek-V3](../../notes/deepseek-v3.md) → [DeepSeek-R1](../../notes/deepseek-r1.md) 追踪基础模型如何接上同题多回答的奖励。最后读 [Qwen3](../../notes/qwen3.md)，辨认在哪个阶段由教师生成轨迹、在哪个阶段由学生采样。

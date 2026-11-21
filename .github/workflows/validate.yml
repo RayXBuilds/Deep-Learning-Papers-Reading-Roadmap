@@ -92,3 +92,7 @@ jobs:
         run: |
           python experiments/attention_tiles.py
           python experiments/preference_odds.py
+      - name: Run SSD duality and masked-loss controls
+        run: |
+          python experiments/ssd_duality.py
+          python experiments/llada_weight.py
