@@ -12,7 +12,7 @@
 
 ## 先修与验收
 
-先完成 LN 和矩阵乘法。对 Q、K、V 均为 3×2 的例子，写出分数矩阵、输出尺寸与 softmax 的归一化方向。
+先完成 [LN 精读](../../notes/layer-normalization.md) 和矩阵乘法，区分统计量每步独立计算与隐藏状态的时间依赖；运行笔记内 5 项前向手算检查。对 Q、K、V 均为 3×2 的例子，写出分数矩阵、输出尺寸与 softmax 的归一化方向。
 
 运行 `python3 experiments/run.py --experiment attention`。实验修改未来位置的 K、V，检查早期输出不变；没有词表、位置编码、训练或语言理解能力。
 
