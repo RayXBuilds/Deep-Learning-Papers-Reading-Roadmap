@@ -40,5 +40,11 @@
 | ViT / 2020，ICLR 2021 | 图像块序列的 Transformer | [原文](https://arxiv.org/abs/2010.11929) | [精读初版](../notes/vit.md)；vit_patches.py；分类训练未复现 |
 | CLIP / 2021，ICML 2021 | 图文配对监督与对比学习 | [原文](https://arxiv.org/abs/2103.00020) | [精读初版](../notes/clip.md)；clip_objective.py；预训练及零样本分类未复现 |
 | LoRA / 2021，ICLR 2022 | 冻结权重与低秩适配 | [原文](https://arxiv.org/abs/2106.09685) | [精读初版](../notes/lora.md)；lora_mechanics.py；任务微调未复现 |
+| ELMo / 2018，NAACL-HLT | 同一个词怎样获得随句子变化的表示？ | [原文](https://aclanthology.org/N18-1202.pdf) | [精读初版](../notes/elmo.md)，未运行 biLM |
+| GPT-1 / 2018，OpenAI 技术报告 | 只读左侧的模型怎样完成句对分类？ | [原文](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) | [精读初版](../notes/gpt-1.md)，未运行微调 |
+| Transformer-XL / 2019，ACL | 分段计算怎样保留上段的语言线索？ | [原文](https://aclanthology.org/P19-1285.pdf) | [精读初版](../notes/transformer-xl.md)，未运行段级递归实验 |
+| XLNet / 2019，NeurIPS | 打乱预测顺序，怎样保留词序又防止偷看答案？ | [原文](https://papers.neurips.cc/paper/8812-xlnet-generalized-autoregressive-pretraining-for-language-understanding.pdf) | [精读初版](../notes/xlnet.md)，已验证排列可见性 |
+| T5 / 2019，JMLR 2020 | 一段缺失文本如何变成可生成的标签？ | [原文](https://www.jmlr.org/papers/volume21/20-074/20-074.pdf) | [精读初版](../notes/t5.md)，已验证片段去噪序列 |
+| StyleGAN / 2018，CVPR 2019 | 姿态与发丝为何能从不同入口控制？ | [原文](https://arxiv.org/html/1812.04948) | [精读初版](../notes/stylegan.md)，未运行生成器 |
 
 本表最近维护：2026-11-21；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。

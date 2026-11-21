@@ -171,3 +171,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## MobileNet v1 与 FPN
 
 运行 `python3 experiments/vision_operators.py`，比较分解卷积的两条线性计算路径，再将不同尺度的框分到 P2–P5，与固定 P4 对照。[配置、阈值与实测结果](results/vision-operators.md)
+
+## 排列可见性与片段标签
+
+运行 `python3 experiments/pretraining_layouts.py` 穷举 XLNet 的四位置查询和 T5 的六词缺段，比较内容流自读及全文重建基线。[配置、结果与边界](results/pretraining-layouts.md)

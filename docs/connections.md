@@ -39,6 +39,15 @@
 
 VAE / CLIP → [DualCast](../notes/dualcast.md) 属于组件联系，分别构造潜变量条件与视觉上下文。DDPM ↔ DualCast 属于目标对照，阅读时核对噪声预测与速度预测的定义。
 
+## 预训练的信息路径与生成器控制
+
+| 对读 | 关系及可追踪的差别 |
+|---|---|
+| [ELMo](../notes/elmo.md) ↔ [GPT-1](../notes/gpt-1.md) | 迁移接口对照。前者把不同层的前后向状态作为下游特征，后者将标签梯度传回单向主干。 |
+| [Transformer](../notes/transformer.md) → [Transformer-XL](../notes/transformer-xl.md) → [XLNet](../notes/xlnet.md) | 组件承接。先在键值端接入带相对距离的段缓存，再通过双流分别处理可见内容和待预测位置。 |
+| [BERT](../notes/bert.md) ↔ [XLNet](../notes/xlnet.md) ↔ [T5](../notes/t5.md) | 目标对照。分别在受扰动输入上分类、沿排列条件分解词概率、从缺段输入生成带哨兵的标签。 |
+| [GAN](../notes/gan.md) → [StyleGAN](../notes/stylegan.md) | 保留对抗学习，用中间潜码逐层调节通道统计，另设局部噪声入口。 |
+
 ## 关系概览
 
 ```mermaid

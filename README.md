@@ -26,7 +26,9 @@
 
 ## 已有中文精读
 
-目前有 **34 篇精读初版、24 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
+目前有 **40 篇精读初版、26 个机制实验专题**。从 [AlexNet](notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](notes/word2vec.md) 和 [Seq2Seq](notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
+
+沿[序列路线](docs/roadmaps/sequence-and-attention.md)可比较上下文特征、因果预测、排列预测与片段去噪；沿[生成路线](docs/roadmaps/generative-models.md)可从 GAN 读到 StyleGAN 的分层风格控制。
 
 [按年份浏览全部精读](docs/roadmaps/timeline.md) · [逐篇查看原文和验证状态](docs/papers.md)
 

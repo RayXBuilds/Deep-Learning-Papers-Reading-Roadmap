@@ -1,0 +1,16 @@
+{
+  "seed": null,
+  "source_sha256": "4c09a85a33e40204f08e1c6b62c36cc367f225fa45f6462a9f90ee3e46ea86f5",
+  "t5": {
+    "length_matches": 62,
+    "mixed_masks": 62,
+    "restored": 62,
+    "shorter_than_full_target": 25
+  },
+  "xlnet": {
+    "content_self_reads": 96,
+    "queries": 96,
+    "queries_with_right_context": 46,
+    "target_leaks": 0
+  }
+}

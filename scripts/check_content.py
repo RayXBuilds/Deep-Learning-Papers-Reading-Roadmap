@@ -41,6 +41,7 @@ def main():
                 '## 与其他论文的关系', '## 可验证实验', '## 局限与思考']
     notes = list((ROOT / 'notes').glob('*.md'))
     published_sources = {
+        'gpt-1.md': 'https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf',
         'alexnet.md': 'https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf',
         'dropout.md': 'https://jmlr.org/papers/v15/srivastava14a.html',
     }
@@ -450,6 +451,20 @@ def main():
     entries = re.findall(r'\(\.\./\.\./notes/([\w-]+\.md)\)', timeline)
     if sorted(entries) != sorted(note.name for note in notes):
         errors.append('Timeline must link each reading note exactly once')
+    layout_path = ROOT / 'experiments/results/pretraining-layouts.json'
+    if not layout_path.exists():
+        errors.append('Missing pretraining layout report')
+    else:
+        report = json.loads(layout_path.read_text(encoding='utf-8'))
+        script = ROOT / 'experiments/pretraining_layouts.py'
+        if report.get('source_sha256') != hashlib.sha256(script.read_bytes()).hexdigest():
+            errors.append('pretraining-layouts.json: source hash mismatch')
+        if report.get('xlnet') != {'queries': 96, 'target_leaks': 0, 'content_self_reads': 96,
+                                   'queries_with_right_context': 46}:
+            errors.append('pretraining-layouts.json: unexpected permutation visibility')
+        if report.get('t5') != {'mixed_masks': 62, 'restored': 62, 'length_matches': 62,
+                                'shorter_than_full_target': 25}:
+            errors.append('pretraining-layouts.json: unexpected span lengths or reconstruction')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1

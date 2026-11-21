@@ -80,3 +80,7 @@ jobs:
           diff experiments/results/early-mechanisms.json /tmp/early-mechanisms-ci.json
       - name: Check linear convolution and pyramid routing
         run: python experiments/vision_operators.py
+      - name: Recompute XLNet visibility and T5 span lengths
+        run: |
+          python experiments/pretraining_layouts.py > /tmp/pretraining-layouts.json
+          diff -u experiments/results/pretraining-layouts.json /tmp/pretraining-layouts.json
