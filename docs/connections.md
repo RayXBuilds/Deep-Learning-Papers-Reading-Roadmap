@@ -110,3 +110,12 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 | [Faster R-CNN](../notes/faster-rcnn.md) 与 [SSD](../notes/ssd.md) | 都用相对参考框的回归；RPN 的物体性分数用于选候选，SSD 的类别分数直接参与最终筛选。 |
 | ResNet、Faster R-CNN 与 [FPN](../notes/fpn.md) | 组件组合。骨干提供 C2–C5；FPN 融合跨层特征；RPN 和区域分类器消费不同尺度。 |
 | [U-Net](../notes/u-net.md) 与 FPN | 空间细节恢复的对照。前者跨尺度对齐后拼接，再预测像素；后者投影后相加，供多个尺度上的检测头读取。 |
+
+## 比较监督来自哪里
+
+| 方法对照 | 具体变化 | 验证问题 |
+|---|---|---|
+| [MoCo](../notes/moco.md) ↔ [SimCLR](../notes/simclr.md) ↔ [CLIP](../notes/clip.md) | 候选来自历史键、同批图像视图或同批另一模态 | 固定批量后有哪些负例仍可参与？ |
+| MoCo → [BYOL](../notes/byol.md)（组件对照） | 慢目标从编码字典键变成同图另一视图的回归目标 | 对齐损失怎样响应所有图像取同一向量？ |
+| [ViT](../notes/vit.md) ↔ [Swin](../notes/swin.md) / [MAE](../notes/mae.md) | 移窗改变层间可达性，遮挡改变送入编码器的位置 | 同样缩小注意力矩阵，哪个方法仍保留全图位置？ |
+| [Transformer](../notes/transformer.md) → [GPT-3](../notes/gpt-3.md) | 因果解码器扩展到多个模型规模，以前缀示例传入任务 | 同一权重增加示例与同一提示扩大模型分别控制了什么？ |

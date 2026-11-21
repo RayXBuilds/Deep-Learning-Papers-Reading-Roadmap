@@ -84,3 +84,7 @@ jobs:
         run: |
           python experiments/pretraining_layouts.py > /tmp/pretraining-layouts.json
           diff -u experiments/results/pretraining-layouts.json /tmp/pretraining-layouts.json
+      - name: Check SimCLR and MAE mechanism reports
+        run: |
+          python experiments/view_candidates.py > /tmp/view-candidates.json
+          python experiments/masked_patches.py > /tmp/masked-patches.json

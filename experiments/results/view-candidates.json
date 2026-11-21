@@ -1,0 +1,29 @@
+{
+  "source_sha256": "fdb5e69a59140261073f4149dfcef3c32c152c0b99a01af75251cf69deb4c88f",
+  "temperature": 0.5,
+  "seed": null,
+  "views": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "loss": {
+    "base": 0.2395447662218847,
+    "self_included": 0.8200751916029179,
+    "same_direction_negative_pair": 1.1849950300857262
+  },
+  "passed": true
+}

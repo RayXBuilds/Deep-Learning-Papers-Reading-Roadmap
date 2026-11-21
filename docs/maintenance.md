@@ -54,3 +54,7 @@
 ## 批次 03 · 2018–2019 年的预训练与图像合成
 
 六篇精读已按原题、版本标识和发布来源去重。序列路线补入 ELMo、GPT-1、Transformer-XL、XLNet 与 T5，生成路线补入初代 StyleGAN。[实验记录](../experiments/results/pretraining-layouts.md)给出查询泄漏与片段回填两项穷举。段缓存的预测收益、ELMo 层选择、GPT-1 微调及生成器干预仍缺本地测量。升级为任务复现需记录对应检查点、数据划分、训练预算和多次运行的指标。
+
+## 历年补读 04 · 2019–2021
+
+[MoCo](../notes/moco.md)、[SimCLR](../notes/simclr.md)、[BYOL](../notes/byol.md)、[GPT-3](../notes/gpt-3.md)、[Swin Transformer](../notes/swin.md)、[Masked Autoencoders（MAE）](../notes/mae.md) 已完成六栏精读。候选集损失、遮挡位置恢复与损失归约通过 CPU 验证。后续若升级实验等级，MoCo 需测队列年龄与特征漂移，BYOL 需同时测对齐与表示方差，Swin 需核对边界掩码与可达性，GPT-3 需固定模型和示例协议比较提示。本批六篇均未复现数据集基准。

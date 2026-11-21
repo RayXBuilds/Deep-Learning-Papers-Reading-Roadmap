@@ -6,6 +6,12 @@
 
 | 论文 / 年份 | 学习问题 | 一手来源 | 本仓库状态 |
 |---|---|---|---|
+| MoCo / 2019，CVPR 2020 | 跨批负例还能用同一把尺子比较吗？ | [原文](https://openaccess.thecvf.com/content_CVPR_2020/html/He_Momentum_Contrast_for_Unsupervised_Visual_Representation_Learning_CVPR_2020_paper.html) | [精读初版](../notes/moco.md)，本地实验未运行 |
+| SimCLR / 2020，ICML 2020 | 为什么训练时用投影头，评估时读它的输入？ | [原文](https://proceedings.mlr.press/v119/chen20j.html) | [精读初版](../notes/simclr.md)，候选集机制已验证 |
+| BYOL / 2020，NeurIPS 2020 | 没有负例时，在线网络在追谁？ | [原文](https://proceedings.neurips.cc/paper_files/paper/2020/hash/f3ada80d5c4ee70142b17b8192b2958e-Abstract.html) | [精读初版](../notes/byol.md)，本地实验未运行 |
+| GPT-3 / 2020，NeurIPS 2020 | 示例怎样在参数固定时改变回答？ | [原文](https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html) | [精读初版](../notes/gpt-3.md)，本地实验未运行 |
+| Swin Transformer / 2021，ICCV 2021 | 移动半个窗口后，哪些图像块第一次能交流？ | [原文](https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html) | [精读初版](../notes/swin.md)，本地实验未运行 |
+| Masked Autoencoders（MAE） / 2021，CVPR 2022 | 解码器为什么要拿回原始块位置？ | [原文](https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html) | [精读初版](../notes/mae.md)，掩码重建机制已验证 |
 | AlexNet / 2012 | 局部共享与整图分类 | [原文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) | [精读初版](../notes/alexnet.md)，专项实验未运行 |
 | word2vec（CBOW / Skip-gram） / 2013，ICLR Workshop | 上下文与中心词互换后，监督如何改变？ | [原文](https://arxiv.org/abs/1301.3781) | [精读初版](../notes/word2vec.md)，专项实验未运行 |
 | Dropout / 2014，JMLR | 哪些输出可以用期望缩放？ | [原文](https://jmlr.org/papers/v15/srivastava14a.html) | [精读初版](../notes/dropout.md)，掩码枚举已验证 |

@@ -1,0 +1,42 @@
+{
+  "source_sha256": "370a5bd39f2b5eb7f6b36928742befb4fbc99f4f44363c474e9ef76925949d8e",
+  "runs": [
+    {
+      "seed": 7,
+      "visible": [
+        3,
+        14,
+        7,
+        9
+      ],
+      "restored": true,
+      "masked_mse": 1.0,
+      "all_patch_mse": 25.75
+    },
+    {
+      "seed": 42,
+      "visible": [
+        7,
+        9,
+        5,
+        6
+      ],
+      "restored": true,
+      "masked_mse": 1.0,
+      "all_patch_mse": 25.75
+    },
+    {
+      "seed": 2026,
+      "visible": [
+        0,
+        11,
+        2,
+        9
+      ],
+      "restored": true,
+      "masked_mse": 1.0,
+      "all_patch_mse": 25.75
+    }
+  ],
+  "passed": true
+}

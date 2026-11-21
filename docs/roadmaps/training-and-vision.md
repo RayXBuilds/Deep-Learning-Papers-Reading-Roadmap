@@ -31,3 +31,9 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 | 分类骨干 | [ResNet](../../notes/resnet.md) → [DenseNet](../../notes/densenet.md)，再读 [MobileNet v1](../../notes/mobilenet-v1.md) | 相加或拼接之后还能否单独读取旧通道？逐通道滤波之后哪一步交换通道信息？ |
 | 检测 | [Faster R-CNN](../../notes/faster-rcnn.md) → [SSD](../../notes/ssd.md)（检测头对照）→ [FPN](../../notes/fpn.md)（多尺度特征） | 分别指出候选框、类别预测和尺度分配发生的位置。 |
 | 像素分割 | [U-Net](../../notes/u-net.md)，再与 FPN 图 3 对读 | 编码特征为什么要裁剪？哪一级输出像素类别，哪几级提供区域特征？ |
+
+## 视图、窗口与遮挡
+
+先给一张图做两次增强，分别画出 [SimCLR](../../notes/simclr.md) 的批内候选、[MoCo](../../notes/moco.md) 的队列和 [BYOL](../../notes/byol.md) 的回归目标，再把正例换成配对文本，比较 [CLIP](../../notes/clip.md) 的候选矩阵。
+
+沿 [ViT](../../notes/vit.md) 读两种计算预算：[Swin](../../notes/swin.md) 限制每个查询的邻居并交替分窗，[MAE](../../notes/mae.md) 预训练时从编码器输入中移除被遮块。画出两者在同一张图上保留的位置与连接。

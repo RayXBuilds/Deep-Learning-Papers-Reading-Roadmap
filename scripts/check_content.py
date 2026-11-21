@@ -6,6 +6,7 @@ Git-tracked sparse files count as existing so legacy PDFs need not be downloaded
 """
 import hashlib
 import json
+import math
 import re
 import subprocess
 import sys
@@ -465,6 +466,29 @@ def main():
         if report.get('t5') != {'mixed_masks': 62, 'restored': 62, 'length_matches': 62,
                                 'shorter_than_full_target': 25}:
             errors.append('pretraining-layouts.json: unexpected span lengths or reconstruction')
+    for name in ('view_candidates', 'masked_patches'):
+        script = ROOT / 'experiments' / f'{name}.py'
+        record = ROOT / 'experiments/results' / (name.replace('_', '-') + '.json')
+        if not record.exists():
+            errors.append(f'Missing {record.name}')
+            continue
+        report = json.loads(record.read_text(encoding='utf-8'))
+        if report.get('source_sha256') != hashlib.sha256(script.read_bytes()).hexdigest():
+            errors.append(f'{record.name}: source hash mismatch')
+        if report.get('passed') is not True:
+            errors.append(f'{record.name}: failed mechanism checks')
+        if name == 'view_candidates':
+            losses = report.get('loss', {})
+            for label, count in [('base', 1), ('self_included', 2), ('same_direction_negative_pair', 3)]:
+                expected_loss = math.log(count + 2 * math.exp(-2))
+                if not math.isclose(losses.get(label, math.inf), expected_loss, rel_tol=0, abs_tol=1e-12):
+                    errors.append(f'{record.name}: unexpected {label} loss')
+        else:
+            runs = report.get('runs', [])
+            if [r.get('seed') for r in runs] != [7, 42, 2026] or not all(
+                    r.get('restored') is True and r.get('masked_mse') == 1
+                    and r.get('all_patch_mse') == 25.75 for r in runs):
+                errors.append(f'{record.name}: missing positions, seeds or MSE controls')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         return 1

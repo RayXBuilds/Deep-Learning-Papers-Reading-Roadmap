@@ -175,3 +175,8 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## 排列可见性与片段标签
 
 运行 `python3 experiments/pretraining_layouts.py` 穷举 XLNet 的四位置查询和 T5 的六词缺段，比较内容流自读及全文重建基线。[配置、结果与边界](results/pretraining-layouts.md)
+
+## 视觉自监督目标
+
+- `python3 experiments/view_candidates.py` 比较 SimCLR 正确分母、误含自身和重复方向负例。[协议与结果](results/view-candidates.md)
+- `python3 experiments/masked_patches.py` 比较 MAE 遮挡误差和全图误差，核对解码器的块顺序。[协议与结果](results/masked-patches.md)
