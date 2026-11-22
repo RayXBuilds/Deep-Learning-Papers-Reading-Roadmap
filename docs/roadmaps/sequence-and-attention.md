@@ -26,6 +26,10 @@
 
 源端 padding 的独立实验：`python3 experiments/additive_attention.py`。与上面的因果掩码实验对照阅读，明确两类掩码的目的。
 
+## 注意力可以直接回答“选哪一行”吗？
+
+读 [Pointer Networks](../../topics/08-memory/notes/pointer-networks.md) 第 2.3 节对应的推导。先算一组分数的 softmax，再分别求加权上下文和指定行号的交叉熵，比较哪一步需要知道目标行号。
+
 ## 参数固定时怎样指定任务
 
 读 [GPT-3](../../topics/04-language/notes/gpt-3.md) 表 3.2–3.3，固定模型对比示例数，再固定提示协议比较模型规模。与 [LoRA](../../topics/10-transfer/notes/lora.md) 对照，标出任务信息分别进入上下文还是参数更新。

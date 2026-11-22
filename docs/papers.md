@@ -17,6 +17,7 @@
 | Dropout / 2014，JMLR | 哪些输出可以用期望缩放？ | [原文](https://jmlr.org/papers/v15/srivastava14a.html) | [精读初版](../topics/02-training/notes/dropout.md)，掩码枚举已验证 |
 | VGG / 2014，ICLR 2015 | 小核如何组合空间证据？ | [原文](https://arxiv.org/abs/1409.1556) | [精读初版](../topics/03-vision/notes/vgg.md)，脉冲响应已验证 |
 | GoogLeNet / 2014，CVPR 2015 | 通道投影怎样控制多尺度分支成本？ | [原文](https://arxiv.org/abs/1409.4842) | [精读初版](../topics/03-vision/notes/googlenet.md)，专项实验未运行 |
+| Pointer Networks / 2015，NIPS | 如何让输出类别随输入点数改变？ | [原文](https://arxiv.org/abs/1506.03134) | [精读](../topics/08-memory/notes/pointer-networks.md)，位置概率与损失已验证 |
 | Seq2Seq / 2014，NIPS | 固定摘要与源句反转改变哪些依赖？ | [原文](https://arxiv.org/abs/1409.3215) | [精读初版](../topics/04-language/notes/seq2seq.md)，专项实验未运行 |
 | U-Net / 2015，MICCAI 2015 | 跳接裁剪与相邻细胞边界 | [原文](https://arxiv.org/abs/1505.04597) | [精读初版](../topics/06-detection-segmentation/notes/u-net.md)，分割实验未运行 |
 | Faster R-CNN / 2015，NIPS 2015 | 共享特征上的候选框生成 | [原文](https://arxiv.org/abs/1506.01497) | [精读初版](../topics/06-detection-segmentation/notes/faster-rcnn.md)，RPN 未验证 |
@@ -65,4 +66,4 @@
 | LLaDA / 2025 | 从整段空白怎样得到一条有依赖的文本序列？ | [原文](https://arxiv.org/abs/2502.09992v3) | [LLaDA](../topics/05-generative/notes/llada.md) 精读初版，掩码逆概率已验 |
 | Janus-Pro / 2025 | 为什么看图答题和按文字画图需要不同的图像表示？ | [原文](https://arxiv.org/abs/2501.17811v1) | [Janus-Pro](../topics/07-multimodal/notes/janus-pro.md) 精读初版，未运行模型实验 |
 
-本表最近维护：2026-11-21；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。
+本表最近维护：2026-11-22；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。

@@ -95,3 +95,5 @@ CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 C
 视觉自监督的两组实测分别记录 [SimCLR 候选集与分母](view-candidates.md) 和 [MAE 位置恢复与损失](masked-patches.md)。
 
 [SSD 递推与 LLaDA 掩码权重实测](ssd-and-mask.md)
+
+[Pointer Networks 位置读出](pointer-readout.json)记录候选排列、扩展和相同均值下的两组位置损失。[输入、基线与边界](../../topics/08-memory/notes/pointer-networks.md)

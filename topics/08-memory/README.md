@@ -6,7 +6,7 @@
 
 ## 中文精读与阅读顺序
 
-尚无已完成的中文精读。下方是资料入口，不计入精读数量。
+先读 [Bahdanau Attention](../04-language/notes/bahdanau-attention.md) 理解位置打分，再读 [Pointer Networks](notes/pointer-networks.md)，比较读取加权均值与输出行号所接收的监督。
 
 ## 原始资料
 
@@ -20,6 +20,6 @@
 
 ## 状态与下一步
 
-此专题目前仅有历史资料，没有按新标准完成的精读。
+已有 1 篇精读。Memory Networks、End-To-End Memory Networks 和两篇图灵机资料仍待补读，后续可对照只读取输入位置与写入记忆槽的差别。
 
 [实验指南与实测边界](../../experiments/README.md) · [迁移对照](../../docs/archive/path-migration.md)

@@ -136,3 +136,7 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 | [R1](../topics/04-language/notes/deepseek-r1.md) 与 [Qwen3](../topics/04-language/notes/qwen3.md) | 蒸馏配方对照 | 静态教师轨迹与学生采样前缀上的教师分布覆盖不同的上下文。 |
 | [BERT](../topics/04-language/notes/bert.md) 与 [LLaDA](../topics/05-generative/notes/llada.md) | 监督位置对照 | LLaDA 用多噪声水平的掩码损失配合反向采样，自全掩码生成。 |
 | [LLaDA](../topics/05-generative/notes/llada.md) 与 [Janus-Pro](../topics/07-multimodal/notes/janus-pro.md) | 离散生成对照 | 多轮揭晓词位与逐个生成图像码的条件集合不同；Janus-Pro 的理解路径另用语义编码器。 |
+
+## 从输入对齐到位置输出
+
+[Bahdanau Attention](../topics/04-language/notes/bahdanau-attention.md) 与 [Pointer Networks](../topics/08-memory/notes/pointer-networks.md) 共享加性位置打分。前者用权重汇集源句信息，后者直接用目标位置监督打分，输出类别数随当前样本改变。

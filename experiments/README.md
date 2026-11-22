@@ -189,3 +189,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 | `python3 experiments/preference_odds.py` | 三回答、非均匀参考分布，枚举 β=0.25、1、4 及三对候选。确定性，无随机种子 | 由策略还原的偏好概率与奖励差基线的最大误差 < 1e-12；遗漏参考项的最大误差 > 0.5。未训练语言模型。[记录](results/preference-odds.json) |
 
 [SSD 递推与 LLaDA 掩码权重](results/ssd-and-mask.md) 给出两项 CPU 实验的输入、独立参照、命令及验收阈值。
+
+## 指针网络的位置读出
+
+运行 `python3 experiments/pointer_readout.py`。六种顺序与扩展到四个候选后的概率须符合整数比，两组权重的读出均值须相同，目标位置损失分别为 ln(4/3)、ln(4)。绝对误差容限 1e−12。[精读与输入](../topics/08-memory/notes/pointer-networks.md) · [CPU 实测与脚本哈希](results/pointer-readout.json)

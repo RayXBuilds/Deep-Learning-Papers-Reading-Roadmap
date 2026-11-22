@@ -1,0 +1,15 @@
+{
+  "source_sha256": "100d9f25b9ebb06ca819b80363263ef3b8ee70baa34d1605e4c272c96f857a31",
+  "measurements": {
+    "permutation_max_error": 0.0,
+    "fourth_position_probability": 0.5333333333333332,
+    "contexts": [
+      0.9999999999999999,
+      1.0
+    ],
+    "middle_target_losses": [
+      0.28768207245178107,
+      1.3862943611198906
+    ]
+  }
+}
