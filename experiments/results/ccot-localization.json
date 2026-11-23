@@ -1,0 +1,30 @@
+{
+  "source_sha256": "80e7ab6a49a8c3a6a18678ac166f593ed43eb20399b731def131bdfc92343878",
+  "results": {
+    "peaks": [
+      {
+        "center": 0.31,
+        "grid_peak": 0.3333333333333333,
+        "refined_peak": 0.31,
+        "grid_error": 0.023333333333333317,
+        "refined_error": 0.0
+      },
+      {
+        "center": 0.62,
+        "grid_peak": 0.6666666666666666,
+        "refined_peak": 0.62,
+        "grid_error": 0.046666666666666634,
+        "refined_error": 0.0
+      },
+      {
+        "center": 0.98,
+        "grid_peak": 0.0,
+        "refined_peak": 0.98,
+        "grid_error": 0.020000000000000018,
+        "refined_error": 0.0
+      }
+    ],
+    "alias_sample_error": 9.43689570931383e-16,
+    "alias_half_period_gap": 2.0
+  }
+}

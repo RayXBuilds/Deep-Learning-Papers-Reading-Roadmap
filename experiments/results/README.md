@@ -97,3 +97,5 @@ CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 C
 [SSD 递推与 LLaDA 掩码权重实测](ssd-and-mask.md)
 
 [Pointer Networks 位置读出](pointer-readout.json)记录候选排列、扩展和相同均值下的两组位置损失。[输入、基线与边界](../../topics/08-memory/notes/pointer-networks.md)
+
+[C-COT 连续定位实测](ccot-localization.json)记录三个中心位置的定位误差与五点采样的混叠反例。[配置与验收条件](../../topics/11-tracking/notes/c-cot.md)

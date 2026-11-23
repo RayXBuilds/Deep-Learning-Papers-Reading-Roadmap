@@ -140,3 +140,7 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 ## 从输入对齐到位置输出
 
 [Bahdanau Attention](../topics/04-language/notes/bahdanau-attention.md) 与 [Pointer Networks](../topics/08-memory/notes/pointer-networks.md) 共享加性位置打分。前者用权重汇集源句信息，后者直接用目标位置监督打分，输出类别数随当前样本改变。
+
+## 检测与跟踪中的多分辨率特征
+
+[FPN](../topics/06-detection-segmentation/notes/fpn.md) 与 [C-COT](../topics/11-tracking/notes/c-cot.md) 构成方法对照。沿两者的数据路径寻找求和的位置：FPN 合并经对齐的特征图，保留多个检测层级；C-COT 累加各通道对位移的响应，求同一目标的位置。

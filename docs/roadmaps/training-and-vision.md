@@ -37,3 +37,7 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 先给一张图做两次增强，分别画出 [SimCLR](../../topics/03-vision/notes/simclr.md) 的批内候选、[MoCo](../../topics/03-vision/notes/moco.md) 的队列和 [BYOL](../../topics/03-vision/notes/byol.md) 的回归目标，再把正例换成配对文本，比较 [CLIP](../../topics/07-multimodal/notes/clip.md) 的候选矩阵。
 
 沿 [ViT](../../topics/03-vision/notes/vit.md) 读两种计算预算：[Swin](../../topics/03-vision/notes/swin.md) 限制每个查询的邻居并交替分窗，[MAE](../../topics/03-vision/notes/mae.md) 预训练时从编码器输入中移除被遮块。画出两者在同一张图上保留的位置与连接。
+
+## 从图像检测到视频跟踪
+
+读完 FPN，再读 [C-COT](../../topics/11-tracking/notes/c-cot.md)。用五点与九点网格画出同一搜索区域，在格点上找峰，再细化到格点之间。比较两种方案分别在哪一步融合多层信息。

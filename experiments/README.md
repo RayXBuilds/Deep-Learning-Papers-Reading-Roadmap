@@ -193,3 +193,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## 指针网络的位置读出
 
 运行 `python3 experiments/pointer_readout.py`。六种顺序与扩展到四个候选后的概率须符合整数比，两组权重的读出均值须相同，目标位置损失分别为 ln(4/3)、ln(4)。绝对误差容限 1e−12。[精读与输入](../topics/08-memory/notes/pointer-networks.md) · [CPU 实测与脚本哈希](results/pointer-readout.json)
+
+## 多分辨率响应的连续定位
+
+运行 `python3 experiments/ccot_localization.py`。用解析峰位检查网格定位误差与牛顿细化误差，并核对混叠信号在网格内外的差别。[输入、阈值与边界](../topics/11-tracking/notes/c-cot.md) · [实测数据](results/ccot-localization.json)
