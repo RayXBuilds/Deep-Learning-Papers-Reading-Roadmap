@@ -6,7 +6,7 @@
 
 ## 中文精读与阅读顺序
 
-尚无已完成的中文精读。下方是资料入口，不计入精读数量。
+先从下方 Playing Atari 原文认识动作价值，再读 [Dueling Networks](notes/dueling-networks.md)。先手算只更新一个动作后整行估值的变化，再看图 3 的策略评估对照。
 
 ## 原始资料
 
@@ -32,6 +32,6 @@
 
 ## 状态与下一步
 
-此专题目前仅有历史资料；不能把大模型偏好优化当作完整强化学习路线。
+已补 Dueling Networks 的精读与输出头验证。DQN、策略优化、连续控制及机器人应用仍待独立精读。
 
 [实验指南与实测边界](../../experiments/README.md) · [迁移对照](../../docs/archive/path-migration.md)

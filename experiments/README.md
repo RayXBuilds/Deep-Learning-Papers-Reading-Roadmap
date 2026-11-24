@@ -197,3 +197,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## 多分辨率响应的连续定位
 
 运行 `python3 experiments/ccot_localization.py`。用解析峰位检查网格定位误差与牛顿细化误差，并核对混叠信号在网格内外的差别。[输入、阈值与边界](../topics/11-tracking/notes/c-cot.md) · [实测数据](results/ccot-localization.json)
+
+## Dueling 输出头
+
+运行 `python3 experiments/dueling_head.py`。四个动作中只监督一个，将两个输出头在所选动作上都拟合到 1，再检查其余动作的误差怎样随真值方向改变。[推导与验收条件](../topics/09-rl-robotics/notes/dueling-networks.md) · [实测记录](results/dueling-head.json)

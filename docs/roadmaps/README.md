@@ -30,7 +30,7 @@
 - [训练与视觉](training-and-vision.md)：训练机制、视觉架构。
 - [序列与注意力](sequence-and-attention.md)：语言和多模态的基础组件。
 - [生成模型](generative-models.md)：概率生成目标与加噪机制。
-- 强化学习、机器人先查 [专题阅读入口](../../topics/09-rl-robotics/README.md)，尚未按新标准完成精读。
+- 强化学习从 [Dueling Networks](../../topics/09-rl-robotics/notes/dueling-networks.md) 的单状态估值实验入手。DQN 前置原文与机器人方向的后续资料见[专题阅读入口](../../topics/09-rl-robotics/README.md)。
 
 ## 怎样判断读懂了
 

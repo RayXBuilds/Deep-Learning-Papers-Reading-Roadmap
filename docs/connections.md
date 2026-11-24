@@ -144,3 +144,7 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 ## 检测与跟踪中的多分辨率特征
 
 [FPN](../topics/06-detection-segmentation/notes/fpn.md) 与 [C-COT](../topics/11-tracking/notes/c-cot.md) 构成方法对照。沿两者的数据路径寻找求和的位置：FPN 合并经对齐的特征图，保留多个检测层级；C-COT 累加各通道对位移的响应，求同一目标的位置。
+
+## 两种强化学习方法中的“优势”
+
+[Dueling Networks](../topics/09-rl-robotics/notes/dueling-networks.md) 与 [DeepSeek-R1](../topics/04-language/notes/deepseek-r1.md) 可作方法对照。前者在同一状态的动作维度上中心化网络输出，再重建 Q 值；后者在同一问题的采样回答组内比较奖励，为策略更新提供相对信号。
