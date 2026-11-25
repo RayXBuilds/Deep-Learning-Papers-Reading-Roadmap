@@ -17,6 +17,7 @@
 | Dropout / 2014，JMLR | 哪些输出可以用期望缩放？ | [原文](https://jmlr.org/papers/v15/srivastava14a.html) | [精读初版](../topics/02-training/notes/dropout.md)，掩码枚举已验证 |
 | VGG / 2014，ICLR 2015 | 小核如何组合空间证据？ | [原文](https://arxiv.org/abs/1409.1556) | [精读初版](../topics/03-vision/notes/vgg.md)，脉冲响应已验证 |
 | GoogLeNet / 2014，CVPR 2015 | 通道投影怎样控制多尺度分支成本？ | [原文](https://arxiv.org/abs/1409.4842) | [精读初版](../topics/03-vision/notes/googlenet.md)，专项实验未运行 |
+| Knowledge Distillation / 2014 workshop，2015 预印本 | 同一首选类如何产生不同训练信号？ | [原文](https://arxiv.org/abs/1503.02531) | [精读](../topics/10-transfer/notes/knowledge-distillation.md)，温度梯度与高温极限已验证 |
 | Dueling Networks / 2015，ICML 2016 | 单个动作的监督如何改变其他估值？ | [会议原文](https://proceedings.mlr.press/v48/wangf16.pdf) | [精读](../topics/09-rl-robotics/notes/dueling-networks.md)，跨动作更新与反例已验证 |
 | C-COT / 2016，ECCV | 如何在不同网格上定位同一目标？ | [原文](https://arxiv.org/abs/1608.03773) | [精读](../topics/11-tracking/notes/c-cot.md)，频域峰值细化已验证 |
 | Pointer Networks / 2015，NIPS | 如何让输出类别随输入点数改变？ | [原文](https://arxiv.org/abs/1506.03134) | [精读](../topics/08-memory/notes/pointer-networks.md)，位置概率与损失已验证 |
@@ -68,4 +69,4 @@
 | LLaDA / 2025 | 从整段空白怎样得到一条有依赖的文本序列？ | [原文](https://arxiv.org/abs/2502.09992v3) | [LLaDA](../topics/05-generative/notes/llada.md) 精读初版，掩码逆概率已验 |
 | Janus-Pro / 2025 | 为什么看图答题和按文字画图需要不同的图像表示？ | [原文](https://arxiv.org/abs/2501.17811v1) | [Janus-Pro](../topics/07-multimodal/notes/janus-pro.md) 精读初版，未运行模型实验 |
 
-本表最近维护：2026-11-24；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。
+本表最近维护：2026-11-25；各论文的来源核对日期见精读元数据。新增内容优先引用公开一手来源，不新增论文 PDF 镜像。按首次公开年份浏览[精读时间线](roadmaps/timeline.md)。

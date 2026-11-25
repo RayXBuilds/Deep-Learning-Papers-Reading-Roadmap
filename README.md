@@ -26,7 +26,7 @@
 
 ## 已有中文精读
 
-目前有 **61 篇精读初版、35 个机制实验专题**。从 [AlexNet](topics/03-vision/notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](topics/04-language/notes/word2vec.md) 和 [Seq2Seq](topics/04-language/notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
+目前有 **62 篇精读初版、36 个机制实验专题**。从 [AlexNet](topics/03-vision/notes/alexnet.md) 开始可对照小核堆叠、多尺度分支与残差连接。从 [word2vec](topics/04-language/notes/word2vec.md) 和 [Seq2Seq](topics/04-language/notes/seq2seq.md) 开始可追踪词向量、固定句向量与注意力之间的联系。
 
 沿[视觉路线](docs/roadmaps/training-and-vision.md)可从批内对比、动量字典读到无负样本回归和掩码重建。沿[序列路线](docs/roadmaps/sequence-and-attention.md)可比较上下文特征、因果预测、排列预测与片段去噪，再读指令微调与偏好优化；沿[生成路线](docs/roadmaps/generative-models.md)可从 GAN 读到 StyleGAN 的分层风格控制，也可从 DDPM 读到潜空间扩散。
 
@@ -52,7 +52,7 @@ python3 experiments/run.py --experiment all --seed 7
 
 所有学习内容按专题放在 `topics/`：专题首页给出阅读顺序，`notes/` 放中文精读，`papers/` 保存原有 PDF。教材、旧论文和新解读从同一个专题入口阅读；实验集中在 `experiments/`，由笔记链接到对应配置和实测。
 
-[查看 12 个专题与覆盖状态](topics/README.md)。语音、外部记忆、强化学习、机器人、跟踪等方向仍有精读缺口，已在各专题标明；61 篇精读并不代表 112 个历史文件都已解读。
+[查看 12 个专题与覆盖状态](topics/README.md)。语音、外部记忆、强化学习、机器人、跟踪等方向仍有精读缺口，已在各专题标明；62 篇精读并不代表 112 个历史文件都已解读。
 
 本次重编排移动了文件位置，112 个 PDF 内容逐一保持不变。旧收藏链接请使用 [旧路径 → 新位置对照](docs/archive/path-migration.md)，其中保留迁移前的固定版本入口。
 

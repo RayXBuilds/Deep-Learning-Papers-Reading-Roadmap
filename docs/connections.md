@@ -148,3 +148,7 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 ## 两种强化学习方法中的“优势”
 
 [Dueling Networks](../topics/09-rl-robotics/notes/dueling-networks.md) 与 [DeepSeek-R1](../topics/04-language/notes/deepseek-r1.md) 可作方法对照。前者在同一状态的动作维度上中心化网络输出，再重建 Q 值；后者在同一问题的采样回答组内比较奖励，为策略更新提供相对信号。
+
+## 学生从教师得到什么信息
+
+[经典知识蒸馏](../topics/10-transfer/notes/knowledge-distillation.md) 与 [DeepSeek-R1](../topics/04-language/notes/deepseek-r1.md) 构成监督方式对照。前者匹配分类器给出的整个类别分布，后者的小模型在教师生成的轨迹上做监督学习。只有前一种输入直接给出未被选中类别的相对概率。

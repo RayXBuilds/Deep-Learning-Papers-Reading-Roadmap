@@ -201,3 +201,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## Dueling 输出头
 
 运行 `python3 experiments/dueling_head.py`。四个动作中只监督一个，将两个输出头在所选动作上都拟合到 1，再检查其余动作的误差怎样随真值方向改变。[推导与验收条件](../topics/09-rl-robotics/notes/dueling-networks.md) · [实测记录](results/dueling-head.json)
+
+## 蒸馏温度与软目标梯度
+
+运行 `python3 experiments/distillation_temperature.py`，比较首选相同但非首选类排序相反的教师，并与中心化得分差的高温极限核对。[推导与阈值](../topics/10-transfer/notes/knowledge-distillation.md) · [实测](results/distillation-temperature.json)

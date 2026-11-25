@@ -41,3 +41,7 @@ AlexNet → VGG / GoogLeNet（并列设计路线）→ ResNet → ViT（架构�
 ## 从图像检测到视频跟踪
 
 读完 FPN，再读 [C-COT](../../topics/11-tracking/notes/c-cot.md)。用五点与九点网格画出同一搜索区域，在格点上找峰，再细化到格点之间。比较两种方案分别在哪一步融合多层信息。
+
+## 从训练分类器到训练小模型
+
+读完 Dropout 后读 [知识蒸馏](../../topics/10-transfer/notes/knowledge-distillation.md)。固定首选类别并交换其他两个类别的教师分数，比较用硬标签和软目标训练时学生收到的梯度。

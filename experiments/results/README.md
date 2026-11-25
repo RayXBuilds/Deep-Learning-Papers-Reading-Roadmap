@@ -101,3 +101,5 @@ CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 C
 [C-COT 连续定位实测](ccot-localization.json)记录三个中心位置的定位误差与五点采样的混叠反例。[配置与验收条件](../../topics/11-tracking/notes/c-cot.md)
 
 [Dueling 输出头实测](dueling-head.json)记录相同观测误差下，未采样动作在两种目标方向上的均方误差。[输入与边界](../../topics/09-rl-robotics/notes/dueling-networks.md)
+
+[蒸馏软目标实测](distillation-temperature.json)记录四个温度下的梯度和高温近似误差。[配置与边界](../../topics/10-transfer/notes/knowledge-distillation.md)
