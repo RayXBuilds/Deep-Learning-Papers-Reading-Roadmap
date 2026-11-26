@@ -205,3 +205,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## 蒸馏温度与软目标梯度
 
 运行 `python3 experiments/distillation_temperature.py`，比较首选相同但非首选类排序相反的教师，并与中心化得分差的高温极限核对。[推导与阈值](../topics/10-transfer/notes/knowledge-distillation.md) · [实测](results/distillation-temperature.json)
+
+## 策略蒸馏中的动作一致率与回报
+
+运行 `python3 experiments/policy_distillation.py`。固定两种状态、两种动作与出现频率，对照三种蒸馏目标在共享输出上的最优解。[推导与验收条件](../topics/10-transfer/notes/policy-distillation.md) · [CPU 实测](results/policy-distillation.json)

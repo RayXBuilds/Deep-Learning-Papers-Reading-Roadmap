@@ -6,7 +6,8 @@
 
 ## 中文精读与阅读顺序
 
-- [知识蒸馏：同一首选类别能给出哪些不同的梯度？](notes/knowledge-distillation.md) 先看教师如何构造目标，再沿下面两篇比较哪些学生参数参与更新。
+- [知识蒸馏：同一首选类别能给出哪些不同的梯度？](notes/knowledge-distillation.md) 先看教师如何构造目标。
+- [Policy Distillation：从动作估值到学生策略](notes/policy-distillation.md) 比较三种教师目标，再沿 LoRA / QLoRA 分支看哪些参数参与更新。
 - [LoRA：少训练哪些参数，梯度又怎样流动？](notes/lora.md)
 - [QLoRA：冻结的四位权重怎样传回梯度？](notes/qlora.md)
 
@@ -25,6 +26,6 @@
 
 ## 状态与下一步
 
-已补知识蒸馏的软目标与温度机制。策略蒸馏、Matching Networks 与持续学习仍待独立精读。
+已补知识蒸馏与策略蒸馏的目标对照。Matching Networks 与持续学习仍待独立精读。
 
 [实验指南与实测边界](../../experiments/README.md) · [迁移对照](../../docs/archive/path-migration.md)

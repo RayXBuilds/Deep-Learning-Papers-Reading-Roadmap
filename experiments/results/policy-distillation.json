@@ -1,0 +1,55 @@
+{
+  "source_sha256": {
+    "policy_distillation.py": "05cc4d9c8424fc49aec213396029c48e6da5e4a8c566988a971b14bed1b87b09",
+    "run.py": "8d130aff2172759c00c1379dad62412bcff5c0f11854e5cb79af59f2cc8485d3"
+  },
+  "results": {
+    "teacher_rows": [
+      [
+        0.01,
+        0
+      ],
+      [
+        0.01,
+        0
+      ],
+      [
+        0.01,
+        0
+      ],
+      [
+        0,
+        0.1
+      ]
+    ],
+    "nll": {
+      "p_left": 0.75,
+      "agreement": 0.75,
+      "mean_return": 0.0075
+    },
+    "mse": {
+      "mean_q": [
+        0.0075,
+        0.025
+      ],
+      "agreement": 0.25,
+      "mean_return": 0.025
+    },
+    "kl": [
+      {
+        "temperature": 0.1,
+        "p_left": 0.4609697459517037,
+        "action": 1,
+        "agreement": 0.25,
+        "mean_return": 0.025
+      },
+      {
+        "temperature": 0.01,
+        "p_left": 0.5483052834396793,
+        "action": 0,
+        "agreement": 0.75,
+        "mean_return": 0.0075
+      }
+    ]
+  }
+}

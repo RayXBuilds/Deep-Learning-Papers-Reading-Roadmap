@@ -6,7 +6,7 @@
 
 ## 中文精读与阅读顺序
 
-先从下方 Playing Atari 原文认识动作价值，再读 [Dueling Networks](notes/dueling-networks.md)。先手算只更新一个动作后整行估值的变化，再看图 3 的策略评估对照。
+先从下方 Playing Atari 原文认识动作价值，再读 [Dueling Networks](notes/dueling-networks.md)。先手算只更新一个动作后整行估值的变化，再看图 3 的策略评估对照。随后可读迁移专题的 [Policy Distillation](../10-transfer/notes/policy-distillation.md)，将动作价值转成学生的监督目标。
 
 ## 原始资料
 
