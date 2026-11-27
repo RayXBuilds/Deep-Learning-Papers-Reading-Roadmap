@@ -105,3 +105,5 @@ CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 C
 [蒸馏软目标实测](distillation-temperature.json)记录四个温度下的梯度和高温近似误差。[配置与边界](../../topics/10-transfer/notes/knowledge-distillation.md)
 
 [策略蒸馏决策对照](policy-distillation.json)记录三种目标的动作一致率、一步回报与两档温度。[输入与边界](../../topics/10-transfer/notes/policy-distillation.md)
+
+[CTC 对齐实测](ctc-alignment.json)记录空串、单个及重复音素的路径概率与贪心输出。[输入与边界](../../topics/04-language/notes/deep-rnn-speech.md)

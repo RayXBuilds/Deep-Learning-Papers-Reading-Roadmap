@@ -1,0 +1,18 @@
+{
+  "source_sha256": "e5239dc3715726b5fb5a05143b72a4744f2ea6b7fefdcb376efa6342566935c9",
+  "results": {
+    "greedy_transcript": "",
+    "best_transcript": "A",
+    "enumerated": {
+      "": 0.216,
+      "A": 0.6880000000000001,
+      "AA": 0.096
+    },
+    "forward": {
+      "": 0.216,
+      "A": 0.6880000000000001,
+      "AA": 0.096
+    },
+    "double_A_two_frames": 0.0
+  }
+}

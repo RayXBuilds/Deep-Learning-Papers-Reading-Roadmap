@@ -41,3 +41,7 @@
 ## 状态、专家与推理策略
 
 先展开 [Mamba-2](../../topics/04-language/notes/mamba-2.md) 的两步递推，找出前一项的衰减系数。再沿 [DeepSeek-V3](../../topics/04-language/notes/deepseek-v3.md) → [DeepSeek-R1](../../topics/04-language/notes/deepseek-r1.md) 追踪基础模型如何接上同题多回答的奖励。最后读 [Qwen3](../../topics/04-language/notes/qwen3.md)，辨认在哪个阶段由教师生成轨迹、在哪个阶段由学生采样。
+
+## 语音帧与音素的单调对齐
+
+读 [深层 RNN 语音识别](../../topics/04-language/notes/deep-rnn-speech.md)，把三帧输出的八条路径按转录分组，再对照翻译注意力能否回到较早的输入位置。

@@ -209,3 +209,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## 策略蒸馏中的动作一致率与回报
 
 运行 `python3 experiments/policy_distillation.py`。固定两种状态、两种动作与出现频率，对照三种蒸馏目标在共享输出上的最优解。[推导与验收条件](../topics/10-transfer/notes/policy-distillation.md) · [CPU 实测](results/policy-distillation.json)
+
+## CTC 路径求和
+
+运行 `python3 experiments/ctc_alignment.py`。固定帧概率、枚举路径，再用前向递推检查每个转录的总概率。[推导与阈值](../topics/04-language/notes/deep-rnn-speech.md) · [CPU 实测](results/ctc-alignment.json)

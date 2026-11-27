@@ -154,3 +154,7 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 [经典知识蒸馏](../topics/10-transfer/notes/knowledge-distillation.md) 与 [DeepSeek-R1](../topics/04-language/notes/deepseek-r1.md) 构成监督方式对照。前者匹配分类器给出的整个类别分布，后者的小模型在教师生成的轨迹上做监督学习。只有前一种输入直接给出未被选中类别的相对概率。
 
 [Policy Distillation](../topics/10-transfer/notes/policy-distillation.md) 接续上述软目标构造，用教师动作价值形成目标分布。结合 [Dueling Networks](../topics/09-rl-robotics/notes/dueling-networks.md) 可验证：同一状态中所有动作共享的价值偏移会在教师 softmax 中抵消，动作差距与温度的比值决定赔率。
+
+## 语音与翻译中的对齐
+
+[深层 RNN 语音识别](../topics/04-language/notes/deep-rnn-speech.md) 的 CTC 对同一音素串的单调路径求和。[Bahdanau Attention](../topics/04-language/notes/bahdanau-attention.md) 在每个翻译步骤重新给源位置分配权重，允许换序。两者是方法对照。
