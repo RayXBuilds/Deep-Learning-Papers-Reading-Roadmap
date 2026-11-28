@@ -107,3 +107,5 @@ CI 的实际运行状态以 GitHub Checks 为准，本地通过不等于远程 C
 [策略蒸馏决策对照](policy-distillation.json)记录三种目标的动作一致率、一步回报与两档温度。[输入与边界](../../topics/10-transfer/notes/policy-distillation.md)
 
 [CTC 对齐实测](ctc-alignment.json)记录空串、单个及重复音素的路径概率与贪心输出。[输入与边界](../../topics/04-language/notes/deep-rnn-speech.md)
+
+[期望词错率实测](ctc-word-risk.json)记录三种词边界概率下，末帧字符的似然与词错率梯度。[推导与验收条件](../../topics/04-language/notes/character-ctc-speech.md)

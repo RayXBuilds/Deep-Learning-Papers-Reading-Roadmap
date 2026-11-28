@@ -45,3 +45,5 @@
 ## 语音帧与音素的单调对齐
 
 读 [深层 RNN 语音识别](../../topics/04-language/notes/deep-rnn-speech.md)，把三帧输出的八条路径按转录分组，再对照翻译注意力能否回到较早的输入位置。
+
+接着读 [字符级语音识别](../../topics/04-language/notes/character-ctc-speech.md)。保持字母得分不动，先改变中间一帧的空格概率，再检查末尾字母收到的词级损失梯度。

@@ -213,3 +213,7 @@ python3 experiments/ebgan_energy.py --output /tmp/ebgan-energy.json
 ## CTC 路径求和
 
 运行 `python3 experiments/ctc_alignment.py`。固定帧概率、枚举路径，再用前向递推检查每个转录的总概率。[推导与阈值](../topics/04-language/notes/deep-rnn-speech.md) · [CPU 实测](results/ctc-alignment.json)
+
+## 字符 CTC 的期望词错率
+
+运行 `python3 experiments/ctc_word_risk.py`。固定末帧的字符概率，改变中间帧的空格概率，对照参考串似然与词级编辑损失的梯度。[输入与阈值](../topics/04-language/notes/character-ctc-speech.md) · [实测](results/ctc-word-risk.json)

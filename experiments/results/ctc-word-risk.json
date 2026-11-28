@@ -1,0 +1,32 @@
+{
+  "source_sha256": {
+    "ctc_word_risk.py": "119e12a45e6f03d12a638200f5c9213664103901a822a981556827b4a2d78e9c",
+    "ctc_alignment.py": "e5239dc3715726b5fb5a05143b72a4744f2ea6b7fefdcb376efa6342566935c9"
+  },
+  "rows": [
+    {
+      "space": 0.25,
+      "b": 0.5,
+      "reference_probability": 0.125,
+      "expected_wer": 0.625,
+      "wer_logit_gradient": 0.0625,
+      "nll_logit_gradient": -0.5
+    },
+    {
+      "space": 0.5,
+      "b": 0.5,
+      "reference_probability": 0.25,
+      "expected_wer": 0.5,
+      "wer_logit_gradient": 0.0,
+      "nll_logit_gradient": -0.5
+    },
+    {
+      "space": 0.75,
+      "b": 0.5,
+      "reference_probability": 0.375,
+      "expected_wer": 0.375,
+      "wer_logit_gradient": -0.0625,
+      "nll_logit_gradient": -0.5
+    }
+  ]
+}

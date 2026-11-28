@@ -44,6 +44,7 @@ def main():
     if not notes:
         errors.append('No reading notes found in topics/*/notes/')
     published_sources = {
+        'character-ctc-speech.md': 'https://proceedings.mlr.press/v32/graves14.pdf',
         'gpt-1.md': 'https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf',
         'alexnet.md': 'https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf',
         'dropout.md': 'https://jmlr.org/papers/v15/srivastava14a.html',

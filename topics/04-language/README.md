@@ -7,6 +7,7 @@ word2vec → Seq2Seq → Attention → Transformer；再比较 ELMo、GPT、BERT
 ## 中文精读与阅读顺序
 
 - [语音识别：没有逐帧标签，怎样训练深层循环网络？](notes/deep-rnn-speech.md) 从三帧例子理解单调对齐，再对照下面的翻译注意力。
+- [字符级语音识别：空格怎样改变词错率梯度？](notes/character-ctc-speech.md) 从音素对齐接着读期望转录损失。
 - [word2vec：预测方向怎样决定一个词收到的监督？](notes/word2vec.md)
 - [Seq2Seq：读完整句之后，译文如何逐词生成？](notes/seq2seq.md)
 - [Bahdanau Attention：每一步解码，应该重新读取哪里？](notes/bahdanau-attention.md)
@@ -58,6 +59,6 @@ word2vec → Seq2Seq → Attention → Transformer；再比较 ELMo、GPT、BERT
 
 ## 状态与下一步
 
-语音分支已补 2013 年 TIMIT 音素识别与 CTC 对齐。直接转写文字、Deep Speech 2、稀有词与字符级翻译等馆藏仍待精读。
+语音分支已补 2013 年 TIMIT 音素识别与 2014 年 WSJ 字符转写。Deep Speech 2、稀有词与字符级翻译等馆藏仍待精读。
 
 [实验指南与实测边界](../../experiments/README.md) · [迁移对照](../../docs/archive/path-migration.md)

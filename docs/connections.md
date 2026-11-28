@@ -158,3 +158,5 @@ Flow Matching 与 WGAN 的教学对照还需区分距离评价和模型表达能
 ## 语音与翻译中的对齐
 
 [深层 RNN 语音识别](../topics/04-language/notes/deep-rnn-speech.md) 的 CTC 对同一音素串的单调路径求和。[Bahdanau Attention](../topics/04-language/notes/bahdanau-attention.md) 在每个翻译步骤重新给源位置分配权重，允许换序。两者是方法对照。
+
+[ICML 2014 字符转写](../topics/04-language/notes/character-ctc-speech.md) 延续 TIMIT 的 CTC 对齐方法，将监督从音素串改为文字。用空格切词后，训练还能对路径折叠后的整句计算编辑代价。
